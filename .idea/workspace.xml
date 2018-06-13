@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9b36bfe-23b0-4cf3-ac9d-ba15dd3f2271" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/some-dir/composer.json</pharConfigPath>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="autoload_namespaces.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_namespaces.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-16">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/some-dir/web/index.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/some-dir/vendor/stecman/symfony-console-completion" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony-cmf/routing" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/league/container" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/easyrdf/easyrdf" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/chi-teck/drupal-code-generator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/consolidation/config" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/consolidation/robo" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/consolidation/log" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/consolidation/annotated-command" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/consolidation/output-formatters" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/mikey179/vfsStream" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/cweagans/composer-patches" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/instaclick/php-webdriver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/phpunit-mock-objects" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drush/drush" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/dflydev/placeholder-resolver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/grasmash/yaml-expander" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/grasmash/expander" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/dflydev/dot-access-configuration" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/dflydev/dot-access-data" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal/console" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal/coder" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal/console-en" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal/console-core" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal/console-extend-plugin" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/stack/builder" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/commerceguys/addressing" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/commerceguys/intl" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/phpunit-bridge" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/jcalderonzumba/mink-phantomjs-driver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/jcalderonzumba/gastonjs" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/polyfill-php70" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/class-loader" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/composer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/alchemy/zippy" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/validator" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/html2text/html2text" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/zendframework/zend-stdlib" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/zendframework/zend-diactoros" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/behat/mink-browserkit-driver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/behat/mink-goutte-driver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/behat/mink-selenium2-driver" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/behat/mink" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/webflo/drupal-finder" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/zendframework/zend-escaper" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/zendframework/zend-feed" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/drupal-composer/drupal-scaffold" />
+      <path value="$PROJECT_DIR$/some-dir/vendor/masterminds/html5" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="1346" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>PHP</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PhpCSValidationInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="some-dir" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="some-dir" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="some-dir" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="composer" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9b36bfe-23b0-4cf3-ac9d-ba15dd3f2271" name="Default" comment="" />
+      <created>1528780576950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528780576950</updated>
+      <workItem from="1528780578474" duration="1298000" />
+      <workItem from="1528831023117" duration="4603000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5901000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/some-dir/web/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/web/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/web/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_real.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1326">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_classmap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_namespaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
