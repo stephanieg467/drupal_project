@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="drupal_project" createEmptyFolders="true">
+  <component name="PublishConfigData" serverName="drupal_project" createEmptyFolders="true">
     <serverData>
       <paths name="drupal_project">
         <serverdata>
           <mappings>
-            <mapping deploy="/www/sgalata/web" local="$PROJECT_DIR$" web="/www/sgalata/web" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
     </serverData>
-    <option name="myAutoUpload" value="ALWAYS" />
   </component>
 </project>

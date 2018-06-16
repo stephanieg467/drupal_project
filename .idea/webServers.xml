@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="20cc6926-7db8-4699-a522-3536b1bb4d32" name="drupal_project" url="http://www.oc-drupal.com">
-        <fileTransfer host="www.oc-drupal.com" port="22" privateKey="C:\Users\Stephanie\Documents\assignment_1\a1_private_key.ppk" rootFolder="/home/sgalata" accessType="SFTP" keyPair="true">
+        <fileTransfer host="www.oc-drupal.com" port="22" privateKey="C:\Users\Stephanie\Documents\assignment_1\a1_private_key.ppk" rootFolder="/home/sgalata/www/sgalata" accessType="SFTP" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>

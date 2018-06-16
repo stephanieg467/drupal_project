@@ -297,7 +297,7 @@ $config_directories = array();
  *   $settings['hash_salt'] = file_get_contents('/home/example/salt.txt');
  * @endcode
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = 'yZZLU3vGqgeYDHFtt1OwbcWgMsUc8HHf5CqkkvIyGK9TdNqAdE6lu7RrdFbD-U62yRLLO_gMgg';
 
 /**
  * Deployment identifier.
@@ -536,7 +536,7 @@ if ($settings['hash_salt']) {
  * must exist and be writable by Drupal. This directory must be relative to
  * the Drupal installation directory and be accessible over the web.
  */
-# $settings['file_public_path'] = 'sites/default/files';
+$settings['file_public_path'] = 'sites/default/files';
 
 /**
  * Private file path:
@@ -551,7 +551,7 @@ if ($settings['hash_salt']) {
  * See https://www.drupal.org/documentation/modules/file for more information
  * about securing private files.
  */
-# $settings['file_private_path'] = '';
+$settings['file_private_path'] = '/home/sgalata/www/sgalata/web/sites/default/files/private';
 
 /**
  * Session write interval:
@@ -654,7 +654,7 @@ if ($settings['hash_salt']) {
  * configuration values in settings.php will not fire any of the configuration
  * change events.
  */
-# $config['system.file']['path']['temporary'] = '/tmp';
+ $config['system.file']['path']['temporary'] = '/tmp';
 # $config['system.site']['name'] = 'My Drupal site';
 # $config['system.theme']['default'] = 'stark';
 # $config['user.settings']['anonymous'] = 'Visitor';
@@ -746,6 +746,11 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 
+
+$settings['trusted_host_patterns'] = array(
+    '^sgalata\.oc-drupal\.com$',
+);
+
 /**
  * The default list of directories that will be ignored by Drupal's file API.
  *
@@ -757,8 +762,8 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * @see \Drupal\Core\Extension\ExtensionDiscovery::scanDirectory()
  */
 $settings['file_scan_ignore_directories'] = [
-  'node_modules',
-  'bower_components',
+    'node_modules',
+    'bower_components',
 ];
 
 /**
@@ -781,8 +786,8 @@ $settings['entity_update_batch_size'] = 50;
  *
  * Keep this code block at the end of this file to take full effect.
  */
-#
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$config_directories['sync'] = '../config/sync';
+
+if (file_exists(__DIR__ . '/settings.local.php')) {
+    include __DIR__ . '/settings.local.php';
+}
+
