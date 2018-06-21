@@ -32,6 +32,7 @@
     "drupal-composer/drupal-scaffold": "^2.5",
     "drupal/console": "^1.0.2",
     "drupal/core": "~8.5.3",
+    "drupal/image_effects": "^2.1",
     "drupal/simple_gmap": "^1.4",
     "drush/drush": "^9.0.0",
     "webflo/drupal-finder": "^1.0.0",
