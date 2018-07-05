@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Theme implementation for a store locations node.
+ *
+ * Available variables:
+ * - page_header_image_url: The header image's image style url for the field,
+ *   "field_page_header_image".
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+    <header>
+        {# Header banner image. #}
+        <div class="page-header-image">
+            {{ content.field_page_header_image }}
+        </div>
+
+        {{ title_prefix }}
+        {# Title of store location page #}
+        <h1{{ title_attributes.addClass('page-title') }}>
+            {{ label }}
+        </h1>
+        {{ title_suffix }}
+    </header>
+
+    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {# Row for store location details. #}
+        <div class="row">
+            {# About store column. #}
+            <div class="col-xs-12 col-md-6 node__content__about">
+                <h2>{{ 'About this store'|t }}</h2>
+                {{ content.body }}
+            </div>
+
+            {# Location details column. #}
+            <div class="col-xs-12 col-md-6 node__content__details">
+                <h2>{{ 'Store contact details'|t }}</h2>
+                {{ content.field_phone_number }}
+                {{ content.field_company_email }}
+                {{ content.field_address }}
+                {{ content.field_hours }}
+            </div>
+        </div>
+        {# Row for google map #}
+        <div class="row">
+            <div class="col-xs-12 col-md-12 node__content__map">
+                <h2>{{ 'Visit this store'|t }}</h2>
+                {{ content.field_google_map }}
+            </div>
+        </div>
+    </div>
+</article>

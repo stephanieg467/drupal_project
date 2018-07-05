@@ -1,0 +1,69 @@
+/**
+ * Header Styles
+ */
+
+.site-header {
+  min-height: 120px;
+  background: $header-top;
+}
+
+/**
+ * Site logo.
+ */
+.site-header__logo {
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 80px;
+    height: 89px;
+  }
+}
+
+/**
+ * Site header navigation.
+ */
+.site-header-nav {
+  float: right;
+  color: #ffffff;
+
+  .menu__item:last-child {
+    .menu__link {
+      padding-right: 0;
+    }
+  }
+}
+
+/**
+ * Site header bottom.
+ */
+.site-header__bottom {
+  background-color: $header-bottom;
+}
+
+/**
+ * Primary navigation.
+ */
+.primary-nav {
+  display: block;
+  //display: inline-block;
+  vertical-align: top;
+
+  .menu--child-menu {
+    background-color: $gray-base;
+  }
+}
+
+/**
+ * Site header search.
+ */
+.site-header__search {
+  float: right;
+  clear: right;
+
+  .form-optional {
+    display: none;
+  }
+}

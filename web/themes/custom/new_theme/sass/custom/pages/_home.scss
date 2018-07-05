@@ -1,0 +1,48 @@
+/**
+ * Home.
+ */
+
+// Have styling apply to full home page.
+.node--type-home.node--view-mode-full {
+
+  //mixins
+  @mixin title-border($radius) {
+    border-top: 2px solid $header-top;
+    border-bottom: 2px solid $header-top;
+    width: $radius;
+  }
+
+  // Field styles.
+  .page-title {
+    @include title-border(40%);
+  }
+
+  .node__content__gold-standard {
+    h2 {
+      border-bottom: 2px solid $header-top;
+      width: 45%;
+    }
+    a {
+      margin: auto;
+    }
+  }
+
+  .node__content__our-goal {
+    h2 {
+      border-bottom: 2px solid $header-top;
+      width: 33%;
+    }
+    a {
+      margin: auto;
+    }
+  }
+
+  // Mobile only styles.
+  @media(max-width: $screen-sm-max) {
+    h2 {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 5px solid $gray-darker;
+    }
+  }
+}
