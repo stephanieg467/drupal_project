@@ -18,27 +18,14 @@
 }
 
 /**
- *Exercise
+ * Page styles.
  */
-//Container style
-.exercise-container {
-  background-color: $c-link-hover;
-  margin-bottom: 20px;
-}
-
-//Row style
-.exercise-container__row {
-  background-color: $header-top;
-}
-.exercise-container__col {
-  border: 2px solid #000000;
-  border-radius: 5px;
-  btn {
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-    .btn__label {
-      color: white;
-    }
+.field--name-field-title {
+  border-top: 2px solid $button-background;
+  border-bottom: 2px solid $button-background;
+  margin: 30px 0;
+  h1 {
+    text-align: center;
   }
 }
 
@@ -120,7 +107,7 @@
 }
 // Required fields.
 .form-required {
-  color: $c-primary;
+  color: $gray-base;
 }
 // Optional fields.
 .form-optional {
@@ -370,3 +357,4 @@ a.card:hover {
     margin: 0;
   }
 }
+

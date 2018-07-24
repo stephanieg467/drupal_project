@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Theme override to display vehicle for sale.
+ *
+ * Available variables:
+ * -
+ *
+ * @see template_preprocess_node()
+ *
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+{{ attach_library('classy/node') }}
+<article{{ attributes.addClass(classes) }}>
+
+    <div class="vehicle">
+        <div class="vehicle__container">
+            <div class="vehicle__image">
+                {{ content.field_vehicle_image }}
+            </div>
+
+            <div class="vehicle__info">
+                <div class="vehicle__title">
+                    <h3>{{ content.field_vehicle_brand }}</h3>
+                </div>
+                <p>Price: {{ content.field_price }}</p>
+            </div>
+        </div>
+    </div>
+
+
+</article>

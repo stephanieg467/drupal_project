@@ -23,16 +23,22 @@
 %}
 <article{{ attributes.addClass(classes) }}>
     <header>
-        {# Header banner image. #}
+        {# Header banner image.#}
         <div class="page-header-image">
             {{ content.field_page_header_image }}
         </div>
 
         {{ title_prefix }}
         {# Title of store location page #}
-        <h1{{ title_attributes.addClass('page-title') }}>
-            {{ label }}
-        </h1>
+        <div class="contact-page-banner__content-wrapper">
+            <div class="contact-page-banner__content">
+                <div class="page-banner__title">
+                    <h1>
+                        {{ label }}
+                    </h1>
+                </div>
+            </div>
+        </div>
         {{ title_suffix }}
     </header>
 
@@ -41,13 +47,13 @@
         <div class="row">
             {# About store column. #}
             <div class="col-xs-12 col-md-6 node__content__about">
-                <h2>{{ 'About this store'|t }}</h2>
                 {{ content.body }}
+                {{ content.field_contact_us_form }}
             </div>
 
             {# Location details column. #}
             <div class="col-xs-12 col-md-6 node__content__details">
-                <h2>{{ 'Store contact details'|t }}</h2>
+                <h2>{{ 'Contact details'|t }}</h2>
                 {{ content.field_phone_number }}
                 {{ content.field_company_email }}
                 {{ content.field_address }}
@@ -57,7 +63,7 @@
         {# Row for google map #}
         <div class="row">
             <div class="col-xs-12 col-md-12 node__content__map">
-                <h2>{{ 'Visit this store'|t }}</h2>
+                <h2>{{ 'Our Location'|t }}</h2>
                 {{ content.field_google_map }}
             </div>
         </div>

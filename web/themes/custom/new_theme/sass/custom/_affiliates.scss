@@ -1,0 +1,430 @@
+/**
+ * Affiliates styling.
+ */
+
+/**
+ * Affiliates - Tools and Equipment.
+ * Affiliates - Supports.
+ */
+.view-affiliates-tools-and-equipment,
+.view-affiliates-supports {
+
+  a {
+    color: $button-background;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #000000;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .col-1 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 8%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 13%;
+        left: 51%;
+      }
+    }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+  .col-2 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 30%;
+        left: 50%;
+      }
+    }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+  .col-3 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 42%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 44%;
+        left: 50%;
+      }
+    }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+  .col-4 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 58%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 60%;
+        left: 50%;
+      }
+  }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+  .col-5 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 76%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 76%;
+        left: 48%;
+      }
+    }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+  .col-6 {
+    .views-field-field-affiliate-logo {
+      opacity: 1;
+      width: 100%;
+      height: auto;
+      transition: .5s ease;
+      backface-visibility: hidden;
+
+    }
+    .views-field-field-affiliate-link {
+      transition: .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 65%;
+      left: 92%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      text-align: center;
+      @media (max-width: $screen-xs-max) {
+        top: 93%;
+        left: 50%;
+      }
+    }
+    &:hover {
+      .views-field-field-affiliate-logo {
+        opacity: 0.3;
+      }
+      .views-field-field-affiliate-link {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/**
+ * Affiliates - Certified.
+*/
+.view-affiliates-certified {
+  position: relative;
+  bottom: 100px;
+  @media(max-width: $screen-xs-max) {
+    bottom: 150px;
+  }
+  h2 {
+    display: none;
+  }
+  .col-1 {
+    img {
+      position: relative;
+      left: 280px;
+      @media(max-width: $screen-xs-max) {
+        left: 25px;
+      }
+    }
+    margin-bottom: 10px;
+  }
+  .col-2 {
+    position: relative;
+    left: 0;
+    @media(max-width: $screen-xs-max) {
+      left: 25px;
+    }
+  }
+}
+
+/**
+ * Block for Affiliates - Supports.
+ */
+.block-views-blockaffiliates-tools-and-equipment-block-1,
+.block-views-blockaffiliates-supports-block-1 {
+  margin-top: 40px;
+  @media (max-width: $screen-xs-max) {
+    margin: 40px auto 0 auto;
+  }
+}
+
+/**
+ * Affiliates - Tires
+ */
+.view-affiliates-tires {
+
+  a {
+    color: $button-background;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: #000000;
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .col-1 {
+    .node--type-affiliates {
+      h2 {
+        display: none;
+      }
+      .field--name-field-affiliate-logo {
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+      }
+      .field--name-field-affiliate-link {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 42%;
+        left: 14%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          top: 12%;
+          left: 51%;
+        }
+      }
+      &:hover {
+        .field--name-field-affiliate-logo {
+          opacity: 0.3;
+        }
+        .field--name-field-affiliate-link {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .col-2 {
+    .node--type-affiliates {
+      h2 {
+        display: none;
+      }
+      .field--name-field-affiliate-logo {
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+      }
+      .field--name-field-affiliate-link {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 42%;
+        left: 39%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          top: 36%;
+          left: 51%;
+        }
+      }
+      &:hover {
+        .field--name-field-affiliate-logo {
+          opacity: 0.3;
+        }
+        .field--name-field-affiliate-link {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .col-3 {
+    .node--type-affiliates {
+      h2 {
+        display: none;
+      }
+      .field--name-field-affiliate-logo {
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+      }
+      .field--name-field-affiliate-link {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 42%;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          top: 59%;
+          left: 51%;
+        }
+      }
+      &:hover {
+        .field--name-field-affiliate-logo {
+          opacity: 0.3;
+        }
+        .field--name-field-affiliate-link {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .col-4 {
+    .node--type-affiliates {
+      h2 {
+        display: none;
+      }
+      .field--name-field-affiliate-logo {
+        opacity: 1;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+
+      }
+      .field--name-field-affiliate-link {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 42%;
+        left: 86%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+        @media (max-width: $screen-xs-max) {
+          top: 87%;
+          left: 51%;
+        }
+      }
+      &:hover {
+        .field--name-field-affiliate-logo {
+          opacity: 0.3;
+        }
+        .field--name-field-affiliate-link {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+

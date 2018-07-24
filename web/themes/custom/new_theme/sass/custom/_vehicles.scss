@@ -1,0 +1,26 @@
+/**
+ * Vehicles.
+ */
+
+// Teaser view.
+.vehicle {
+  width: 100%;
+  margin: 16px 0;
+  padding: 0 8px;
+  .vehicle__container {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    .vehicle__image {
+      img {
+        width: 100%;
+      }
+    }
+    .vehicle__info {
+      padding: 0 16px;
+
+    }
+  }
+}
+.field--name-field-price {
+  float: right;
+}

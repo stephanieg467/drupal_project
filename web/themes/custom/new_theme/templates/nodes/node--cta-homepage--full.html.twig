@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display page for a cta (currently being used by season-package page).
+ *
+ * Available variables:
+ * - cta_image_url: The image style url from "field_cta_image"
+ * - cta_url: The formatted url from "field_cta_link".
+ * - cta_non_homepage_image_url: The image style url from "field_cta_non_homepage_image"
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+    <div class="cta-full-page">
+
+        <div class="cta-full-page__image">
+            {{ content.field_cta_full_page_image }}
+        </div>
+
+        <div class="cta-full-page__content-wrapper__title">
+            <div class="cta-homepage__content__title">
+                <div class="cta-full-page__title">
+                    <h1> {{ node.field_cta_title.value }} </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-full-page__content-wrapper">
+            <div class="cta-full-page__content">
+                <div class="cta-full-page__body">
+                    <h2><span>{{ node.field_cta_body.value }}</span></h2>
+                    <p>{{ content.field_cta_page_title }}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</article>

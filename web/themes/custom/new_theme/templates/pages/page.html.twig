@@ -51,8 +51,6 @@
   Issue: https://www.drupal.org/node/953034.
 #}
 
-{{ devel_breakpoint() }}
-
 {% set page_sidebar_rendered = render_var(page.page_sidebar) %}
 {# Set column class based on sidebar. #}
 {% set col_class = page_sidebar_rendered ? 'col-xs-12 col-sm-8 col-md-9' : 'col-sm-12' %}
@@ -65,13 +63,6 @@
 <div class="site-content">
   <div class="container">
     <div class="row">
-      {% if page_sidebar_rendered %}
-        <div class="col-xs-12 col-sm-4 col-md-3">
-          <aside class="site-sidebar" role="complementary">
-            {{ page.page_sidebar }}
-          </aside>
-        </div>
-      {% endif %}
 
       <div class="{{ col_class }}">
         <main class="content__main-content clearfix" role="main">
@@ -90,60 +81,20 @@
           {% endif %}
         </main>
       </div>
+
+        {% if page_sidebar_rendered %}
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <aside class="site-sidebar" role="complementary">
+                {{ page.page_sidebar }}
+            </aside>
+          </div>
+        {% endif %}
+
     </div>
   </div>
 </div>
 
 {# / Main Content. #}
-
-<div class = "container exercise-container">
-    <div class = "row exercise-container__row">
-
-      <div class = "col-xs-12 col-sm-12 col-md-4 exercise-container__col">
-        <h3> <i class="fas fa-star"></i> {{ 'H3 Title'|t }} </h3>
-        <hr>
-        <p>
-            {% trans %}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis, sem feugiat lacinia pellentesque,
-          nulla risus volutpat odio, condimentum convallis dui sem in justo. Cras et velit a tortor vehicula viverra
-          id in ex. Cras fermentum dignissim risus sit amet vehicula.
-            {% endtrans %}
-        </p>
-        <div class = "span"></div>
-        <p>
-            {% trans %}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat lacus nunc, ut ullamcorper metus.
-            {% endtrans %}
-        </p>
-        <button type="button" class="btn"> <a href = "#" class = "btn__label"> {{ 'Button Label'|t }} </a> </button>
-      </div>
-
-      <div class = "col-xs-12 col-sm-12 col-md-8 exercise-container__col">
-        <h3> <i class="fas fa-star"></i> {{ 'H3 Title'|t }} </h3>
-        <hr>
-        <p>
-            {% trans %}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis, sem feugiat lacinia pellentesque,
-              nulla risus volutpat odio, condimentum convallis dui sem in justo. Cras et velit a tortor vehicula viverra
-              id in ex. Cras fermentum dignissim risus sit amet vehicula. Nulla interdum nisl scelerisque luctus aliquet.
-              Fusce volutpat feugiat rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-              inceptos himenaeos. Integer gravida mauris leo, pulvinar porta nulla fringilla euismod. Lorem ipsum dolor
-              sit amet, consectetur adipiscing elit. Donec lob
-            {% endtrans %}
-        </p>
-        <div class = "span"></div>
-        <p>
-            {% trans %}
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat lacus nunc, ut ullamcorper metus.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In consequat lacus nunc, ut ullamcorper metus.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            {% endtrans %}
-        </p>
-        <button type="button" class="btn"> <a href = "#" class = "btn__label"> {{ 'Button Label'|t }} </a> </button>
-      </div>
-
-    </div>
-</div>
 
 {# Site Footer. #}
 {% include base_path ~ directory ~ '/templates/pages/includes/site_footer.html.twig' %}

@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme implementation for tires page.
+ *
+ * Available variables:
+ * -
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+    <div class="tires">
+
+        <div class="cta-full-page__image">
+            {{ content.field_cta_full_page_image }}
+        </div>
+
+        <div class="cta-full-page__content-wrapper__title">
+            <div class="cta-homepage__content__title">
+                <div class="cta-full-page__title">
+                    <h1> {{ content.field_cta_title }} </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-appointment__content-wrapper">
+            <div class="cta-full-page__content">
+
+                <div class="cta-full-page__body">
+                    <h2>{{ content.field_cta_body }}</h2>
+                    <p>{{ content.field_cta_page_title }}</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</article>

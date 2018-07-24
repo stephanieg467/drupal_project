@@ -47,8 +47,6 @@ function new_theme_theme_suggestions_page_alter(array &$suggestions, array $vari
   if ($is_front_page) {
     array_splice($suggestions, 1, 0, 'page__front');
   }
-  xdebug_break();
-  $test = 'test';
 }
 
 /**
@@ -118,15 +116,42 @@ function new_theme_preprocess_node(&$variables) {
       if (isset($node->field_page_header_image->entity)) {
         $variables['page_header_image_url'] = ImageStyle::load('banner')->buildUrl($node->field_page_header_image->entity->getFileUri());
       }
+      // Link 1 URL.
+      if (isset($node->field_link_1->uri)) {
+        $link_1 = $node->field_link_1->uri;
+        $variables['link_1_url'] = Url::fromUri($link_1);
+      }
+      // Link 2 URL.
+      if (isset($node->field_link->uri)) {
+        $link_2 = $node->field_link->uri;
+        $variables['link_2_url'] = Url::fromUri($link_2);
+      }
     }
 
-    // Store Location.
-    if ($node->getType() === 'store_locations') {
-          // Store location Header Image.
-          if (isset($node->field_page_header_image->entity)) {
-            $variables['page_header_image_url'] = ImageStyle::load('banner')->buildUrl($node->field_page_header_image->entity->getFileUri());
-          }
-        }
+    //Page Banner.
+    if ($node->getType() === 'page_banner') {
+      // Image.
+      if (isset($node->field_page_banner_image->entity)) {
+        $variables['page_banner_image_url'] = ImageStyle::load('homepage_carousel_slide_image')->buildUrl($node->field_page_banner_image->entity->getFileUri());
+      }
+    }
+
+    // CTA Homepage.
+    if ($node->getType() === 'cta_homepage') {
+      // CTA Homepage Image.
+      if (isset($node->field_cta_image->entity)) {
+        $variables['cta_image_url'] = ImageStyle::load('cta_homepage')->buildUrl($node->field_cta_image->entity->getFileUri());
+      }
+      // CTA Non-Homepage Image.
+      if (isset($node->field_cta_non_homepage_image->entity)) {
+        $variables['cta_non_homepage_image_url'] = ImageStyle::load('cta_non_homepage')->buildUrl($node->field_cta_non_homepage_image->entity->getFileUri());
+      }
+      // Link URL.
+      if (isset($node->field_cta_link->uri)) {
+        $cta_link = $node->field_cta_link->uri;
+        $variables['cta_url'] = Url::fromUri($cta_link);
+      }
+    }
 
     // Homepage Carousel Slide.
     if ($node->getType() === 'homepage_carousel_slide') {
@@ -143,6 +168,14 @@ function new_theme_preprocess_node(&$variables) {
       if (isset($node->field_carousel_slide_link->uri)) {
         $carousel_link = $node->field_carousel_slide_link->uri;
         $variables['slide_link_url'] = Url::fromUri($carousel_link);
+      }
+    }
+
+    //Employee
+    if ($node->getType() === 'employee') {
+      // Image.
+      if (isset($node->field_employ->entity)) {
+        $variables['employee_image_url'] = ImageStyle::load('employee')->buildUrl($node->field_employ->entity->getFileUri());
       }
     }
 
@@ -216,6 +249,12 @@ function new_theme_preprocess_page(&$variables) {
       $variables['homepage_carousel_view'] = views_embed_view($homepage_carousel_view_name, $homepage_carousel_view_display);
     }
   }
+
+
+   // if ($is_front_page == false) blah blah
+   // OR
+   // if($page_current_path == /node/7 || etc for all pages
+   //
 }
 
 /**
@@ -246,4 +285,6 @@ function new_theme_form_alter(&$form, FormStateInterface $form_state, $form_id) 
 *     $variables['items.content'] = t('items.content')
 * }
 */
+
+
 

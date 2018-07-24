@@ -2,9 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e9b36bfe-23b0-4cf3-ac9d-ba15dd3f2271" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_affiliates.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_brands.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_employee.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_homepage_cta.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_page_banner.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_vehicles.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_about_us.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_cta_page.scss" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/layout/region--below-content.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--1--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--39--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--43--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--51.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--53.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--7.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--75--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--84--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--brand--teaser.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage--full.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--employee.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page-banner.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--cta.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointement.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--vehicles---block-1.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view-fields--affiliates-tools-and-equipment.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view-grid.html.twig" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view.html.twig" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.theme" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.theme" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_content.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_content.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_general.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_general.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_navigation.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_navigation.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_variables.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_variables.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_home.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_home.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_store-locations.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_appointment.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/style.scss" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/style.scss" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--homepage-carousel-slide.html.twig" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--homepage-carousel-slide.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page.html.twig" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--store-locations--full.html.twig" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--store-locations--full.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page--front.html.twig" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page--front.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page.html.twig" afterPath="$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,8 +56,49 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/some-dir/composer.json</pharConfigPath>
   </component>
+  <component name="DrupalConfiguration" enabled="true" version="8">
+    <drupalPath>C:\wamp64\www\drupal_project\web</drupalPath>
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="node--7.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--7.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_general.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_general.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="267" column="15" lean-forward="false" selection-start-line="267" selection-start-column="15" selection-end-line="267" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_about_us.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_about_us.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="FrameworkCommandLineHistory">
     <commandsHistory>
@@ -28,25 +109,66 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/some-dir/web/index.php" />
-        <option value="&lt;20cc6926-7db8-4699-a522-3536b1bb4d32&gt;/www/sgalata/web/some-dir/web/sites/default/settings.local.php" />
-        <option value="&lt;20cc6926-7db8-4699-a522-3536b1bb4d32&gt;/www/sgalata/web/some-dir/web/sites/default/settings.php" />
-        <option value="$PROJECT_DIR$/some-dir/web/sites/default/settings.php" />
-        <option value="$PROJECT_DIR$/some-dir/web/sites/default/settings.local.php" />
-        <option value="&lt;20cc6926-7db8-4699-a522-3536b1bb4d32&gt;/web/sites/default/settings.local.php" />
-        <option value="$PROJECT_DIR$/web/sites/default/default.settings.php" />
-        <option value="&lt;20cc6926-7db8-4699-a522-3536b1bb4d32&gt;/web/sites/default/settings.php" />
-        <option value="$PROJECT_DIR$/web/sites/default/settings.local.php" />
-        <option value="$PROJECT_DIR$/web/sites/default/settings.php" />
-        <option value="&lt;20cc6926-7db8-4699-a522-3536b1bb4d32&gt;/web/sites/default/files/.htaccess" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/layout/region--below-content.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view-grid--affiliates-tools-and-equipment.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view-fields__affiliates-tools-and-equipment.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/views/views-view-fields--affiliates-tools-and-equipment.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/layout/region--below-content-about-us.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page-banner.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--53.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--64.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/layout/region--about-us.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/layout/region--below-content--about-us.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/contrib/orange_framework/templates/block/block.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/block/block--views-block--homepage-ctas-block-1.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--51.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page--environment.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_store-locations.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointment.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--74.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/field/field--field-page-header-image.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--store-locations--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_homepage_cta.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointement--block-1.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/js/custom/script.js" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--homepage-carousel-slide.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_affiliates.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--brand--teaser.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--7.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_content.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_variables.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_home.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_navigation.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_page_banner.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.theme" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--1--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--cta.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--41.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointement.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_brands.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--39--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_cta_page.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--75--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--43--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--84--full.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_appointment.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/style.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--vehicles---block-1.html.twig" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_vehicles.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_general.scss" />
+        <option value="$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_about_us.scss" />
       </list>
     </option>
+  </component>
+  <component name="JoomlaConfiguration">
+    <joomlaConfigPath />
+    <joomlaPath />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -56,6 +178,16 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/web/themes/contrib/orange_starter/node_modules" />
+    <handled-path value="$PROJECT_DIR$/web/themes/custom/new_theme/node_modules" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="sgalata.oc-drupal.com" id="c473a4dd-7506-4ac6-a116-070328fa6e58" name="sgalata.oc-drupal.com" port="443" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/home/sgalata/www/sgalata" />
+        </path_mappings>
+      </server>
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
     <include_path>
@@ -186,7 +318,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="3" />
+    <option name="y" value="80" />
     <option name="width" value="1346" />
     <option name="height" value="688" />
   </component>
@@ -225,6 +358,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,25 +377,135 @@
               <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="orange_framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="orange_framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="contrib" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="orange_framework" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="content" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sass" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="pages" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drupal_project" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="themes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="custom" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="new_theme" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="nodes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../stevesautotech2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="Constants" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="HTML" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -263,6 +518,32 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.html.html.twig">
+    <configuration name="field.html.twig" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://www.oc-drupal.com/web/themes/custom/new_theme/templates/field/field.html.twig" />
+    <configuration name="html.html.twig" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://www.oc-drupal.com/web/themes/custom/new_theme/templates/pages/html.html.twig" />
+    <configuration name="drupal_project" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="Debug.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/modules/contrib/devel/src/Twig/Extension/Debug.php" />
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/web/index.php" />
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" filter_connections="FILTER" server_name="sgalata.oc-drupal.com" session_id="sgalata" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.field.html.twig" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.html.html.twig" />
+      <item index="2" class="java.lang.String" itemvalue="PHP Script.index.php" />
+      <item index="3" class="java.lang.String" itemvalue="PHP Script.Debug.php" />
+      <item index="4" class="java.lang.String" itemvalue="PHPUnit.drupal_project" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.html.html.twig" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.drupal_project" />
+        <item index="2" class="java.lang.String" itemvalue="PHP Script.index.php" />
+        <item index="3" class="java.lang.String" itemvalue="PHP Script.Debug.php" />
+        <item index="4" class="java.lang.String" itemvalue="JavaScript Debug.field.html.twig" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -291,37 +572,107 @@
       <workItem from="1529203211641" duration="596000" />
       <workItem from="1529259775394" duration="591000" />
       <workItem from="1529291257812" duration="594000" />
-      <workItem from="1529552218093" duration="909000" />
+      <workItem from="1529552218093" duration="1469000" />
+      <workItem from="1529638285325" duration="6227000" />
+      <workItem from="1529690423417" duration="3520000" />
+      <workItem from="1529723848725" duration="8622000" />
+      <workItem from="1529777897334" duration="6919000" />
+      <workItem from="1529817284290" duration="5044000" />
+      <workItem from="1529894515180" duration="10265000" />
+      <workItem from="1529948262860" duration="7000000" />
+      <workItem from="1529981043017" duration="10547000" />
+      <workItem from="1530036506849" duration="6380000" />
+      <workItem from="1530068189664" duration="10897000" />
+      <workItem from="1530121014919" duration="6220000" />
+      <workItem from="1530153947894" duration="3544000" />
+      <workItem from="1530211409467" duration="1937000" />
+      <workItem from="1530244726371" duration="7273000" />
+      <workItem from="1530294206348" duration="6632000" />
+      <workItem from="1530326436633" duration="10996000" />
+      <workItem from="1530382518300" duration="8259000" />
+      <workItem from="1530412917942" duration="9055000" />
+      <workItem from="1530467817569" duration="3801000" />
+      <workItem from="1530499992799" duration="10034000" />
+      <workItem from="1530553379741" duration="8279000" />
+      <workItem from="1530587604470" duration="7376000" />
+      <workItem from="1530641277412" duration="2697000" />
+      <workItem from="1530674209771" duration="1323000" />
+      <workItem from="1530726379828" duration="3282000" />
+      <workItem from="1530758553855" duration="8338000" />
+      <workItem from="1530814394578" duration="10870000" />
+      <workItem from="1530844515903" duration="7442000" />
+      <workItem from="1530899022770" duration="7976000" />
+      <workItem from="1530931810352" duration="5977000" />
+      <workItem from="1530985973855" duration="2541000" />
+      <workItem from="1531018245966" duration="4229000" />
+      <workItem from="1531070842942" duration="592000" />
+      <workItem from="1531103139737" duration="4972000" />
+      <workItem from="1531191172412" duration="4431000" />
+      <workItem from="1531245021883" duration="6008000" />
+      <workItem from="1531278657250" duration="8776000" />
+      <workItem from="1531330274936" duration="7405000" />
+      <workItem from="1531364257197" duration="10266000" />
+      <workItem from="1531419151045" duration="7522000" />
+      <workItem from="1531450474713" duration="7872000" />
+      <workItem from="1531503444667" duration="5859000" />
+      <workItem from="1531537022976" duration="9121000" />
+      <workItem from="1531590265667" duration="2968000" />
+      <workItem from="1531623427153" duration="7289000" />
+      <workItem from="1531676907421" duration="4690000" />
+      <workItem from="1531710341424" duration="8651000" />
+      <workItem from="1531762728308" duration="4946000" />
+      <workItem from="1531796104710" duration="8538000" />
+      <workItem from="1531850899617" duration="7917000" />
+      <workItem from="1531881277551" duration="8532000" />
+      <workItem from="1531935515606" duration="7607000" />
+      <workItem from="1531967767942" duration="7351000" />
+      <workItem from="1532023638981" duration="619000" />
+      <workItem from="1532024759537" duration="6480000" />
+      <workItem from="1532055672718" duration="8480000" />
+      <workItem from="1532108079438" duration="8324000" />
+      <workItem from="1532140466720" duration="8691000" />
+      <workItem from="1532195590606" duration="5789000" />
+      <workItem from="1532227727495" duration="10824000" />
+      <workItem from="1532279982939" duration="6829000" />
+      <workItem from="1532314567343" duration="8958000" />
+      <workItem from="1532402320451" duration="6001000" />
+      <workItem from="1532455434400" duration="1085000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="drupal_project - 2018.06.26 at 22h 06m 37s.xml">
+      <configuration name="drupal_project" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66245000" />
+    <option name="totallyTimeSpent" value="493700000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5058565" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13312203" sideWeight="0.4941435" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.526149" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.261347" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -331,110 +682,397 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="WordPressConfiguration">
+    <wordpressPath />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/web/modules/contrib/devel/src/Twig/Extension/Debug.php</url>
+          <line>49</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/web/modules/contrib/devel/src/Twig/Extension/Debug.php</url>
+          <line>21</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="10" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand>
+      <path>
+        <item name="drupal_project" type="b2602c69:ProjectViewProjectNode" />
+        <item name="drupal_project" type="462c0819:PsiDirectoryNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>$context['page']['page_sidebar']['new_theme_storelocationstitle']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>$_SERVER['USER']</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--74.html.twig" />
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/field/field.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="34">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/field/field--field-page-header-image.html.twig" />
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--store-locations--full.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="595">
+          <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="37" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_homepage_cta.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1377">
+          <caret line="81" column="9" lean-forward="false" selection-start-line="81" selection-start-column="9" selection-end-line="81" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.info.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sites/default/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-16">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/sites/default/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sites/default/settings.local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/some-dir/web/web.config" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/index.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/web.config" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/index.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_real.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/vendor/autoload.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_classmap.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/autoload_namespaces.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/themes/contrib/orange_starter/composer.json" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/themes/contrib/orange_starter/gulpfile.js" />
-    <entry file="file://$PROJECT_DIR$/some-dir/vendor/composer/installers/composer.json" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/themes/contrib/orange_starter/node_modules/gulp/package.json" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/themes/contrib/orange_starter/css/style.css" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/sites/example.settings.local.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/sites/example.sites.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/themes/contrib/orange_starter/node_modules/gulp/bin/gulp.js" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/sites/default/default.settings.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/README.md" />
-    <entry file="file://$PROJECT_DIR$/some-dir/composer.json" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/sites/default/settings.php" />
-    <entry file="file://$PROJECT_DIR$/some-dir/web/sites/default/settings.local.php" />
-    <entry file="file://$PROJECT_DIR$/web/sites/default/default.settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="798" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sites/default/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="553" column="35" lean-forward="false" selection-start-line="553" selection-start-column="35" selection-end-line="553" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/sites/default/settings.local.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="48" lean-forward="false" selection-start-line="13" selection-start-column="48" selection-end-line="13" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.libraries.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/js/custom/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="75" column="25" lean-forward="false" selection-start-line="75" selection-start-column="25" selection-end-line="75" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_homepage.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-952">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--homepage-carousel-slide.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_affiliates.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="278" column="3" lean-forward="false" selection-start-line="278" selection-start-column="3" selection-end-line="278" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--brand--teaser.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="81" column="130" lean-forward="false" selection-start-line="81" selection-start-column="130" selection-end-line="81" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/contrib/orange_framework/js/contrib/jquery.flexslider-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/contrib/orange_framework/templates/views/views-view-list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/html.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-663">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_page_banner.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page-banner.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1462">
+          <caret line="86" column="31" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page--front.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="21" lean-forward="false" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/core/lib/Drupal/Core/Theme/ThemeManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="462" column="0" lean-forward="false" selection-start-line="462" selection-start-column="0" selection-end-line="462" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_navigation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--1--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="60" column="34" lean-forward="false" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointement--block-1.html.twig" />
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--41.html.twig" />
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--cta.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="108" lean-forward="false" selection-start-line="40" selection-start-column="108" selection-end-line="40" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--ctas-appointement.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="41" column="108" lean-forward="false" selection-start-line="41" selection-start-column="108" selection-end-line="41" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="41" column="80" lean-forward="false" selection-start-line="41" selection-start-column="80" selection-end-line="41" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--cta-homepage--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="43" column="68" lean-forward="false" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_brands.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="30" column="6" lean-forward="false" selection-start-line="30" selection-start-column="6" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--39--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="42" column="52" lean-forward="false" selection-start-line="42" selection-start-column="52" selection-end-line="42" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_cta_page.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="81" column="17" lean-forward="false" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/pages/page.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="90" column="19" lean-forward="false" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--page.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--53.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1184">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--51.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--43--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="24" column="4" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="47" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--75--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="30" lean-forward="false" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--84--full.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_appointment.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="134" column="15" lean-forward="false" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/contrib/orange_framework/templates/content/node.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_content.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3162">
+          <caret line="24" column="45" lean-forward="false" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_employee.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--employee.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/new_theme.theme">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2397">
+          <caret line="146" column="13" lean-forward="false" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--view--vehicles---block-1.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_vehicles.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="1" lean-forward="false" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/templates/nodes/node--7.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="90" column="0" lean-forward="true" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/_general.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="267" column="15" lean-forward="false" selection-start-line="267" selection-start-column="15" selection-end-line="267" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/themes/custom/new_theme/sass/custom/pages/_about_us.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="15" lean-forward="false" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
           <folding />
         </state>
       </provider>

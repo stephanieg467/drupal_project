@@ -1,0 +1,39 @@
+/**
+ * About Us.
+ */
+
+.about-us {
+  .about-us__links {
+    .about-us__links--link-1 {
+      a {
+        position: relative;
+        left: 22%;
+
+        @media (min-width: $screen-sm-min) {
+          left: -20%;
+        }
+
+        @media (min-width: $screen-xs-min) {
+          position: relative;
+          left: 45%;
+        }
+      }
+
+    }
+    .about-us__links--link-2 {
+      a {
+        position: relative;
+        left: 25%;
+
+        @media (min-width: $screen-sm-min) {
+          left: 20%;
+        }
+
+        @media (min-width: $screen-xs-min) {
+          position: relative;
+          left: 10%;
+        }
+      }
+    }
+  }
+}

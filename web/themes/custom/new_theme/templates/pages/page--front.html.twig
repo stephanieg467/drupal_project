@@ -9,6 +9,11 @@
  * @see template_preprocess_page()
  */
 #}
+
+{% set page_sidebar_rendered = render_var(page.page_sidebar) %}
+{# Set column class based on sidebar. #}
+{% set col_class = page_sidebar_rendered ? 'col-xs-12 col-sm-8 col-md-9' : 'col-sm-12' %}
+
 {# Site Header. #}
 {% include base_path ~ directory ~ '/templates/pages/includes/site_header.html.twig' %}
 {# / Site Header. #}
@@ -21,7 +26,16 @@
 <div class="site-content">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
+
+        {% if page_sidebar_rendered %}
+          <div class="col-xs-12 col-sm-4 col-md-3">
+            <aside class="site-sidebar" role="complementary">
+                {{ page.page_sidebar }}
+            </aside>
+          </div>
+        {% endif %}
+
+      <div class="{{ col_class }}">
         <main class="content__main-content clearfix" role="main">
           <div class="visually-hidden"><a id="main-content" tabindex="-1"></a></div>
           {% if page.highlighted %}

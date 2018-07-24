@@ -13,6 +13,7 @@
  */
 #}
 <div class="homepage-carousel-slide">
+
   {% if slide_link_url and not node.field_carousel_slide_link.title %}
     <a href="{{ slide_link_url }}" class="homepage-carousel-slide__link-wrapper">
   {% endif %}
@@ -58,4 +59,5 @@
   {% if slide_link_url and not node.field_carousel_slide_link.title %}
     </a>
   {% endif %}
+
 </div>
