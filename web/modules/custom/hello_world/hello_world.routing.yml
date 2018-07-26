@@ -1,7 +1,25 @@
 hello_world.content:
-  path: '/hello_world'
+  path: '/hello_world/{user}'
   defaults:
     _controller: '\Drupal\hello_world\Controller\HelloWorldController::content'
-    _title: 'Hello World'
+    _title: 'Hello World | User ID'
   requirements:
     _permission: 'access content'
+
+hello_world.system_admin:
+  path: '/hello_world/system_admin'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::system_admin'
+    _title: 'Hello World | Admin'
+  requirements:
+    _role: 'administrator'
+
+hello_world.full_name:
+  path: '/hello_world/{first}/{last}'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::full_name'
+    _title: 'Hello World | Full Name'
+  requirements:
+    _permission: 'access content'
+
+
