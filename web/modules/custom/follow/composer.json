@@ -1,0 +1,14 @@
+{
+  "name": "drupal/follow",
+  "type": "drupal-module",
+  "description": "Allow user to be followed",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/follow",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/follow",
+    "source": "http://cgit.drupalcode.org/follow"
+  },
+  "require": { }
+}
