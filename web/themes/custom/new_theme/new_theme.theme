@@ -249,12 +249,6 @@ function new_theme_preprocess_page(&$variables) {
       $variables['homepage_carousel_view'] = views_embed_view($homepage_carousel_view_name, $homepage_carousel_view_display);
     }
   }
-
-
-   // if ($is_front_page == false) blah blah
-   // OR
-   // if($page_current_path == /node/7 || etc for all pages
-   //
 }
 
 /**

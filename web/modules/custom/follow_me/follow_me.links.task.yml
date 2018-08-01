@@ -1,0 +1,27 @@
+# Follow me routing definition
+follow_me.settings_tab:
+  route_name: follow_me.settings
+  title: 'Settings'
+  base_route: follow_me.settings
+
+entity.follow_me.canonical:
+  route_name: entity.follow_me.canonical
+  base_route: entity.follow_me.canonical
+  title: 'View'
+
+entity.follow_me.edit_form:
+  route_name: entity.follow_me.edit_form
+  base_route: entity.follow_me.canonical
+  title: 'Edit'
+
+entity.follow_me.version_history:
+  route_name: entity.follow_me.version_history
+  base_route: entity.follow_me.canonical
+  title: 'Revisions'
+
+entity.follow_me.delete_form:
+  route_name:  entity.follow_me.delete_form
+  base_route:  entity.follow_me.canonical
+  title: Delete
+  weight: 10
+

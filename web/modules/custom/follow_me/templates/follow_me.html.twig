@@ -1,0 +1,22 @@
+{#
+/**
+ * @file follow_me.html.twig
+ * Default theme implementation to present Follow me data.
+ *
+ * This template is used when viewing Follow me pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_follow_me()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('follow_me') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

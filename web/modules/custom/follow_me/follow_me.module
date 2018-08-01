@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains follow_me.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function follow_me_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the follow_me module.
+    case 'help.page.follow_me':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Give users the ability to follow various different entities on the site') . '</p>';
+      return $output;
+
+    default:
+  }
+}

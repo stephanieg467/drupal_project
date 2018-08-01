@@ -1,0 +1,30 @@
+add follow me entities:
+  title: 'Create new Follow me entities'
+
+administer follow me entities:
+  title: 'Administer Follow me entities'
+  description: 'Allow to access the administration form to configure Follow me entities.'
+  restrict access: true
+
+delete follow me entities:
+  title: 'Delete Follow me entities'
+
+edit follow me entities:
+  title: 'Edit Follow me entities'
+
+view published follow me entities:
+  title: 'View published Follow me entities'
+
+view unpublished follow me entities:
+  title: 'View unpublished Follow me entities'
+
+view all follow me revisions:
+  title: 'View all Follow me revisions'
+
+revert all follow me revisions:
+  title: 'Revert all Follow me revisions'
+  description: 'Role requires permission <em>view Follow me revisions</em> and <em>edit rights</em> for follow me entities in question or <em>administer follow me entities</em>.'
+
+delete all follow me revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Follow me revisions</em> and <em>delete rights</em> for follow me entities in question or <em>administer follow me entities</em>.'

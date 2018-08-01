@@ -50,11 +50,6 @@
         {% if page.mobile_nav %}
           <div class="mobile-control-nav visible-xs-block">
             <ul class="menu clearfix">
-              <li class="menu__item menu__item--search">
-                <a href="#" class="menu__link" title="{{ 'Search'|t }}">
-                  <span aria-hidden="true" class="fa fa-search"></span>
-                </a>
-              </li>
               <li class="menu__item menu__item--menu">
                 <a href="#" class="menu__link" title="{{ 'Menu'|t }}">
                   <span aria-hidden="true" class="fa fa-bars"></span>
@@ -65,17 +60,11 @@
         {% endif %}
         {# / Mobile navigation. #}
 
-        {% if page.header_nav %}
-          <div class="site-header-nav hidden-xs">
-            {{ page.header_nav }}
-          </div>
-        {% endif %}
+        <div class="header-ctas hidden-xs">
+          <a class="btn btn-primary header-ctas__button--blue" href="https://sgalata.oc-drupal.com/appointment">Book An Appointment</a>
+          <a class="btn btn-primary header-ctas__button--black" href="tel: 250-276-5347">Call Today: <strong class="blue-text">250-276-5347</strong></a>
+        </div>
 
-        {% if page.site_search %}
-          <div class="site-header__search hidden-xs">
-            {{ page.site_search }}
-          </div>
-        {% endif %}
       </div>
     </div>
   </div>

@@ -67,3 +67,30 @@
     display: none;
   }
 }
+
+/**
+ * Site header ctas
+ */
+.header-ctas {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #ffffff;
+  float: right;
+  margin-top: 5%;
+
+  .header-ctas__button--blue{
+    background: $button-background;
+  }
+
+  .header-ctas__button--black{
+    background: #000000;
+  }
+
+  .blue-text {
+    color: $button-background;
+  }
+}
+
+

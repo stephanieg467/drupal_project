@@ -1,0 +1,15 @@
+# Hello World's Volume Form
+hello_world.volume_form_menu_link:
+  title: 'Volume Form'
+  route_name: hello_world.volume_form
+  description: 'Form to calculate volumes of rectangle.'
+  parent: system.admin_structure
+  weight: 99
+
+# Hello World's AJAX Volume Form
+hello_world.ajax_volume_form_menu_link:
+  title: 'AJAX Volume Form'
+  route_name: hello_world.ajax_volume_form
+  description: 'AJAX Form to calculate volumes of shapes.'
+  parent: system.admin_structure
+  weight: 100

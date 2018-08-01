@@ -1,0 +1,14 @@
+
+# Follow me menu items definition
+entity.follow_me.collection:
+  title: 'Follow me list'
+  route_name: entity.follow_me.collection
+  description: 'List Follow me entities'
+  parent: system.admin_structure
+  weight: 100
+
+follow_me.admin.structure.settings:
+  title: 'Follow me settings'
+  description: 'Configure Follow me entities'
+  route_name: follow_me.settings
+  parent: system.admin_structure

@@ -1,0 +1,5 @@
+entity.follow_me.add_form:
+  route_name: entity.follow_me.add_form
+  title: 'Add Follow me'
+  appears_on:
+    - entity.follow_me.collection

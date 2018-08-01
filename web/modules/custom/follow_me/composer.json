@@ -1,0 +1,14 @@
+{
+  "name": "drupal/follow_me",
+  "type": "drupal-module",
+  "description": "Give users the ability to follow various different entities on the site",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/follow_me",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/follow_me",
+    "source": "http://cgit.drupalcode.org/follow_me"
+  },
+  "require": { }
+}

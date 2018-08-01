@@ -19,10 +19,8 @@ regions:
   below_content: 'Below Content'
   page_sidebar: 'Page - Sidebar'
   blog_sidebar: 'Blog - Sidebar'
-  site_search: 'Site Search'
   footer: 'Footer'
   # Navigation.
-  header_nav: 'Header Navigation'
   primary_nav: 'Primary Navigation'
   mobile_nav: 'Mobile Navigation'
   footer_nav: 'Footer Navigation'
