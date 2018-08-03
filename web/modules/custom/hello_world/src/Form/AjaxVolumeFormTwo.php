@@ -11,23 +11,9 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Dynamically-enabled form with graceful no-JS degradation.
- *
- * Example of a dynamic form, field inputs change according to shape selected.
- * Includes graceful degradation in the case of no JavaScript.
- *
- * The third $no_js_use argument is strictly for demonstrating operation
- * without JavaScript, without making the user/developer turn off JavaScript.
+ * Implements an example form.
  */
 class AjaxVolumeForm extends FormBase {
-
-  /**
-   * Shape, if it has been selected, or else it's an empty string.
-   *
-   * @var string
-   *
-   */
-  public $shape;
 
   /**
    * {@inheritdoc}
@@ -38,7 +24,6 @@ class AjaxVolumeForm extends FormBase {
 
   /**
    * {@inheritdoc}
-   *
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
@@ -46,6 +31,8 @@ class AjaxVolumeForm extends FormBase {
       '#type' => 'select',
       '#default_value' => $form_state->getValue('calculation_type_selector'),
       '#options' => [
+        'Choose shape' => $this
+          ->t('Choose shape'),
         'Rectangle' => $this
           ->t('Rectangle'),
         'Sphere' => $this
@@ -79,17 +66,16 @@ class AjaxVolumeForm extends FormBase {
       '#attributes' => ['id' => 'shape-fieldset-wrapper'],
     ];
 
-    // Set value of shape.
-    $this->shape = $form_state->getValue('calculation_type_selector');
+    $shape = $form_state->getValue('calculation_type_selector');
 
-    if ( !empty($this->shape) ) {
+    if (!empty($shape) && $shape !== 'Choose shape') {
       // Message which states which item from the select list was chosen.
       $form['shape_fieldset']['shape'] = [
         '#markup' =>
-          $this->t('<p>Shape: @shape</p>', ['@shape' => $this->shape ]),
+          $this->t('<p>Shape: @shape</p>', ['@shape' => $shape ]),
       ];
 
-      switch ($this->shape) {
+      switch ($shape) {
         case 'Rectangle':
           $form['shape_fieldset']['height'] = [
             '#type' => 'number',
@@ -183,8 +169,9 @@ class AjaxVolumeForm extends FormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
 
-    if ($this->shape == 'Rectangle') {
+    $shape = $form_state->getValue('calculation_type_selector');
 
+    if ($shape == 'Rectangle') {
       //Make sure that values are non-zero
       if (empty($form_state->getValue('height')) || $form_state->getValue('height') == 0) {
         $form_state->setErrorByName('height', $this->t('The value of height cannot be zero.'));
@@ -195,7 +182,6 @@ class AjaxVolumeForm extends FormBase {
       if (empty($form_state->getValue('width')) || $form_state->getValue('width') == 0) {
         $form_state->setErrorByName('width', $this->t('The value of width cannot be zero.'));
       }
-
       //Make sure values are greater than zero
       if ($form_state->getValue('height') < 0 ) {
         $form_state->setErrorByName('height', $this->t('The value of height must be greater than zero.'));
@@ -206,7 +192,6 @@ class AjaxVolumeForm extends FormBase {
       if ($form_state->getValue('width') < 0) {
         $form_state->setErrorByName('width', $this->t('The value of width must be greater than zero.'));
       }
-
       //Make sure values are numeric
       if (!is_numeric($form_state->getValue('height'))) {
         $form_state->setErrorByName('height', $this->t('The value of height is not a number.'));
@@ -218,26 +203,22 @@ class AjaxVolumeForm extends FormBase {
         $form_state->setErrorByName('length', $this->t('The value of length is not a number.'));
       }
     }
-    elseif ($this->shape  == 'Sphere') {
-
+    elseif ($shape == 'Sphere') {
       //Make sure that radius is non-zero
       if (empty($form_state->getValue('radius')) || $form_state->getValue('radius') == 0) {
         $form_state->setErrorByName('radius', $this->t('The value of radius cannot be zero.'));
       }
-
       //Make sure that radius is greater than zero
       if ($form_state->getValue('radius') < 0 ) {
         $form_state->setErrorByName('radius', $this->t('The value of radius must be greater than zero.'));
       }
-
       //Make sure that radius is numeric
       if (!is_numeric($form_state->getValue('radius'))) {
         $form_state->setErrorByName('radius', $this->t('The value of radius is not a number.'));
       }
     }
     // Cone and Cylinder require height and radius for the volume equation, so can combine their validation code.
-    elseif ($this->shape  == 'Cone' || $this->shape  == 'Cylinder') {
-
+    elseif ($shape == 'Cone' || $shape == 'Cylinder') {
       //Make sure that values are non-zero
       if (empty($form_state->getValue('height')) || $form_state->getValue('height') == 0) {
         $form_state->setErrorByName('height', $this->t('The value of height cannot be zero.'));
@@ -245,7 +226,6 @@ class AjaxVolumeForm extends FormBase {
       if (empty($form_state->getValue('radius')) || $form_state->getValue('radius') == 0) {
         $form_state->setErrorByName('radius', $this->t('The value of radius cannot be zero.'));
       }
-
       //Make sure values are greater than zero
       if ($form_state->getValue('height') < 0 ) {
         $form_state->setErrorByName('height', $this->t('The value of height must be greater than zero.'));
@@ -253,7 +233,6 @@ class AjaxVolumeForm extends FormBase {
       if ($form_state->getValue('radius') < 0 ) {
         $form_state->setErrorByName('radius', $this->t('The value of radius must be greater than zero.'));
       }
-
       //Make sure values are numeric
       if (!is_numeric($form_state->getValue('height'))) {
         $form_state->setErrorByName('height', $this->t('The value of height is not a number.'));
@@ -270,19 +249,21 @@ class AjaxVolumeForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-    if ($this->shape  == 'Rectangle') {
+    $shape = $form_state->getValue('calculation_type_selector');
+
+    if ($shape == 'Rectangle') {
       $volume = round($form_state->getValue('height')*$form_state->getValue('length')*$form_state->getValue('width'), 2);
       drupal_set_message($this->t('The rectangle volume is @volume cm', ['@volume' => $volume ]));
     }
-    elseif ($this->shape  == 'Sphere') {
+    elseif ($shape == 'Sphere') {
       $volume = round((4/3)*pi()*pow($form_state->getValue('radius'), 3), 2);
       drupal_set_message($this->t('The sphere volume is @volume cm', ['@volume' => $volume ]));
     }
-    elseif ($this->shape  == 'Cone') {
+    elseif ($shape == 'Cone') {
       $volume = round(pi()*pow($form_state->getValue('radius'), 2)*($form_state->getValue('height')/3), 2);
       drupal_set_message($this->t('The cone volume is @volume cm', ['@volume' => $volume ]));
     }
-    elseif ($this->shape  == 'Cylinder') {
+    elseif ($shape == 'Cylinder') {
       $volume = round(pi()*pow($form_state->getValue('radius'),2)*$form_state->getValue('height'), 2);
       drupal_set_message($this->t('The cylinder volume is @volume cm', ['@volume' => $volume ]));
     }
