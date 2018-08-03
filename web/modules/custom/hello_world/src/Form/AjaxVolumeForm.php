@@ -11,18 +11,15 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Dynamically-enabled form with graceful no-JS degradation.
  *
  * Example of a dynamic form, field inputs change according to shape selected.
- * Includes graceful degradation in the case of no JavaScript.
  *
- * The third $no_js_use argument is strictly for demonstrating operation
- * without JavaScript, without making the user/developer turn off JavaScript.
  */
 class AjaxVolumeForm extends FormBase {
 
   /**
-   * Shape, if it has been selected, or else it's an empty string.
+   * The shape variable holds the value of the selected shape, if it has been
+   * selected, or else it's an empty string.
    *
    * @var string
    *
@@ -68,13 +65,11 @@ class AjaxVolumeForm extends FormBase {
       ],
     ];
 
-    // This fieldset just serves as a container for the part of the form
-    // that gets rebuilt. It has a nice line around it so you can see it.
     $form['shape_fieldset'] = [
       '#type' => 'details',
       '#title' => $this->t('Calculate the volume of...'),
       '#open' => TRUE,
-      // We set the ID of this fieldset to questions-fieldset-wrapper so the
+      // Set the ID of this fieldset to shape-fieldset-wrapper so the
       // AJAX command can replace it.
       '#attributes' => ['id' => 'shape-fieldset-wrapper'],
     ];
@@ -89,6 +84,7 @@ class AjaxVolumeForm extends FormBase {
           $this->t('<p>Shape: @shape</p>', ['@shape' => $this->shape ]),
       ];
 
+      // Create form according to value of shape selected
       switch ($this->shape) {
         case 'Rectangle':
           $form['shape_fieldset']['height'] = [
@@ -159,6 +155,7 @@ class AjaxVolumeForm extends FormBase {
           break;
       }
 
+      // Submit button
       $form['shape_fieldset']['actions']['#type'] = 'actions';
       $form['shape_fieldset']['actions']['submit'] = [
         '#type' => 'submit',
@@ -183,6 +180,8 @@ class AjaxVolumeForm extends FormBase {
    */
   public function validateForm(array &$form, FormStateInterface $form_state) {
 
+    // Use appropriate validation according to type of shape that has been
+    // selected.
     if ($this->shape == 'Rectangle') {
 
       //Make sure that values are non-zero
@@ -270,20 +269,29 @@ class AjaxVolumeForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
+    // Volume calculation will depend on type of shape that has been selected.
     if ($this->shape  == 'Rectangle') {
-      $volume = round($form_state->getValue('height')*$form_state->getValue('length')*$form_state->getValue('width'), 2);
+      $height = $form_state->getValue('height');
+      $length = $form_state->getValue('length');
+      $width = $form_state->getValue('width');
+      $volume = round($height * $length * $width, 2);
       drupal_set_message($this->t('The rectangle volume is @volume cm', ['@volume' => $volume ]));
     }
     elseif ($this->shape  == 'Sphere') {
-      $volume = round((4/3)*pi()*pow($form_state->getValue('radius'), 3), 2);
+      $radius = $form_state->getValue('radius');
+      $volume = round((4/3) * pi() * pow($radius, 3), 2);
       drupal_set_message($this->t('The sphere volume is @volume cm', ['@volume' => $volume ]));
     }
     elseif ($this->shape  == 'Cone') {
-      $volume = round(pi()*pow($form_state->getValue('radius'), 2)*($form_state->getValue('height')/3), 2);
+      $radius = $form_state->getValue('radius');
+      $height = $form_state->getValue('height');
+      $volume = round(pi() * pow($radius, 2) * ($height/3), 2);
       drupal_set_message($this->t('The cone volume is @volume cm', ['@volume' => $volume ]));
     }
     elseif ($this->shape  == 'Cylinder') {
-      $volume = round(pi()*pow($form_state->getValue('radius'),2)*$form_state->getValue('height'), 2);
+      $radius = $form_state->getValue('radius');
+      $height = $form_state->getValue('height');
+      $volume = round(pi() * pow($radius,2) * $height, 2);
       drupal_set_message($this->t('The cylinder volume is @volume cm', ['@volume' => $volume ]));
     }
   }
