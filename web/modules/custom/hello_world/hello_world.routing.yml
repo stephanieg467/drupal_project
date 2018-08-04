@@ -37,3 +37,14 @@ hello_world.ajax_volume_form:
     _title: 'AJAX Volume Form'
   requirements:
     _permission: 'access content'
+
+hello_world.config_volume_form:
+  path: '/admin/config/hello_world'
+  defaults:
+    _form: '\Drupal\hello_world\Form\ConfigVolumeForm'
+    _title: 'Configuration for Volume Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+

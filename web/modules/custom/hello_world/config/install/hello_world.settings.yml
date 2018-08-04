@@ -1,0 +1,6 @@
+please_select_message: 'Please select a shape.'
+rectangle_checkbox: 0
+sphere_checkbox: 0
+cone_checkbox: 0
+cylinder_checkbox: 0
+submit_message: 'Calculate'

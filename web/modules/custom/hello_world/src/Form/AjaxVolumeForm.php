@@ -39,19 +39,14 @@ class AjaxVolumeForm extends FormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    $config = \Drupal::config('hello_world.settings');
+
+    $shape_options = static::getShapeOptions();
+
     $form['calculation_type_selector'] = [
       '#type' => 'select',
       '#default_value' => $form_state->getValue('calculation_type_selector'),
-      '#options' => [
-        'Rectangle' => $this
-          ->t('Rectangle'),
-        'Sphere' => $this
-          ->t('Sphere'),
-        'Cone' => $this
-          ->t('Cone'),
-        'Cylinder' => $this
-          ->t('Cylinder'),
-      ],
+      '#options' => $shape_options,
       '#title' => $this->t('Shape'),
       '#required' => TRUE,
       '#ajax' => [
@@ -159,7 +154,7 @@ class AjaxVolumeForm extends FormBase {
       $form['shape_fieldset']['actions']['#type'] = 'actions';
       $form['shape_fieldset']['actions']['submit'] = [
         '#type' => 'submit',
-        '#value' => $this->t('Calculate'),
+        '#value' => $this->t($config->get('submit_message')),
         '#button_type' => 'primary',
       ];
 
@@ -167,7 +162,7 @@ class AjaxVolumeForm extends FormBase {
     else {
       // Message which states that nothing has been selected.
       $form['shape_fieldset']['message'] = [
-        '#markup' => $this->t('Please choose a shape.'),
+        '#markup' => $this->t($config->get('please_select_message')),
       ];
     }
 
@@ -309,6 +304,26 @@ class AjaxVolumeForm extends FormBase {
    */
   public function promptCallback(array $form, FormStateInterface $form_state) {
     return $form['shape_fieldset'];
+  }
+
+  /**
+   * Helper function to populate the first dropdown.
+   *
+   * This would normally be pulling data from the database.
+   *
+   * @return array
+   *   Dropdown options.
+   */
+  public static function getShapeOptions() {
+
+    $config = \Drupal::config('hello_world.settings');
+
+    return [
+      'Rectangle' => $config->get('rectangle_checkbox') == 1 ? 'Rectangle' : '',
+      'Sphere' => $config->get('sphere_checkbox') == 1 ? 'Sphere' : '',
+      'Cone' => $config->get('cone_checkbox') == 1 ? 'Cone' : '',
+      'Cylinder' => $config->get('cylinder_checkbox') == 1 ? 'Cylinder' : '',
+    ];
   }
 
 }

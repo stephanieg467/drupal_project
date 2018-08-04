@@ -13,3 +13,11 @@ hello_world.ajax_volume_form_menu_link:
   description: 'AJAX Form to calculate volumes of shapes.'
   parent: system.admin_structure
   weight: 100
+
+# Hello World's Configure Volume Form
+hello_world.config_volume_form_menu_link:
+  title: 'Config Volume Form'
+  route_name: hello_world.config_volume_form
+  description: 'Configure volume form'
+  parent: system.admin_config_system
+  weight: 99
