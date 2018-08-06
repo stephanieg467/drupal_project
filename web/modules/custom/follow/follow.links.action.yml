@@ -1,5 +1,0 @@
-entity.follow.add_form:
-  route_name: entity.follow.add_form
-  title: 'Add Follow'
-  appears_on:
-    - entity.follow.collection

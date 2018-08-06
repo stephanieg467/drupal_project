@@ -9,6 +9,9 @@ namespace Drupal\hello_world\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
 
 /**
  *
@@ -42,6 +45,14 @@ class AjaxVolumeForm extends FormBase {
     $config = \Drupal::config('hello_world.settings');
 
     $shape_options = static::getShapeOptions();
+
+    $form['#prefix'] = '<div id="ajax_volume_form">';
+    $form['#suffix'] = '</div>';
+    // The status messages that will contain any form errors.
+    $form['status_messages'] = [
+      '#type' => 'status_messages',
+      '#weight' => -10,
+    ];
 
     $form['calculation_type_selector'] = [
       '#type' => 'select',
@@ -156,6 +167,15 @@ class AjaxVolumeForm extends FormBase {
         '#type' => 'submit',
         '#value' => $this->t($config->get('submit_message')),
         '#button_type' => 'primary',
+        '#attributes' => [
+          'class' => [
+            'use-ajax',
+          ],
+        ],
+        '#ajax' => [
+          'callback' => [$this, 'submitAjax'],
+          'event' => 'click',
+        ],
       ];
 
     }
@@ -166,8 +186,56 @@ class AjaxVolumeForm extends FormBase {
       ];
     }
 
+    // Attach the library for pop-up dialogs/modals.
+    $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+
     return $form;
 
+  }
+
+  /**
+   * AJAX callback handler that displays any errors or a success message.
+   */
+  public function submitAjax(array $form, FormStateInterface $form_state) {
+    $response = new AjaxResponse();
+    // If there are any form errors, AJAX replace the form.
+    if ($form_state->hasAnyErrors()) {
+      $response->addCommand(new ReplaceCommand('#ajax_volume_form', $form));
+    }
+    else {
+      // Volume calculation will depend on type of shape that has been selected.
+      if ($this->shape  == 'Rectangle') {
+        $height = $form_state->getValue('height');
+        $length = $form_state->getValue('length');
+        $width = $form_state->getValue('width');
+        $volume = round($height * $length * $width, 2);
+        $result = $this->t('The rectangle volume is @volume cm^3', ['@volume' => $volume]);
+        $response->addCommand(new OpenModalDialogCommand("Success!", $result, ['width' => '700']));
+      }
+      elseif ($this->shape  == 'Sphere') {
+        $radius = $form_state->getValue('radius');
+        $volume = round((4/3) * pi() * pow($radius, 3), 2);
+        $result = $this->t('The sphere volume is @volume cm^3', ['@volume' => $volume ]);
+        $response->addCommand(new OpenModalDialogCommand("Success!", $result, ['width' => '700']));
+
+      }
+      elseif ($this->shape  == 'Cone') {
+        $radius = $form_state->getValue('radius');
+        $height = $form_state->getValue('height');
+        $volume = round(pi() * pow($radius, 2) * ($height/3), 2);
+        $result = $this->t('The cone volume is @volume cm^3', ['@volume' => $volume ]);
+        $response->addCommand(new OpenModalDialogCommand("Success!", $result, ['width' => '700']));
+      }
+      elseif ($this->shape  == 'Cylinder') {
+        $radius = $form_state->getValue('radius');
+        $height = $form_state->getValue('height');
+        $volume = round(pi() * pow($radius,2) * $height, 2);
+        $result = $this->t('The cylinder volume is @volume cm^3', ['@volume' => $volume ]);
+        $response->addCommand(new OpenModalDialogCommand("Success!", $result, ['width' => '700']));
+      }
+
+    }
+    return $response;
   }
 
   /**
@@ -265,6 +333,7 @@ class AjaxVolumeForm extends FormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
     // Volume calculation will depend on type of shape that has been selected.
+    /*
     if ($this->shape  == 'Rectangle') {
       $height = $form_state->getValue('height');
       $length = $form_state->getValue('length');
@@ -289,6 +358,7 @@ class AjaxVolumeForm extends FormBase {
       $volume = round(pi() * pow($radius,2) * $height, 2);
       drupal_set_message($this->t('The cylinder volume is @volume cm', ['@volume' => $volume ]));
     }
+    */
   }
 
   /**

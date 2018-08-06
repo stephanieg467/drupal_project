@@ -1,5 +1,0 @@
-name: 'Follow'
-type: module
-description: 'Allow user to be followed'
-core: 8.x
-package: 'Custom'

@@ -9,6 +9,10 @@ namespace Drupal\hello_world\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\OpenModalDialogCommand;
+use Drupal\Core\Ajax\HtmlCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
 
 /**
  * Implements an example form.
@@ -26,6 +30,13 @@ class VolumeForm extends FormBase {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
+    $form['#prefix'] = '<div id="volume_form">';
+    $form['#suffix'] = '</div>';
+    // The status messages that will contain any form errors.
+    $form['status_messages'] = [
+      '#type' => 'status_messages',
+      '#weight' => -10,
+    ];
 
     $form['height'] = [
       '#type' => 'number',
@@ -54,7 +65,45 @@ class VolumeForm extends FormBase {
       '#value' => $this->t('Calculate'),
       '#button_type' => 'primary',
     ];
+
+    $form['actions'] = array('#type' => 'actions');
+    $form['actions']['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Submit'),
+      '#attributes' => [
+        'class' => [
+          'use-ajax',
+        ],
+      ],
+      '#ajax' => [
+        'callback' => [$this, 'submitAjax'],
+        'event' => 'click',
+      ],
+    ];
+
+    // Attach the library for pop-up dialogs/modals.
+    $form['#attached']['library'][] = 'core/drupal.dialog.ajax';
+
     return $form;
+  }
+
+  /**
+   * AJAX callback handler that displays any errors or a success message.
+   */
+  public function submitAjax(array $form, FormStateInterface $form_state) {
+    $response = new AjaxResponse();
+    // If there are any form errors, AJAX replace the form.
+    if ($form_state->hasAnyErrors()) {
+      $response->addCommand(new ReplaceCommand('#volume_form', $form));
+    }
+    else {
+
+      $volume = $form_state->getValue('height')*$form_state->getValue('length')*$form_state->getValue('width');
+      $result = $this->t('The rectangle volume is @volume cm^3', ['@volume' => $volume ]);
+
+      $response->addCommand(new OpenModalDialogCommand("Success!", $result, ['width' => '700']));
+    }
+    return $response;
   }
 
   /**
@@ -102,8 +151,12 @@ class VolumeForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+
+    /*
     $volume = $form_state->getValue('height')*$form_state->getValue('length')*$form_state->getValue('width');
     drupal_set_message($this->t('The rectangle volume is @volume cm', ['@volume' => $volume ]));
+    */
+
   }
 
 }
