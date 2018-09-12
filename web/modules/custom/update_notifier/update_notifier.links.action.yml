@@ -1,0 +1,5 @@
+entity.update_notifier_entity.add_form:
+  route_name: entity.update_notifier_entity.add_form
+  title: 'Add Update notifier entity'
+  appears_on:
+    - entity.update_notifier_entity.collection

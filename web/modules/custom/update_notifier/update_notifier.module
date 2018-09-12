@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains update_notifier.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function update_notifier_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the update_notifier module.
+    case 'help.page.update_notifier':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Allow users to follow/unfollow products.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function update_notifier_theme() {
+  return [
+    'update_notifier' => [
+      'render element' => 'children',
+    ],
+  ];
+}

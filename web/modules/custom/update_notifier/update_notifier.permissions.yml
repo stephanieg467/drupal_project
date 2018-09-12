@@ -1,0 +1,19 @@
+add update notifier entity entities:
+  title: 'Create new Update notifier entity entities'
+
+administer update notifier entity entities:
+  title: 'Administer Update notifier entity entities'
+  description: 'Allow to access the administration form to configure Update notifier entity entities.'
+  restrict access: true
+
+delete update notifier entity entities:
+  title: 'Delete Update notifier entity entities'
+
+edit update notifier entity entities:
+  title: 'Edit Update notifier entity entities'
+
+view published update notifier entity entities:
+  title: 'View published Update notifier entity entities'
+
+view unpublished update notifier entity entities:
+  title: 'View unpublished Update notifier entity entities'

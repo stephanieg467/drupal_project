@@ -1,0 +1,14 @@
+
+# Update notifier entity menu items definition
+entity.update_notifier_entity.collection:
+  title: 'Update notifier entity list'
+  route_name: entity.update_notifier_entity.collection
+  description: 'List Update notifier entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+update_notifier_entity.admin.structure.settings:
+  title: 'Update notifier entity settings'
+  description: 'Configure Update notifier entity entities'
+  route_name: update_notifier_entity.settings
+  parent: system.admin_structure

@@ -1,0 +1,5 @@
+name: 'Update Notifier'
+type: module
+description: 'Allow users to follow/unfollow products.'
+core: 8.x
+package: 'Custom'
