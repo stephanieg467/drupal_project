@@ -28,6 +28,7 @@ use Drupal\user\UserInterface;
  *       "add" = "Drupal\update_notifier\Form\UpdateNotifierEntityForm",
  *       "edit" = "Drupal\update_notifier\Form\UpdateNotifierEntityForm",
  *       "delete" = "Drupal\update_notifier\Form\UpdateNotifierEntityDeleteForm",
+ *       "follow" = "Drupal\update_notifier\Form\UpdateNotifierEntityFollowForm",
  *     },
  *     "access" = "Drupal\update_notifier\UpdateNotifierEntityAccessControlHandler",
  *     "route_provider" = {
@@ -189,6 +190,7 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setSetting('target_type', 'commerce_product')
       ->setSetting('handler', 'default')
       ->setTranslatable(TRUE)
+      ->setRequired(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'commerce_product_variation_title',
@@ -208,21 +210,22 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayConfigurable('view', TRUE);
 
     // Stores the types of notifications the user will receive.
-    $fields['notifications'] = BaseFieldDefinition::create('string')
+    $fields['notifications'] = BaseFieldDefinition::create('list_string')
       ->setLabel(t('Notifications'))
       ->setDescription(t('What notifications the user will receive.'))
       ->setSettings([
-        'max_length' => 255,
-        'text_processing' => 0,
+        'allowed_values' => [
+          'on_sale' => 'On sale',
+          'back_in_stock' => 'Back in stock',
+          'price_change' => 'Price change']
       ])
-      ->setDefaultValue('')
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'string',
+        'type' => 'list_default',
         'weight' => -4,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
+        'type' => 'options_select',
         'weight' => -4,
       ])
       ->setDisplayConfigurable('form', TRUE)
@@ -230,8 +233,8 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setRequired(TRUE);
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the Update notifier entity entity.'))
+      ->setLabel(t('Customer'))
+      ->setDescription(t('The user ID of customer that is following product.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')

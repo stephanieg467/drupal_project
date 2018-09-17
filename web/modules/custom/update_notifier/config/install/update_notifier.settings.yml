@@ -1,0 +1,5 @@
+notify:
+  price_change: true
+  on_sale: true
+  promotion: true
+  in_stock: true

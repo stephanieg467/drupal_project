@@ -1,0 +1,7 @@
+entity.update_notifier_entity.follow_form:
+  path: '/admin/structure/update_notifier_entity/follow/product'
+  defaults:
+    _entity_form: 'update_notifier_entity.follow'
+    _title: 'Follow a Product'
+  requirements:
+    _permission: 'access content'

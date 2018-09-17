@@ -31,6 +31,10 @@ class UpdateNotifierEntityAccessControlHandler extends EntityAccessControlHandle
 
       case 'delete':
         return AccessResult::allowedIfHasPermission($account, 'delete update notifier entity entities');
+
+      case 'follow':
+        return AccessResult::allowedIfHasPermission($account, 'follow product');
+
     }
 
     // Unknown operation, no opinion.

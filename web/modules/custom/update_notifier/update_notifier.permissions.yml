@@ -17,3 +17,6 @@ view published update notifier entity entities:
 
 view unpublished update notifier entity entities:
   title: 'View unpublished Update notifier entity entities'
+
+follow product:
+  title: 'Follow products'
