@@ -2,19 +2,15 @@ update_notifier.settings:
   type: config_object
   label: 'Update Notifier settings'
   mapping:
-    notify:
-     type: mapping
-     label: 'Notify user'
-     mapping:
-       price_change:
-         type: boolean
-         label: 'Notify user when product price changes'
-       on_sale:
-         type: boolean
-         label: 'Notify user when product goes on sale'
-       promotion:
-         type: boolean
-         label: 'Notify user when product has promotion'
-       in_stock:
-         type: boolean
-         label: 'Notify user when product is in stock'
+    price_change:
+      type: string
+      label: 'Message sent when product price changes'
+    on_sale:
+      type: string
+      label: 'Message sent when product goes on sale'
+    promotion:
+      type: string
+      label: 'Message sent when product has promotion'
+    in_stock:
+      type: string
+      label: 'Message sent when product is in stock'

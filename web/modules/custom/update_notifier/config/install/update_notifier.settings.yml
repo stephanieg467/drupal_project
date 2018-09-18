@@ -1,5 +1,4 @@
-notify:
-  price_change: true
-  on_sale: true
-  promotion: true
-  in_stock: true
+price_change: "The price has changed"
+on_sale: "The product is on sale"
+promotion: "The product has a promotion"
+in_stock: "The product is in stock"
