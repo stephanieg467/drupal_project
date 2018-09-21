@@ -1,4 +1,4 @@
-price_change: "The price has changed"
-on_sale: "The product is on sale"
-promotion: "The product has a promotion"
-in_stock: "The product is in stock"
+price_change: 'The price has changed'
+on_sale: 'The product is on sale'
+promotion: 'The product has a promotion'
+in_stock: 'The product is in stock'

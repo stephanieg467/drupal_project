@@ -1,7 +1,7 @@
-entity.update_notifier_entity.follow_form:
-  path: '/admin/structure/update_notifier_entity/follow/product'
+update_notifier.follow_link:
+  path: '/update_notifier/add/{user}/{entity_id}'
   defaults:
-    _entity_form: 'update_notifier_entity.follow'
+    _form: '\Drupal\update_notifier\Form\UpdateNotifierFollow'
     _title: 'Follow a Product'
   requirements:
-    _permission: 'access content'
+    _permission: 'follow product'

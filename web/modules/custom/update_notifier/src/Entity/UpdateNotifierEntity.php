@@ -28,7 +28,6 @@ use Drupal\user\UserInterface;
  *       "add" = "Drupal\update_notifier\Form\UpdateNotifierEntityForm",
  *       "edit" = "Drupal\update_notifier\Form\UpdateNotifierEntityForm",
  *       "delete" = "Drupal\update_notifier\Form\UpdateNotifierEntityDeleteForm",
- *       "follow" = "Drupal\update_notifier\Form\UpdateNotifierEntityFollowForm",
  *     },
  *     "access" = "Drupal\update_notifier\UpdateNotifierEntityAccessControlHandler",
  *     "route_provider" = {
@@ -194,11 +193,11 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'commerce_product_variation_title',
-        'weight' => -5,
+        'weight' => 0,
       ])
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
-        'weight' => 5,
+        'weight' => 0,
         'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => '60',
@@ -222,11 +221,11 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'list_default',
-        'weight' => -4,
+        'weight' => 1,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'options_select',
-        'weight' => -4,
+        'type' => 'checkboxes',
+        'weight' => 1,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -242,11 +241,11 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'author',
-        'weight' => 0,
+        'weight' => -5,
       ])
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
-        'weight' => 5,
+        'weight' => -5,
         'settings' => [
           'match_operator' => 'CONTAINS',
           'size' => '60',
@@ -268,11 +267,11 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'string',
-        'weight' => -4,
+        'weight' => -6,
       ])
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
-        'weight' => -4,
+        'weight' => -6,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
@@ -284,7 +283,7 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDefaultValue(TRUE)
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
-        'weight' => -3,
+        'weight' => 10,
       ]);
 
     $fields['created'] = BaseFieldDefinition::create('created')
@@ -294,6 +293,11 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
+
+    //$field_type_manager = \Drupal::service('plugin.manager.field.field_type');
+    //$storage_settings = $field_type_manager->getDefaultStorageSettings('entity_reference');
+    //$field_settings = $field_type_manager->getDefaultFieldSettings('entity_reference');
+    //kint($field_settings);
 
     return $fields;
   }
