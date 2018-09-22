@@ -6,7 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Session\UserSession;
+use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Url;
 
@@ -35,17 +35,13 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
   $product = $entity->getEntityTypeId();
   $product_id = $entity->id();
 
-  $user = new UserSession();
-
-  $path = Url::fromRoute('update_notifier.follow_link', [
-    'user' => $user->id(),
-    'entity_id' => $entity->id(),
-  ]);
+  $user = \Drupal::currentUser();
+  $user_id = $user->id();
 
   if ($product == 'commerce_product') {
 
     $build['follow_link'] = [
-      '#suffix' => '<div class="follow_link"> <a class=" button button--primary btn btn-primary" href="https://sgalata.oc-drupal.com/update_notifier/add/user_id/'. $product_id .'">Follow</a> </div>',
+      '#suffix' => '<div class="follow_link"> <a class=" button button--primary btn btn-primary" href="https://sgalata.oc-drupal.com/update_notifier/add/'. $user_id .'/'. $product_id .'">Follow</a> </div>',
       '#weight' => 3,
     ];
   }

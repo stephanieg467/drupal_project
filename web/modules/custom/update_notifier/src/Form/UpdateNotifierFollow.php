@@ -6,6 +6,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Routing\CurrentRouteMatch;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 
 /**
@@ -14,6 +16,30 @@ use Drupal\Core\Entity\EntityInterface;
  * @ingroup update_notifier
  */
 class UpdateNotifierFollow extends FormBase {
+
+  /**
+   * The product being followed.
+   *
+   * @var \Drupal\commerce_product\Entity\ProductInterface
+   */
+  protected $product;
+
+  /**
+   * Constructs a new UpdateNotifierFollow object.
+   *
+   * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
+   *   The current route match.
+   */
+  public function __construct(CurrentRouteMatch $current_route_match) {
+    $this->product = $current_route_match->getParameter('product');
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container) {
+    return new static($container->get('current_route_match'));
+  }
 
   /**
    * Returns a unique string identifying the form.
@@ -49,7 +75,10 @@ class UpdateNotifierFollow extends FormBase {
    * @return array
    *   Form definition array.
    */
-  public function buildForm(array $form, FormStateInterface $form_state, AccountInterface $user = NULL, EntityInterface $entity = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state, AccountInterface $user = NULL) {
+
+    $product_title = $this->product->getTitle();
+
     $form['#prefix'] = '<div id="follow_form">';
     $form['#suffix'] = '</div>';
 
@@ -59,7 +88,7 @@ class UpdateNotifierFollow extends FormBase {
 
     $form['description'] = [
       '#type' => 'item',
-      '#markup' => $this->t("Choose the types of notifications you would like to receive for @product.", ['@product' => $entity->id()]),
+      '#markup' => $this->t("Choose the types of notifications you would like to receive for %product_title.", ['%product_title' => $product_title]),
     ];
 
     $form['notification_type'] = [

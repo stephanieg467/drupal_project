@@ -1,7 +1,13 @@
 update_notifier.follow_link:
-  path: '/update_notifier/add/{user}/{entity_id}'
+  path: '/update_notifier/add/{user}/{product}'
   defaults:
     _form: '\Drupal\update_notifier\Form\UpdateNotifierFollow'
     _title: 'Follow a Product'
+  options:
+    parameters:
+      product:
+        type: 'entity:commerce_product'
+      user:
+        type: 'entity:user'
   requirements:
     _permission: 'follow product'
