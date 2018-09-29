@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Theme override to present all products followed by user on user page.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - products: A list of products being followed
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_update_notifier_user
+ */
+#}
+
+{#
+<article{{ attributes.addClass('profile') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>
+#}
+
+{{ attach_library('update_notifier/update_notifier.styling') }}
+
+<div class="container user_page">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h1 class="user_page__title">{{ 'User Information'|t }}</h1>
+      <table>
+        <tr>
+          <td>{{ 'Username: '|t }}</td>
+          <td>{{ user.account.name }}</td>
+        </tr>
+        <tr>
+          <td>{{ elements.member_for }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <table>
+        <thead>{{ 'Products Being Followed'|t }}</thead>
+        <tbody>
+        <tr>
+          <th>{{ 'Product Followed'|t }}</th>
+          <th>{{ 'Unfollow'|t }}</th>
+        </tr>
+        <tr>
+          <td>
+            {{ products }}
+          </td>
+          <td>
+            {{ 'Unfollow'|t }}
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

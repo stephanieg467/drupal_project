@@ -1,0 +1,4 @@
+services:
+  update_notifier.update_notifier_container:
+    class: Drupal\update_notifier\UpdateNotifierContainer
+    arguments: []

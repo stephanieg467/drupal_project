@@ -19,6 +19,16 @@ class UpdateNotifierEntityForm extends ContentEntityForm {
     /* @var $entity \Drupal\update_notifier\Entity\UpdateNotifierEntity */
     $form = parent::buildForm($form, $form_state);
 
+    /*
+    Can't do this, need another solution
+    $form['notifications']['widget'] = [
+      '#type' => 'checkboxes',
+      '#options' => array('price_change' => $this->t('Price Change'), 'on_sale' => $this->t('On Sale'), 'promotion' => $this->t('Promotion'), 'in_stock' => $this->t('In Stock')),
+      '#title' => $this->t('Types of Notifications'),
+      '#required' => 'TRUE',
+    ];
+    */
+
     $entity = $this->entity;
 
     return $form;

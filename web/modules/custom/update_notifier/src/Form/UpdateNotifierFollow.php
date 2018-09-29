@@ -20,7 +20,7 @@ class UpdateNotifierFollow extends FormBase {
   /**
    * The product being followed.
    *
-   * @var \Drupal\commerce_product\Entity\ProductInterface
+   * @var \Drupal\commerce_product\Entity\Product
    */
   protected $product;
 
@@ -61,7 +61,7 @@ class UpdateNotifierFollow extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $values = $form_state->getValues();
-    drupal_set_message($this->t('You chose to be notified for the following: @notifications', ['@notifications' => $values ]));
+    drupal_set_message($this->t('You chose to be notified for the following: %notifications', ['%notifications' => $values ]));
   }
 
   /**
@@ -82,13 +82,13 @@ class UpdateNotifierFollow extends FormBase {
     $form['#prefix'] = '<div id="follow_form">';
     $form['#suffix'] = '</div>';
 
-    $form['test'] = [
-      '#markup' => $this->t("Hello @user", ['@user' => $user->getDisplayName()]),
+    $form['greeting'] = [
+      '#markup' => $this->t("Hello, @user", ['@user' => $user->getDisplayName()]),
     ];
 
     $form['description'] = [
       '#type' => 'item',
-      '#markup' => $this->t("Choose the types of notifications you would like to receive for %product_title.", ['%product_title' => $product_title]),
+      '#markup' => $this->t("Choose the type(s) of notification(s) you would like to receive for %product_title.", ['%product_title' => $product_title]),
     ];
 
     $form['notification_type'] = [

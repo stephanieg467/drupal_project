@@ -9,6 +9,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 use Drupal\Core\Url;
+use Drupal\update_notifier\Entity\UpdateNotifierEntity;
 
 
 /**
@@ -32,28 +33,82 @@ function update_notifier_help($route_name, RouteMatchInterface $route_match) {
  *
  */
 function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
-  $product = $entity->getEntityTypeId();
-  $product_id = $entity->id();
 
   $user = \Drupal::currentUser();
-  $user_id = $user->id();
+  // Only allow authenticated users to follow products.
+  if ($user->isAuthenticated()) {
 
-  if ($product == 'commerce_product') {
+    $product = $entity->getEntityTypeId();
+    $product_id = $entity->id();
 
-    $build['follow_link'] = [
-      '#suffix' => '<div class="follow_link"> <a class=" button button--primary btn btn-primary" href="https://sgalata.oc-drupal.com/update_notifier/add/'. $user_id .'/'. $product_id .'">Follow</a> </div>',
-      '#weight' => 3,
-    ];
+    $user_id = $user->id();
+
+    if ($product == 'commerce_product') {
+
+      /*
+      $build['follow_link'] = [
+        '#theme' => 'follow_link',
+        '#product_id' => $product_id,
+        '#user_id' => $user_id,
+        '#route' => 'update_notifier.follow_link',
+        '#product' => $product,
+        '#weight' => 100,
+      ];
+      */
+
+      $build['follow_link'] = [
+        '#suffix' => '<div class="follow_link"> <a class=" button button--primary btn btn-primary" href="https://sgalata.oc-drupal.com/update_notifier/add/'. $user_id .'/'. $product_id .'">Follow</a> </div>',
+        '#weight' => 3,
+      ];
+    }
   }
+
 }
 
 /**
  * Implements hook_theme().
  */
-function update_notifier_theme() {
-  return [
-    'update_notifier' => [
-      'render element' => 'children',
-    ],
-  ];
+function update_notifier_theme($existing, $type, $theme, $path) {
+
+    return [
+      'update_notifier_user' => [
+        'template' => 'update-notifier-user',
+      ],
+      'update_notifier' => [
+        'render element' => 'children',
+      ]
+    ];
+
+}
+
+/**
+ * Prepares variables for update-notifier-user template.
+ *
+ * Default template: update-notifier-user.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - products: An array of products being followed by the current user.
+ */
+function template_preprocess_update_notifier_user(&$variables) {
+
+  /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
+  $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
+  $products = $container->followedProducts(\Drupal::currentUser());
+  $variables['products'] = [];
+  foreach ($products as $product) {
+    $variables['products'] = $product->getProductFollowed();
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function update_notifier_theme_suggestions_user_alter(array &$suggestions, array $variables) {
+  $suggestions = [];
+
+  $suggestions[] = 'update_notifier_user';
+
+  return $suggestions;
 }

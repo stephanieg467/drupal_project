@@ -1,0 +1,21 @@
+{#
+/**
+ * @file follow-link.html.twig
+ * This template is used to render the Follow Product button.
+ *
+ * Available variables:
+ * - route: The route for the button to activate.
+ * - product_id: The id of the product to be followed.
+ * - user_id: The id of the current user.
+ * - product: The product to be followed.
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="follow_link">
+  <a class="button button--primary btn btn-primary"
+     href="{{ path(route, {'user_id': user_id, 'product_id': product_id}) }}">
+    {{ 'Follow'|t }}
+  </a>
+</div>
+

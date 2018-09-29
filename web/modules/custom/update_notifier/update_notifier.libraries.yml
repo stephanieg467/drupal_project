@@ -1,0 +1,5 @@
+update_notifier.styling:
+  version: VERSION
+  css:
+    theme:
+      css/update_notifier.styling.css: {}

@@ -8,6 +8,7 @@ use Drupal\Core\Entity\ContentEntityBase;
 use Drupal\Core\Entity\EntityChangedTrait;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
+use Drupal\commerce_product\Entity\ProductInterface;
 
 /**
  * Defines the Update notifier entity entity.
@@ -73,10 +74,16 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   /**
    * {@inheritdoc}
    */
+  public function unfollow() {
+    $this->set('product_followed', NULL);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function getProductFollowed() {
     return $this->get('product_followed')->value;
   }
-
   /**
    * {@inheritdoc}
    */
@@ -89,13 +96,24 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
    * {@inheritdoc}
    */
   public function getNotifications() {
-    return $this->get('notifications')->value;
+
+    $notifications = [];
+
+    foreach ($this->get('notifications') as $notification) {
+      if ($notification->value) {
+        $notifications[] = $notification->value;
+      }
+    }
+
+    return $notifications;
+
+    //return $this->get('notifications')->value;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setNotifications($notifications) {
+  public function setNotifications(array $notifications) {
     $this->set('notifications', $notifications);
     return $this;
   }
@@ -181,7 +199,7 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
-    //Stores the products that a user is following
+    //Stores the product that a user is following
     $fields['product_followed'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Product/Products followed'))
       ->setDescription(t('The product/products being followed.'))

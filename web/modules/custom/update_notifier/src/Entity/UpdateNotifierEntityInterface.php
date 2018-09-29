@@ -5,6 +5,7 @@ namespace Drupal\update_notifier\Entity;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
+use Drupal\commerce_product\Entity\ProductInterface;
 
 /**
  * Provides an interface for defining Update notifier entity entities.
@@ -13,7 +14,10 @@ use Drupal\user\EntityOwnerInterface;
  */
 interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
-  // Add get/set methods for your configuration properties here.
+  /**
+   * Stop following the product.
+   */
+  public function unfollow();
 
   /**
    * Gets the product followed.
@@ -22,7 +26,6 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
    *   The product entity
    */
   public function getProductFollowed();
-
   /**
    * Sets the product followed.
    *
@@ -36,7 +39,7 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
   /**
    * Gets the notifications.
    *
-   * @return string
+   * @return array
    *   The notifications.
    */
   public function getNotifications();
@@ -44,12 +47,12 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
   /**
    * Sets the notifications.
    *
-   * @param string $notifications
+   * @param array $notifications[]
    *   The notifications.
    *
    * @return $this
    */
-  public function setNotifications($notifications);
+  public function setNotifications(array $notifications);
 
   /**
    * Gets the Update notifier entity name.
