@@ -1,0 +1,89 @@
+/**
+ * Site footer.
+ */
+.site-footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+  h5 {
+    margin: auto;
+    text-align: center;
+    border-bottom: 5px solid $button-background;
+    width: 70%;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
+  .menu--footer {
+    ul {
+      list-style-type: none;
+    }
+    li::before {
+      content: "•";
+      color: $button-background;
+      display: inline;
+      width: 1em;
+    }
+    .menu__item {
+      display: block;
+      .menu__link{
+        padding: 10px;
+        display: inline;
+      }
+    }
+  }
+
+}
+
+/**
+* Site logo.
+*/
+.site-footer__logo {
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+  @media (max-width: 767px) {
+    padding-left: 25px;
+  }
+}
+.site-header__image {
+  display: block;
+  width: 285px;
+  height: 180px;
+}
+
+/**
+ * Footer navigation.
+ */
+.footer-nav {
+  margin: 0 0 50px 0;
+}
+
+/**
+ * Footer copyright.
+ */
+.site-footer__copyright {
+  clear: both;
+  font-size: 10px;
+}
+
+/**
+ * Sticky footer.
+ */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.site-header,
+.site-footer {
+  flex: none;
+}
+.site-content {
+  flex: 1 0 auto;
+}

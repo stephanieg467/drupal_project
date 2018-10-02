@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_help().
+ *
+ * Displays help and module information.
+ *
+ * @param path
+ *   Which path of the site we're using to display help
+ * @param arg
+ *   Array that holds the current path as returned from arg() function
+ */
+function schemadata_help($path, $arg) {
+  switch ($path) {
+    case "help.page.schemadata":
+      $output = t('<p>When we are working on local machine then we can check database easily on local machine.</p>');
+      $output .= t('<p>Some time its require to see the database frequently if we are developing application by multiple server.</p>');
+      $output .= t('<p>This module provides you a page to check all the mysql tables and its data.</p>');
+      $output .= t('<p>Below links are given to display all the tables and set the permission to access the schemedata module.</p>');
+      return $output;
+      break;
+  }
+}

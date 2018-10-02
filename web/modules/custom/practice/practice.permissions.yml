@@ -1,0 +1,6 @@
+administer practice types:
+  title: 'Administer PracticeEntity types'
+  restrict access: true
+
+permission_callbacks:
+- '\Drupal\practice\PracticePermissionsGenerator::practiceTypePermissions'

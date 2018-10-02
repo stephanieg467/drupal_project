@@ -1,0 +1,19 @@
+/**
+ * Employee.
+ */
+.mechanic {
+  width: 100%;
+  margin: 16px 0;
+  padding: 0 8px;
+  text-align: center;
+  .mechanic__card {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .mechanic__image {
+    margin: 0 auto;
+  }
+  .mechanic__container {
+    padding: 0 16px;
+  }
+}

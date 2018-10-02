@@ -5,7 +5,7 @@ namespace Drupal\update_notifier\Entity;
 use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\Entity\EntityChangedInterface;
 use Drupal\user\EntityOwnerInterface;
-use Drupal\commerce_product\Entity\ProductInterface;
+use Drupal\commerce_product\Entity\Product;
 
 /**
  * Provides an interface for defining Update notifier entity entities.
@@ -29,7 +29,7 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
   /**
    * Sets the product followed.
    *
-   * @param \Drupal\profile\Entity\ProfileInterface $product_followed
+   * @param \Drupal\commerce_product\Entity\Product $product_followed
    *   The product followed.
    *
    * @return $this
@@ -37,22 +37,42 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
   public function setProductFollowed($product_followed);
 
   /**
-   * Gets the notifications.
+   * Gets notify__price_change.
    *
-   * @return array
-   *   The notifications.
+   * @return bool
+   *   TRUE if the user wants price change notifications.
    */
-  public function getNotifications();
+  public function getNotifyPriceChange();
 
   /**
-   * Sets the notifications.
+   * Sets notify__price_change.
    *
-   * @param array $notifications[]
-   *   The notifications.
+   * @param bool $notify__price_change
+   *   Whether the user wants price change notifications.
+   *   TRUE to get notified if product price changes, FALSE to not get notified if product price changes.
    *
-   * @return $this
+   *   @return $this
    */
-  public function setNotifications(array $notifications);
+  public function setNotifyPriceChange($notify__price_change);
+
+  /**
+   * Gets notify__on_sale.
+   *
+   * @return bool
+   *   TRUE if the user wants on sale notifications.
+   */
+  public function getNotifyOnSale();
+
+  /**
+   * Sets notify__on_sale.
+   *
+   * @param bool $notify__on_sale
+   *   Whether the user wants on sale notifications.
+   *   TRUE to get notified if the product is on sale, FALSE to not get notified if the product is on sale.
+   *
+   *   @return $this
+   */
+  public function setNotifyOnSale($notify__on_sale);
 
   /**
    * Gets the Update notifier entity name.
@@ -61,7 +81,6 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
    *   Name of the Update notifier entity.
    */
   public function getName();
-
   /**
    * Sets the Update notifier entity name.
    *

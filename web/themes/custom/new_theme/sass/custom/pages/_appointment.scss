@@ -1,0 +1,224 @@
+/**
+ * Store Location.
+ */
+
+// Have styling apply to full pages of type store locations.
+.node--type-store-locations.node--view-mode-full {
+
+  //mixins
+  @mixin title-border($radius) {
+    border-top: 2px solid $header-top;
+    border-bottom: 2px solid $header-top;
+    width: $radius;
+  }
+
+  // Field styles.
+  .page-title {
+    @include title-border(25%);
+    @media (max-width: $screen-xs-max) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .node__content__about {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 60%;
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .node__content__details {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 40%;
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .field--name-field-phone-number {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .field--name-field-company-email {
+    margin-bottom: 25px;
+  }
+
+  .node__content__map {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 17%;
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+
+  .field--name-field-address {
+    margin-bottom: 20px;
+  }
+
+  .node__content__map {
+    .field--name-field_google_map {
+      width: 100%;
+    }
+  }
+
+  // Mobile only styles.
+  @media(max-width: $screen-sm-max) {
+    h2 {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 2px solid $gray-darker;
+    }
+  }
+}
+
+.block-block-content01e36138-8287-4f89-8f3b-07fa8a524926 {
+  margin-bottom: -40px;
+}
+
+// Teasers.
+.node--type-store-locations.node--view-mode-teaser {
+  padding-bottom: 15px;
+  border-bottom: 5px solid $gray-darker;
+
+  // Field styles.
+  .field--name-field-page-header-image {
+    margin-bottom: 15px;
+  }
+
+  // Styling for email field
+  .field--name-field-company-email {
+    margin-bottom: 15px;
+  }
+
+  // Styling for read more button.
+  .node-readmore {
+    padding: 0;
+
+    a {
+      padding: 3px 6px;
+      font-size: 18px;
+      color: $c-primary;
+      background-color: $button-background;
+      border: 1px solid $button-border;
+      border-radius: $border-radius;
+
+      &:hover, &:focus {
+        background-color: darken($button-background, 10%);
+        border-color: darken($button-border, 10%);
+      }
+    }
+  }
+}
+
+/**
+ * Schedule Appointment Page
+ */
+.schedule-appointment {
+  .field--name-field-page-header-image {
+    display: block;
+  }
+  .field--name-body {
+    h2{
+      border-bottom: 2px solid $button-background;
+      width: 32%;
+      @media (max-width: $screen-xs-max) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+  .cta-full-page__title{
+    .field--name-field-title {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+      margin: 0 0 10px 0 !important;
+    }
+  }
+  .schedule-appointment__content-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: -83px;
+  }
+}
+
+
+/**
+ * CTAs on Schedule Appointment page.
+ */
+.block-views-blockctas-appointement-block-1 {
+  .view-ctas-appointement {
+    position: relative;
+    top: 0px;
+    @media (max-width: $screen-xs-max) {
+      top: 10px;
+    }
+    .cta-appointment {
+      position: relative;
+      margin: 0 auto;
+      padding: 0;
+      .cta-appointment__image {
+        img {
+          height: 190px;
+        }
+      }
+      .cta-appointment__content-wrapper {
+        position: relative;
+        width: 100%;
+        height: 190px;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.65);
+        text-align: center;
+        bottom: 190px;
+        @media(max-width: $screen-xs-max) {
+          bottom: 188px;
+        }
+      }
+      .cta-appointment__content {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 20px 20px 0px 20px;
+      }
+      .cta-appointment__title {
+        h3 {
+          margin: 0 0 10px 0;
+          padding: 0;
+          font-size: 30px;
+          line-height: 1.2;
+          color: #fff;
+          text-shadow: 2px 1px 1px rgba(0, 0, 0, 0.6);
+
+          @media (min-width: $screen-xs-min) {
+            font-size: 39px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+          }
+          @media (min-width: $screen-sm-min) {
+            font-size: 30px;
+          }
+        }
+      }
+      .cta-appointment__body {
+        p {
+          margin: 0 0 10px 0;
+          color: #ffffff;
+        }
+      }
+      .cta-appointment__link {
+        position: relative;
+        bottom: 13px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,56 @@
+/**
+ * Home.
+ */
+
+// Have styling apply to full home page.
+.node--type-page.node--view-mode-full {
+
+  // Field styles.
+  .page-title {
+    border-top: 2px solid $button-background;
+    border-bottom: 2px solid $button-background;
+    width: 40%;
+  }
+
+  .node__content__gold-standard {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 45%;
+    }
+    p {
+      min-height: 320px;
+    }
+    .btn-primary {
+      margin-left: 35%;
+    }
+  }
+
+  .node__content__our-goal {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 33%;
+    }
+    .btn-primary {
+      margin-left: 35%;
+    }
+  }
+
+  // Mobile only styles.
+  @media(max-width: $screen-sm-max) {
+    .node__content__gold-standard,
+    .node__content__our-goal {
+      h2 {
+        text-align: center;
+        width: 100%;
+        margin: 20px auto 0 auto;
+        padding-top: 20px;
+        border-top: 1px solid $button-background;
+      }
+    }
+    .page-title {
+        text-align: center;
+        width: 100%;
+
+    }
+  }
+}

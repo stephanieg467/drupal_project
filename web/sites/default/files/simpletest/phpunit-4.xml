@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Drupal\Tests\hello_world\Functional\HelloWorldRouteTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Functional/HelloWorldRouteTest.php" tests="1" assertions="6" errors="1" failures="0" skipped="0" time="15.055539">
+    <testcase name="testHelloWorldPage" class="Drupal\Tests\hello_world\Functional\HelloWorldRouteTest" classname="Drupal.Tests.hello_world.Functional.HelloWorldRouteTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Functional/HelloWorldRouteTest.php" line="41" assertions="6" time="15.055539">
+      <error type="Exception">Drupal\Tests\hello_world\Functional\HelloWorldRouteTest::testHelloWorldPage
+Exception: User warning: mkdir(): Permission Denied
+Drupal\Component\PhpStorage\FileStorage-&gt;createDirectory()() (Line: 173)
+
+
+/home/sgalata/www/sgalata/web/core/lib/Drupal/Core/Test/HttpClientMiddleware/TestHttpClientMiddleware.php:51
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:203
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:156
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/TaskQueue.php:47
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:246
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:223
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:267
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:225
+/home/sgalata/www/sgalata/vendor/guzzlehttp/promises/src/Promise.php:62
+/home/sgalata/www/sgalata/vendor/guzzlehttp/guzzle/src/Client.php:131
+/home/sgalata/www/sgalata/vendor/fabpot/goutte/Goutte/Client.php:155
+/home/sgalata/www/sgalata/vendor/symfony/browser-kit/Client.php:312
+/home/sgalata/www/sgalata/vendor/symfony/browser-kit/Client.php:259
+/home/sgalata/www/sgalata/vendor/behat/mink-browserkit-driver/src/BrowserKitDriver.php:696
+/home/sgalata/www/sgalata/vendor/behat/mink-browserkit-driver/src/BrowserKitDriver.php:480
+/home/sgalata/www/sgalata/vendor/behat/mink/src/Element/NodeElement.php:153
+/home/sgalata/www/sgalata/vendor/behat/mink/src/Element/NodeElement.php:161
+/home/sgalata/www/sgalata/web/core/tests/Drupal/Tests/BrowserTestBase.php:900
+/home/sgalata/www/sgalata/web/core/tests/Drupal/Tests/BrowserTestBase.php:814
+/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Functional/HelloWorldRouteTest.php:42
+</error>
+    </testcase>
+  </testsuite>
+</testsuites>

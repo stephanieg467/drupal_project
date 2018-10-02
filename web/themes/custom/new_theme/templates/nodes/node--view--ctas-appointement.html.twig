@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display a cta homepage node.
+ *
+ * Available variables:
+ * - cta_image_url: The image style url from "field_cta_image"
+ * - cta_url: The formatted url from "field_cta_link".
+ * - cta_non_homepage_image_url: The image style url from "field_cta_non_homepage_image"
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+
+<div class="cta-appointment">
+
+    {#Appointment page CTA#}
+    {% if cta_image_url %}
+
+        <div class="cta-appointment__image">
+            <img src="{{ cta_image_url }}" alt="{{ node.field_cta_image.alt.value }}">
+        </div>
+
+        {% if node.body.value or node.field_cta_link.title %}
+            <div class="cta-appointment__content-wrapper">
+                <div class="cta-appointment__content">
+                    {% if node.field_cta_title.value %}
+                        <div class="cta-appointment__title">
+                            <h3>{{ node.field_cta_title.value }}</h3>
+                            <div class="center">
+                                <span class="cta-homepage__title__underline"></span>
+                            </div>
+                        </div>
+                        <div class="cta-appointment__body">
+                            <p>{{ node.field_cta_body.value }}</p>
+                        </div>
+                    {% endif %}
+
+                    {% if cta_url and node.field_cta_link.title %}
+                        <div class="cta-appointment__link">
+                            <a href="{{ cta_url }}" class="btn btn-primary">{{ node.field_cta_link.title  }}</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+        {% endif %}
+
+    {% endif %}
+
+</div>

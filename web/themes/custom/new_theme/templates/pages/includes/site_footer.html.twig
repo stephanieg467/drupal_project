@@ -1,0 +1,46 @@
+{# Set the path for the site logo. #}
+{% set site_logo_url =  base_path ~ directory ~ '/gfx/autotech2.jpeg' %}
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-4 col-md-4">
+          <div class="site-footer__logo">
+              <a href="{{ front_page }}">
+                  <img class="site-header__image" src="{{ site_logo_url }}" alt="{{ site_name ? site_name }}" />
+              </a>
+          </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4 col-md-4">
+          <h5><strong>Steve's Autotech</strong></h5>
+          <h6>101-190 Commercial Place</h6>
+          <h6>Penticton, BC</h6>
+          <h6>V2A3H6</h6>
+          <h6>250-276-5347</h6>
+      </div>
+
+      {% if page.footer_nav %}
+        <!-- Footer navigation. -->
+        <div class="col-xs-12 col-sm-4 col-md-4">
+            <div class="footer-nav">
+                <div class="site-footer_title>">
+                    <h5><strong>Site Map</strong></h5>
+                </div>
+                {{ page.footer_nav }}
+            </div>
+       </div>
+        <!-- / Footer navigation. -->
+      {% endif %}
+
+        <hr>
+
+        <div class="site-footer__copyright">
+          {{ 'Copyright &copy; 1994 - @year'|t({'@year': 'now'|date('Y')}) }}
+          <a href="{{ front_page }}">{{ "Steve's Autotech"|t }}</a>.
+          {{ 'All rights reserved.'|t }}
+        </div>
+    </div>
+  </div>
+</footer>

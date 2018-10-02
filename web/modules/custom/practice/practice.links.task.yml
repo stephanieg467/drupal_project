@@ -1,0 +1,15 @@
+practice_entity_task_view:
+  route_name: entity.practice.canonical
+  base_route: entity.practice.canonical
+  title: 'View'
+
+practice_entity_task_edit:
+  route_name: entity.practice.edit_form
+  base_route: entity.practice.canonical
+  title: 'Edit'
+
+practice_entity_task_delete:
+  route_name:  entity.practice.delete_form
+  base_route:  entity.practice.canonical
+  title: Delete
+  weight: 10

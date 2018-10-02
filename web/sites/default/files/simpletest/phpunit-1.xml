@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Drupal\Tests\Core\Asset\LibraryDiscoveryTest" file="/home/sgalata/www/sgalata/web/core/tests/Drupal/Tests/Core/Asset/LibraryDiscoveryTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.008029">
+    <testcase name="testGetLibrariesByExtension" class="Drupal\Tests\Core\Asset\LibraryDiscoveryTest" classname="Drupal.Tests.Core.Asset.LibraryDiscoveryTest" file="/home/sgalata/www/sgalata/web/core/tests/Drupal/Tests/Core/Asset/LibraryDiscoveryTest.php" line="71" assertions="1" time="0.008029"/>
+  </testsuite>
+</testsuites>

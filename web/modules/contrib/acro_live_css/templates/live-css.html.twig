@@ -1,0 +1,1000 @@
+{{ attach_library('acro_live_css/acro-live-css') }}
+
+<div class="row">
+  <div class="col-md-9">
+
+    <div class="live-css-section live-css-variables">
+      <h1 id="variables" class="h-live-css-section">{{ 'Variables'|t }}</h1>
+      <h2 id="colors" class="sub-header">{{ 'Colors'|t }}</h2>
+
+      <div class="live-css-variables">
+        <ul class="list-inline">
+          <li class="live-css-v-primary"><i></i><strong>{{ 'Primary'|t }}</strong><span class="live-css--code-snippet">$c-primary<br>$c-primary-hover</span></li>
+          <li class="live-css-v-secondary"><i></i><strong>{{ 'Secondary'|t }}</strong><span class="live-css--code-snippet">$c-secondary<br>$c-secondary-hover</span></li>
+          <li class="live-css-v-tertiary"><i></i><strong>{{ 'Tertiary'|t }}</strong><span class="live-css--code-snippet">$c-tertiary<br>$c-tertiary-hover</span></li>
+          <li class="live-css-v-link"><i></i><strong>{{ 'Link'|t }}</strong><span class="live-css--code-snippet">$c-link<br>$c-link-hover</span></li>
+          <li class="live-css-v-accent-1"><i></i><strong>{{ 'Accent 1'|t }}</strong><span class="live-css--code-snippet">$c-accent-1</span></li>
+          <li class="live-css-v-accent-2"><i></i><strong>{{ 'Accent 2'|t }}</strong><span class="live-css--code-snippet">$c-accent-2</span></li>
+          <li class="live-css-v-accent-3"><i></i><strong>{{ 'Accent 3'|t }}</strong><span class="live-css--code-snippet">$c-accent-3</span></li>
+          <li class="live-css-v-body"><i></i><strong>{{ 'Body Text'|t }}</strong><span class="live-css--code-snippet">$c-body</span></li>
+          <li class="live-css-v-gray-base"><i></i><strong>{{ 'Gray Base'|t }}</strong><span class="live-css--code-snippet">$gray-base</span></li>
+          <li class="live-css-v-gray-darker"><i></i><strong>{{ 'Gray Darker'|t }}</strong><span class="live-css--code-snippet">$gray-darker</span></li>
+          <li class="live-css-v-gray-dark"><i></i><strong>{{ 'Gray Dark'|t }}</strong><span class="live-css--code-snippet">$gray-dark</span></li>
+          <li class="live-css-v-gray"><i></i><strong>{{ 'Gray'|t }}</strong><span class="live-css--code-snippet">$gray</span></li>
+          <li class="live-css-v-gray-light"><i></i><strong>{{ 'Gray Light'|t }}</strong><span class="live-css--code-snippet">$gray-light</span></li>
+          <li class="live-css-v-gray-lighter"><i></i><strong>{{ 'Gray Lighter'|t }}</strong><span class="live-css--code-snippet">$gray-lighter</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="fonts" class="sub-header">{{ 'Fonts'|t }}</h2>
+
+      <div class="typography">
+        <p class="live-css-v-f-primary print-font-family"><strong>{{ 'Primary'|t }}</strong> <span class="live-css--code-snippet">$f-primary</span></p>
+
+        <p class="live-css-v-f-secondary print-font-family"><strong>{{ 'Secondary'|t }}</strong> <span class="live-css--code-snippet">$f-secondary</span></p>
+
+        <p class="live-css-v-f-body print-font-family"><strong>{{ 'Body'|t }}</strong> <span class="live-css--code-snippet">$f-body</span></p>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="other-variables" class="sub-header">{{ 'Other Variables'|t }}</h2>
+      <p>The border radius variable is applied to buttons, form fields, pagination, content tabs, links, cards, and modals.</p>
+      <div class="live-css-variables">
+        <ul class="list-inline">
+          <li class="live-css-v-o-border-radius"><i></i><strong>{{ 'Border Radius'|t }}:</strong><span class="live-css--code-snippet">$border-radius</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <div class="typography">
+        <h1 id="typography" class="h-live-css-section">{{ 'Typography'|t }}</h1>
+
+        <h2 id="headings" class="sub-header">{{ 'Headings'|t }}</h2>
+
+        <h1 class="print-font-size">H1 - Vestibulum et metus imperdiet ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis.
+        </p>
+
+        <h2 class="print-font-size">H2 - Vestibulum et metus imperdiet interdum eros eget</h2>
+        <p>
+          Lorem ipsum dolor sit amet, <a href="#">{{ 'Sample inline link'|t }}</a>, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis.
+        </p>
+
+        <h3 class="print-font-size">H3 - Vestibulum et metus imperdiet interdum eros eget</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac
+          arcu blandit venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <h4 class="print-font-size">H4 - Vestibulum et metus imperdiet interdum eros eget et metus imperdiet interdum eros eget</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac
+          arcu blandit venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+
+        <h5 class="print-font-size">H5 - Vestibulum et metus imperdiet interdum eros eget et metus imperdiet interdum eros eget</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac
+          arcu blandit venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <h6 class="print-font-size">H6 - Vestibulum et metus imperdiet interdum eros eget et metus imperdiet interdum eros eget</h6>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac
+          arcu blandit venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="paragraphs" class="sub-header">{{ 'Paragraphs'|t }}</h2>
+      <p class="lead"><span class="live-css--code-snippet">lead</span> Lead paragraph - class name "lead", consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit
+        venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel.</p>
+
+      <p><img class="img-right" src="{{ module_path }}/gfx/img_sample_content.jpg" alt="" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu
+        blandit venenatis. Fusce <a href="#">sample inline link</a> efficitur dolor elit, in dictum dui consectetur vel. Praesent in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero
+        posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sodales diam ac arcu blandit venenatis. Fusce efficitur dolor elit, in dictum dui consectetur vel. Praesent
+          in risus non nunc feugiat consequat nec quis enim. Suspendisse rhoncus turpis in libero posuere molestie. Vestibulum viverra metus a mauris dapibus euismod.</p>
+
+      <blockquote>
+        <p>
+          {{ 'Sample Blockquote.'|t }} Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.
+        </p>
+      </blockquote>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="lists" class="sub-header">{{ 'Lists'|t }}</h2>
+      <ul>
+        <li>Some bulleted list items.</li>
+        <li>Some bulleted list items.</li>
+        <li>Some bulleted list items.</li>
+      </ul>
+
+      <ol>
+        <li>Some ordered list items.</li>
+        <li>Some ordered list items.</li>
+        <li>Some ordered list items.</li>
+      </ol>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="tables" class="h-live-css-section">{{ 'Tables'|t }}</h1>
+
+      <h2 id="basic-tables" class="sub-header">{{ 'Basic Table'|t }} <span class="live-css--code-snippet">table</span></h2>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="striped-tables" class="sub-header">{{ 'Striped Table'|t }} <span class="live-css--code-snippet">table table-striped</span></h2>
+
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="bordered-tables" class="sub-header">{{ 'Bordered Table'|t }} <span class="live-css--code-snippet">table table-bordered</span></h2>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Title</th>
+          <th>Gender</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>John</td>
+          <td>250-801-1111</td>
+          <td>Web Developer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>Bob</td>
+          <td>250-801-2111</td>
+          <td>Senior Designer</td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td>John</td>
+          <td>250-801-3111</td>
+          <td>Director</td>
+          <td>Male</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="buttons" class="h-live-css-section">{{ 'Buttons'|t }}</h1>
+      <ul class="list-inline">
+        <li><button type="button" class="btn btn-primary btn-lg">Large Primary button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-primary btn-lg</span></li>
+        <li><button type="button" class="btn btn-default btn-lg">Large Default button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-default btn-lg</span></li>
+      </ul>
+      <ul class="list-inline">
+        <li><button type="button" class="btn btn-primary">Primary button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-primary</span></li>
+        <li><button type="button" class="btn btn-default">Default button</button>
+          <br><br><span class="live-css--code-snippet">btn btn-default</span></li>
+      </ul>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="drupal-specific" class="h-live-css-section">{{ 'Drupal Specific'|t }}</h1>
+
+      <h2 id="admin-tabs" class="sub-header">{{ 'Admin Tabs'|t }}</h2>
+
+      <ul class="tabs primary clearfix">
+        <li><a href="#">{{ 'View'|t }}</a></li>
+        <li><a href="#">{{ 'Edit'|t }}</a></li>
+        <li><a href="#">{{ 'Clone'|t }}</a></li>
+      </ul>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-messages" class="sub-header">{{ 'Drupal Messages'|t }}</h2>
+
+      <div role="contentinfo" aria-label="Status message" class="messages messages--status">
+        <h2 class="visually-hidden">{{ 'Status Message'|t }}</h2>
+        {{ 'Status Message'|t }}
+      </div>
+      <div role="contentinfo" aria-label="Status message" class="messages messages--warning">
+        <h2 class="visually-hidden">{{ 'Warning Message'|t }}</h2>
+        {{ 'Warning Message'|t }}
+      </div>
+      <div role="contentinfo" aria-label="Status message" class="messages messages--error">
+        <h2 class="visually-hidden">{{ 'Error Message'|t }}</h2>
+        {{ 'Error Message'|t }}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-forms" class="sub-header">{{ 'Forms'|t }}</h2>
+
+      {# Bootstrap Form. #}
+      <form>
+        <!-- Text input. -->
+        <div class="form-group">
+          <label class="control-label" for="textinput">Text Input <span class="form-required" title="This field is required.">*</span></label>
+          <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+          <span class="help-block">help text</span>
+        </div>
+
+        <!-- Select Basic. -->
+        <div class="form-group">
+          <label class="control-label" for="dropdown">Dropdown <span class="form-optional" title="This field is optional.">- Optional</span></label>
+          <select id="dropdown" name="dropdown" class="form-control">
+            <option value="1">Option one</option>
+            <option value="2">Option two</option>
+          </select>
+        </div>
+
+        <!-- Multiple Checkboxes. -->
+        <div class="form-group">
+          <label class="control-label" for="checkboxes">Checkboxes <span class="form-optional" title="This field is optional.">- Optional</span></label>
+          <div class="checkbox">
+            <label for="checkboxes-0">
+              <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+              Option one
+            </label>
+          </div>
+          <div class="checkbox">
+            <label for="checkboxes-1">
+              <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+              Option two
+            </label>
+          </div>
+        </div>
+
+        <!-- Multiple Radios. -->
+        <div class="form-group">
+          <label class="control-label" for="radios">Radio Buttons <span class="form-optional" title="This field is optional.">- Optional</span></label>
+          <div class="radio">
+            <label for="radios-0">
+              <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+              Option one
+            </label>
+          </div>
+          <div class="radio">
+            <label for="radios-1">
+              <input type="radio" name="radios" id="radios-1" value="2">
+              Option two
+            </label>
+          </div>
+        </div>
+
+        <!-- File Button. -->
+        <div class="form-group">
+          <label class="control-label" for="fileupload">File Upload <span class="form-optional" title="This field is optional.">- Optional</span></label>
+          <input id="fileupload" name="fileupload" class="input-file" type="file">
+        </div>
+
+        <!-- Textarea. -->
+        <div class="form-group">
+          <label class="control-label" for="textarea">Text Area <span class="form-required" title="This field is required.">*</span></label>
+          <textarea rows="5" class="form-control" id="textarea" name="textarea"></textarea>
+        </div>
+
+        <!-- Button. -->
+        <div class="form-group">
+          <button id="singlebutton" name="singlebutton" class="btn btn-primary">Primary Button</button>
+        </div>
+      </form>
+      {# / Bootstrap Form. #}
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="drupal-pagination" class="sub-header">{{ 'Pagination'|t }}</h2>
+
+      <div>
+        {# Pagination Sample. #}
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+          <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+          <ul class="pager__items js-pager__items">
+            <li class="pager__item pager__item--first">
+              <a href="?page=0" title="Go to first page">
+                <span class="visually-hidden">First page</span>
+                <span aria-hidden="true">« First</span>
+              </a>
+            </li>
+            <li class="pager__item pager__item--previous">
+              <a href="?page=0" title="Go to previous page" rel="prev">
+                <span class="visually-hidden">Previous page</span>
+                <span aria-hidden="true">‹ Previous</span>
+              </a>
+            </li>
+            <li class="pager__item">
+              <a href="?page=0" title="Go to page 1">
+            <span class="visually-hidden">
+              Page
+            </span>1</a>
+            </li>
+            <li class="pager__item is-active">
+              <a href="?page=1" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>2</a>
+            </li>
+            <li class="pager__item">
+              <a href="?page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+            </li>
+            <li class="pager__item pager__item--next">
+              <a href="?page=2" title="Go to next page" rel="next">
+                <span class="visually-hidden">Next page</span>
+                <span aria-hidden="true">Next ›</span>
+              </a>
+            </li>
+            <li class="pager__item pager__item--last">
+              <a href="?page=2" title="Go to last page">
+                <span class="visually-hidden">Last page</span>
+                <span aria-hidden="true">Last »</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        {# / Pagination Sample. #}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="rich-media" class="h-live-css-section">{{ 'Rich Media'|t }}</h1>
+
+      <h2 id="content-tabs" class="sub-header">{{ 'Content Tabs'|t }}</h2>
+
+      <div>
+        {# Nav Tabs #}
+        <ul class="nav nav-tabs content-tabs clearfix" role="tablist">
+          <li role="presentation" class="active">
+            <a href="#description" aria-controls="{{ 'description'|t }}" role="tab" data-toggle="tab">{{ 'Description'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#specs" aria-controls="{{ 'specs'|t }}" role="tab" data-toggle="tab">{{ 'Specs'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#downloads" aria-controls="{{ 'downloads'|t }}" role="tab" data-toggle="tab">{{ 'Downloads'|t }}</a>
+          </li>
+          <li role="presentation">
+            <a href="#related" aria-controls="{{ 'related'|t }}" role="tab" data-toggle="tab">{{ 'Related'|t }}</a>
+          </li>
+        </ul>
+        {# / Nav Tabs. #}
+
+        {# Tab Panes. #}
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="description">
+            <h2>Description</h2>
+            <p>
+              Tab 1 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="specs">
+            <h2>Specifications</h2>
+            <p>
+              Tab 2 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="downloads">
+            <h2>Our Downloads</h2>
+            <p>
+              Tab 3 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="related">
+            <h2>Related Products</h2>
+            <p>
+              Tab 4 content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend nunc nec fringilla tristique.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
+        {# / Tab Panes. #}
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h1 id="components" class="h-live-css-section">{{ 'Components'|t }}</h1>
+
+      <h2 id="blog-listing" class="sub-header">{{ 'Blog Listing'|t }}</h2>
+
+      {# Blog Sample. #}
+      <div class="blog-listing-item">
+        <div class="blog-listing-item__image">
+          <a href="#">
+            <div class="field field--name-field-blog-image field--type-image field--label-hidden field__item">
+              <img width="827" height="360" alt="Sample" src="{{ module_path }}/gfx/img_sample_banner.jpg">
+            </div>
+          </a>
+        </div>
+        <h3 class="blog-listing-item__title">
+          <a href="#">Acro Blog Title</a>
+        </h3>
+        <div class="blog-post-meta">
+          <div class="field field--name-field-blog-date field--type-datetime field--label-hidden field__item">February 1, 2016</div>
+          <i>|</i>
+          By <a href="#">John Smith</a>
+        </div>
+        <div class="blog-listing-item__body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed dui in nisi tempor ultrices sit amet vel nunc. Cras id scelerisque enim.
+          Aenean condimentum arcu leo, in pellentesque lectus varius sit amet. Duis condimentum lectus vitae turpis vulputa ...
+        </div>
+        <div class="blog-listing-item__footer clearfix">
+          <a class="btn btn-primary" href="/blog/acro-blog-title">Read More</a>
+          <div class="blog-listing-item__tags blog-post-tags">
+            <span class="blog-post-tags--label">Posted in</span>
+            <ul class="blog-post-tags__list clearfix">
+              <li>
+                <a href="#">Drupal</a>
+              </li>
+              <li>
+                <a href="#">Featured</a>
+              </li>
+              <li>
+                <a href="#">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      {# / Blog Sample #}
+
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="image-gallery" class="sub-header">{{ 'Image Gallery'|t }}</h2>
+
+      {# Image Gallery Sample. #}
+      <div class="image-gallery">
+        <div class="image-gallery__slider">
+          <ul class="slides clearfix">
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery__main-image-wrapper">
+                <div class="image-gallery__caption">
+                  <p>Sample caption.</p>
+                </div>
+                <div class="image-gallery__main-image">
+                  <img src="https://unsplash.it/900/500/?random" alt="">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="image-gallery-nav">
+        <div class="image-gallery-nav__slider">
+          <ul class="slides clearfix">
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="image-gallery-nav__thumb">
+                <a><img src="https://unsplash.it/900/500/?random" alt=""></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      {# / Image Gallery Sample. #}
+
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="accordion" class="sub-header">{{ 'Accordion'|t }}</h2>
+
+      {# Accordion Sample. #}
+      <div class="base-accordion">
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #1'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #2'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+        <div class="base-accordion__item">
+          <a class="base-accordion__header" href="#">{{ 'Sample Item #3'|t }}</a>
+
+          <div class="base-accordion__content">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida feugiat quam, at laoreet risus blandit vitae. Maecenas tristique, justo nec
+              imperdiet mollis, nulla justo vestibulum risus, in viverra nulla ligula et diam. Morbi faucibus magna ut turpis dapibus, aliquam sodales augue viverra.
+              Donec quis finibus sem, eu blandit quam. Donec vitae sem vel metus aliquet aliquam eu et libero.
+            </p>
+          </div>
+        </div>
+      </div>
+      {# / Accordion Sample. #}
+
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="cards" class="sub-header">{{ 'Cards'|t }}</h2>
+
+      <div class="row">
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+              <a href="#" class="btn btn-block btn-primary">Read More</a>
+            </div>
+          </div>
+          {# / Card Sample. #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <div class="card">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </div>
+          {# / Card Sample. #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <div class="card">
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </div>
+          {# / Card Sample. #}
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <a class="card" href="#">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+              <button class="btn btn-block btn-primary">Read More</button>
+            </div>
+          </a>
+          {# / Card Sample. #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <a class="card" href="#">
+            <div class="card__image">
+              <img src="https://unsplash.it/300/150/?random" alt="Image description here">
+            </div>
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </a>
+          {# / Card Sample. #}
+        </div>
+        <div class="col-sm-4">
+          {# Card Sample. #}
+          <a class="card" href="#">
+            <div class="card__text-wrapper">
+              <h3>Card Title</h3>
+              <p>Card Description text lorme ipsum bla bla self-contained unit of a discourse in writing </p>
+            </div>
+          </a>
+          {# / Card Sample. #}
+        </div>
+      </div>
+    </div>
+
+    <div class="live-css-section">
+      <h2 id="modals" class="sub-header">{{ 'Modals'|t }}</h2>
+
+      {# Modal Sample. #}
+      <div class="modal-wrapper">
+        <!-- Button trigger modal. -->
+        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+          Launch demo modal
+        </button>
+
+        <!-- Modal. -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div class="modal-body">
+                In sed elit lorem. Cras dapibus tincidunt est, efficitur maximus lacus lobortis in. Pellentesque fermentum sem non felis consectetur semper. Donec in pharetra libero, vitae imperdiet orci. Cras at finibus tellus.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {# / Modal Sample. #}
+    </div>
+
+  </div>
+  <div class="col-md-3 live-css-nav-col">
+
+    <nav class="live-css-nav hidden-print hidden-xs hidden-sm affix-top" role="navigation">
+      <ul class="nav">
+        <li>
+          <a href="#variables">{{ 'Variables'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#colors">{{ 'Colors'|t }}</a>
+            </li>
+            <li>
+              <a href="#fonts">{{ 'Fonts'|t }}</a>
+            </li>
+            <li>
+              <a href="#other-variables">{{ 'Other Variables'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#typography">{{ 'Typography'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#headings">{{ 'Headings'|t }}</a>
+            </li>
+            <li>
+              <a href="#paragraphs">{{ 'Paragraphs'|t }}</a>
+            </li>
+            <li>
+              <a href="#lists">{{ 'Lists'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tables">{{ 'Tables'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#basic-tables">{{ 'Basic Table'|t }}</a>
+            </li>
+            <li>
+              <a href="#striped-tables">{{ 'Striped Table'|t }}</a>
+            </li>
+            <li>
+              <a href="#bordered-tables">{{ 'Bordered Table'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#buttons">{{ 'Buttons'|t }}</a>
+        </li>
+        <li>
+          <a href="#drupal-specific">{{ 'Drupal Specific'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#admin-tabs">{{ 'Admin Tabs'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-messages">{{ 'Drupal Messages'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-forms">{{ 'Forms'|t }}</a>
+            </li>
+            <li>
+              <a href="#drupal-pagination">{{ 'Pagination'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#rich-media">{{ 'Rich Media'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#content-tabs">{{ 'Content Tabs'|t }}</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#components">{{ 'Components'|t }}</a>
+          <ul class="nav">
+            <li>
+              <a href="#blog-listing">{{ 'Blog Listing'|t }}</a>
+            </li>
+            <li>
+              <a href="#image-gallery">{{ 'Image Gallery'|t }}</a>
+            </li>
+            <li>
+              <a href="#accordion">{{ 'Accordion'|t }}</a>
+            </li>
+            <li>
+              <a href="#cards">{{ 'Cards'|t }}</a>
+            </li>
+            <li>
+              <a href="#modals">{{ 'Modals'|t }}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</div>
+
+
+
+
+
+

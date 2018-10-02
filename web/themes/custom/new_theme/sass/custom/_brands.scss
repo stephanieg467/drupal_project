@@ -1,0 +1,35 @@
+/**
+ * Brands.
+ */
+
+.views-col {
+  @media(max-width: $screen-xs-max) {
+    display: block;
+    float: none !important;
+    width: 100% !important;
+  }
+}
+
+// Styling for teasers.
+.node--type-brand.node--view-mode-teaser {
+  text-align: center;
+  .node__content {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  }
+}
+
+// Styling for full page.
+.node--type-brand.node--view-mode-full {
+  .field--name-body {
+    h2 {
+      border-bottom: 2px solid $button-background;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

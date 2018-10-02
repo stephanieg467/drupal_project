@@ -95,26 +95,30 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   /**
    * {@inheritdoc}
    */
-  public function getNotifications() {
-
-    $notifications = [];
-
-    foreach ($this->get('notifications') as $notification) {
-      if ($notification->value) {
-        $notifications[] = $notification->value;
-      }
-    }
-
-    return $notifications;
-
-    //return $this->get('notifications')->value;
+  public function getNotifyPriceChange() {
+    return $this->get('notify__price_change')->value;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function setNotifications(array $notifications) {
-    $this->set('notifications', $notifications);
+  public function setNotifyPriceChange($notify__price_change) {
+    $this->set('notify__price_change', $notify__price_change ? TRUE : FALSE);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getNotifyOnSale() {
+    return $this->get('notify__on_sale')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setNotifyOnSale($notify__on_sale) {
+    $this->set('notify__on_sale', $notify__on_sale ? TRUE : FALSE);
     return $this;
   }
 
@@ -124,7 +128,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   public function getName() {
     return $this->get('name')->value;
   }
-
   /**
    * {@inheritdoc}
    */
@@ -226,28 +229,40 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
-    // Stores the types of notifications the user will receive.
-    $fields['notifications'] = BaseFieldDefinition::create('list_string')
-      ->setLabel(t('Notifications'))
-      ->setDescription(t('What notifications the user will receive.'))
-      ->setSettings([
-        'allowed_values' => [
-          'on_sale' => 'On sale',
-          'back_in_stock' => 'Back in stock',
-          'price_change' => 'Price change']
-      ])
+    $fields['notify__price_change'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Get notified if price changes'))
+      ->setDescription(t('Notify the user if the price changes.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
-        'type' => 'list_default',
+        'type' => 'boolean',
         'weight' => 1,
       ])
       ->setDisplayOptions('form', [
-        'type' => 'checkboxes',
+        'type' => 'boolean_checkbox',
         'weight' => 1,
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
-      ->setRequired(TRUE);
+      ->setRequired(FALSE);
+
+    /*
+    $fields['notify__on_sale'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Get notified if product is on sale'))
+      ->setDescription(t('Notify the user if the product is on sale.'))
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'boolean',
+        'weight' => 1,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'boolean_checkbox',
+        'weight' => 1,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(FALSE);
+    */
+
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Customer'))
@@ -261,17 +276,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
         'type' => 'author',
         'weight' => -5,
       ])
-      ->setDisplayOptions('form', [
-        'type' => 'entity_reference_autocomplete',
-        'weight' => -5,
-        'settings' => [
-          'match_operator' => 'CONTAINS',
-          'size' => '60',
-          'autocomplete_type' => 'tags',
-          'placeholder' => '',
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
 
     $fields['name'] = BaseFieldDefinition::create('string')
@@ -287,13 +291,8 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
         'type' => 'string',
         'weight' => -6,
       ])
-      ->setDisplayOptions('form', [
-        'type' => 'string_textfield',
-        'weight' => -6,
-      ])
-      ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
-      ->setRequired(TRUE);
+      ->setRequired(FALSE);
 
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))

@@ -1,0 +1,16 @@
+name: Diba carousel
+description: Diba carousel block based on Bootstrap carousel.
+type: module
+# core: 8.x
+
+dependencies:
+  - drupal:block
+  - drupal:node
+
+configure: diba_carousel.settings
+
+# Information added by Drupal.org packaging script on 2018-02-09
+version: '8.x-1.5'
+core: '8.x'
+project: 'diba_carousel'
+datestamp: 1518187539

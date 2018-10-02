@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme implementation for brand page.
+ *
+ * Available variables:
+ * -
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+    <div class="schedule-appointment">
+
+        <div class="cta-full-page__image">
+            {{ content.field_brand_image_banner }}
+        </div>
+
+        <div class="cta-full-page__content-wrapper__title">
+            <div class="cta-homepage__content__title">
+                <div class="cta-full-page__title">
+                    <h1> {{ content.field_car_brand }} </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="schedule-appointment__content-wrapper">
+            <div class="cta-full-page__content">
+
+                <div class="cta-full-page__body">
+                    {{ content.body }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</article>

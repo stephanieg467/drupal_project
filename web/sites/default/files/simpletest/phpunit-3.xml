@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Drupal\Tests\hello_world\Unit\HelloWorldControllerTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php" tests="3" assertions="2" errors="1" failures="0" skipped="0" time="0.003899">
+    <testcase name="testController" class="Drupal\Tests\hello_world\Unit\HelloWorldControllerTest" classname="Drupal.Tests.hello_world.Unit.HelloWorldControllerTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php" line="25" assertions="1" time="0.003239"/>
+    <testcase name="testContentMethod" class="Drupal\Tests\hello_world\Unit\HelloWorldControllerTest" classname="Drupal.Tests.hello_world.Unit.HelloWorldControllerTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php" line="34" assertions="1" time="0.000283"/>
+    <testcase name="testContentMethodOutput" class="Drupal\Tests\hello_world\Unit\HelloWorldControllerTest" classname="Drupal.Tests.hello_world.Unit.HelloWorldControllerTest" file="/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php" line="43" assertions="0" time="0.000377">
+      <error type="TypeError">Drupal\Tests\hello_world\Unit\HelloWorldControllerTest::testContentMethodOutput
+TypeError: Argument 1 passed to Drupal\hello_world\Controller\HelloWorldController::content() must be an instance of Drupal\Core\Session\AccountInterface, none given, called in /home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php on line 46
+
+/home/sgalata/www/sgalata/web/modules/custom/hello_world/src/Controller/HelloWorldController.php:18
+/home/sgalata/www/sgalata/web/modules/custom/hello_world/tests/src/Unit/HelloWorldControllerTest.php:46
+</error>
+    </testcase>
+  </testsuite>
+</testsuites>

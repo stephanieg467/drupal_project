@@ -1,0 +1,23 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      css/style.css: { media: all }
+      '//fonts.googleapis.com/css?family=Titillium+Web': { type: external, minified: true }
+      '//fonts.googleapis.com/css?family=Lora': { type: external, minified: true }
+      '//use.fontawesome.com/releases/v5.1.0/css/all.css': { type: external, minified: true }
+
+
+  js:
+    js/custom/script.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+maintenance_page:
+  version: 1.x
+  css:
+    theme:
+      css/maintenance-page.css: { media: all }
+  dependencies:
+    - system/maintenance

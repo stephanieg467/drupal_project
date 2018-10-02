@@ -45,20 +45,12 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
 
     if ($product == 'commerce_product') {
 
-      /*
       $build['follow_link'] = [
         '#theme' => 'follow_link',
-        '#product_id' => $product_id,
-        '#user_id' => $user_id,
-        '#route' => 'update_notifier.follow_link',
-        '#product' => $product,
+        '#product' => $product_id,
+        '#user' => $user_id,
+        '#route' => 'update_notifier.follow_link2',
         '#weight' => 100,
-      ];
-      */
-
-      $build['follow_link'] = [
-        '#suffix' => '<div class="follow_link"> <a class=" button button--primary btn btn-primary" href="https://sgalata.oc-drupal.com/update_notifier/add/'. $user_id .'/'. $product_id .'">Follow</a> </div>',
-        '#weight' => 3,
       ];
     }
   }
@@ -76,7 +68,14 @@ function update_notifier_theme($existing, $type, $theme, $path) {
       ],
       'update_notifier' => [
         'render element' => 'children',
-      ]
+      ],
+      'follow_link' => [
+        'variables' => [
+          'route' => NULL,
+          'user' => NULL,
+          'product' => NULL,
+        ],
+      ],
     ];
 
 }

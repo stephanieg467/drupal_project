@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Theme override to display cta image on environment page
+ *
+ * Available variables:
+ * - cta_non_homepage_image_url: The image style url from "field_cta_non_homepage_image"
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+
+<div class="cta-homepage">
+
+    {% if cta_non_homepage_image_url %}
+
+        <div class="cta-non-homepage__image">
+            <img src="{{ cta_non_homepage_image_url }}" alt="{{ node.field_cta_non_homepage_image.alt.value }}">
+        </div>
+
+    {% endif %}
+
+</div>

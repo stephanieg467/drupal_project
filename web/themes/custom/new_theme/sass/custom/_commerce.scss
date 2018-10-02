@@ -1,0 +1,462 @@
+/**
+ * Commerce
+ */
+
+/**
+ * Cart Block
+ */
+.cart--cart-block {
+  width: 100%;
+
+  .cart-block--summary {
+    padding: 5px;
+    background: $button-background;
+    vertical-align: baseline;
+    border: 2px solid #000000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.4), 0 -5px 9px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.4), 0 -5px 9px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.4), 0 -5px 9px rgba(0, 0, 0, 0.2);
+  }
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+  }
+  .cart-block--summary__icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 8px;
+    transition: margin-right .2s ease-in-out;
+  }
+  .cart-block--summary__count {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    padding: 3px 7px;
+    color: $button-background;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 12px;
+    transition: background-color .2s ease-in-out, border .2s ease-in-out, margin-left .2s ease-in-out;
+  }
+  a:hover {
+    .cart-block--summary__icon {
+      margin-right: 0;
+    }
+    .cart-block--summary__count{
+      background-color: darken(#ffffff, 10%);
+      border: 2px solid $c-body;
+      margin-left: 6px;
+    }
+  }
+
+  /**
+ * Cart Expanded
+ */
+  .cart-block--contents {
+    right: 0;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    .cart-block--contents__items {
+      overflow: visible;
+      max-height: none;
+      .cart-block {
+        overflow-x: auto;
+        table {
+          width: 100%;
+          thead{
+            display: none;
+          }
+          tr {
+            border-bottom: 1px solid $button-background;
+            td {
+              padding: 5px;
+              font-size: 13px;
+              line-height: 1.1em;
+              text-align: left;
+            }
+            .views-field-quantity {
+              width: 36px;
+            }
+            .views-field-purchased-entity {
+              font-weight: 600;
+              transition: color .2s ease-in-out;
+              a {
+                color: inherit;
+                text-decoration: none;
+                transition: color .1s ease-in-out;
+              }
+              a:hover {
+                color: $button-background;
+              }
+            }
+            .views-field-purchased-entity:hover {
+              color: $button-background;
+            }
+            .views-field-total-price__number {
+              width: 60px;
+              text-align: right;
+            }
+            .views-field-remove-button {
+              position: relative;
+              width: 40px;
+              input {
+                height: 30px;
+                width: 60px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+        .form-actions {
+          display: none;
+        }
+      }
+    }
+    .cart-block--contents__links {
+      text-align: right;
+      a {
+        display: inline-block;
+        padding: 0 5px;
+        margin-top: 10px;
+        font-family: $f-primary;
+        background-color: $button-background;
+        border: 2px solid $button-border;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+        transition: background-color .1s ease-in-out;
+      }
+      a:hover {
+        background-color: darken($button-background, 10%);
+      }
+    }
+  }
+
+}
+
+/**
+ * Facets.
+ */
+.block-facet--checkbox {
+  h3 {
+    text-align: center;
+    border-bottom: 2px solid $button-background;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  ul {
+    list-style: none;
+  }
+  .facets-checkbox {
+    height: 17px;
+    width: 17px;
+    margin: 10px 5px 0;
+  }
+}
+
+/**
+ * Cart Form
+ */
+.view-commerce-cart-form {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  table {
+    thead {
+      background-color: $gray-light;
+      border-bottom: 1px solid $gray-dark;
+      font-size: 14px;
+      th {
+        padding: 5px;
+      }
+      .views-field-unit-price__number {
+        text-align: center;
+      }
+      .views-field-remove-button {
+        text-align: center;
+      }
+      .views-field-total-price__number {
+        text-align: right;
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid $gray-dark;
+        td {
+          padding: 15px 5px;
+        }
+        .views-field-purchased-entity {
+          color: $button-background;
+          text-decoration: none;
+          transition: color .1s ease-in-out;
+        }
+        .views-field-purchased-entity:hover {
+          color: darken($button-background, 20%);
+        }
+        .views-field-unit-price__number {
+          width: auto;
+        }
+        .views-field-edit-quantity {
+          width: auto;
+          text-align: center;
+          input {
+            position: relative;
+            max-width: 60px;
+            height: 40px;
+            margin-left: 5px;
+            border-radius: 0;
+            border: 1px solid #ccc;
+            text-align: center;
+          }
+        }
+        .views-field-remove-button {
+          input {
+            width: 100px;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .field--name-total-price {
+    position: relative;
+    right: 405px;
+    margin-top: 10px;
+    .order-total-line-label {
+      margin-right: 20px;
+    }
+  }
+  .form-actions {
+    position: relative;
+    right: 395px;
+    float: right;
+    clear: right;
+    text-align: right;
+  }
+}
+.block-block-content4ab346e9-3404-4c44-8948-5804352e7db6 {
+  h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+}
+
+/**
+ * Checkout
+ */
+
+/**
+ * Progress bar
+ */
+.block-commerce-checkout {
+  .checkout-progress {
+    color: #ffffff;
+    list-style-type: none;
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    margin: 10px 0 30px;
+    padding: 10px 15px;
+    background-color: $button-background;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    .checkout-progress--step {
+      position: relative;
+      text-align: center;
+      padding-right: 0;
+    }
+    .checkout-progress--step__current {
+      font-weight: bold;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000000;
+    }
+  }
+}
+
+/**
+ * Checkout flow
+ */
+.commerce-checkout-flow {
+  .form-required {
+    color: red;
+  }
+  legend {
+    padding: 6px 0 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $button-background;
+  }
+  .form-optional {
+    display: none;
+  }
+  /**
+ * Login pane
+ */
+  .checkout-pane-login {
+    input#edit-login-returning-customer-submit {
+      width: 80px;
+    }
+    .form-wrapper__guest-checkout {
+      input {
+        width: 185px;
+      }
+    }
+    a {
+      position: relative;
+      bottom: 0;
+    }
+  }
+  a {
+    position: relative;
+    bottom: 14px;
+    left: 10px;
+    font-size: 15px;
+    transition: color .1s ease-in-out
+  }
+  a:hover {
+    color: darken($button-background, 10%);
+  }
+
+  .layout-checkout-form {
+    .checkout-pane {
+      legend {
+        font-size: 30px;
+        font-weight: 500;
+        font-family: $f-primary;
+      }
+      input {
+        width: 200px;
+      }
+    }
+  }
+
+  .checkout-pane-shipping-information {
+    .form-radio {
+      width: 20px !important;
+    }
+    .form-required {
+      color: #000000 !important;
+    }
+    .form-submit {
+      position: relative;
+      right: 20px;
+    }
+  }
+
+  .layout-region-checkout-secondary {
+    h3 {
+      font-weight: 500;
+    }
+    .view-commerce-checkout-order-summary {
+      padding: 15px;
+      border: 1px solid $button-background;
+      border-radius: 4px;
+      table {
+        margin-bottom: 20px;
+        tr {
+          border-bottom: 1px solid $button-background;
+          td {
+            padding: 10px;
+          }
+        }
+      }
+    }
+    #sidebar-coupon_redemption-form-ajax-wrapper {
+      position: relative;
+      border: 1px solid $button-background;
+      border-radius: 4px;
+      padding: 15px 20px;
+      margin: 30px 0;
+      .form-item {
+        display: inline-block;
+        width: 190px;
+        margin-top: 0;
+        margin-right: 15px;
+      }
+      .form-submit {
+        position: relative;
+        right: 20px;
+      }
+    }
+  }
+  .form-submit {
+    width: 255px;
+  }
+
+  /**
+   * Review pane
+   */
+  .checkout-pane-review {
+    a {
+      position: relative;
+      bottom: 4px;
+      left: 0 !important;
+      font-size: 18px;
+      transition: color .1s ease-in-out;
+    }
+    a:hover {
+      color: darken($button-background, 10%);
+    }
+  }
+
+  .checkout-pane-completion-message {
+    .checkout-complete__payment-instructions {
+      h2 {
+        border-bottom: 1px solid $button-background;
+      }
+      a {
+        position: relative;
+        font-size: 18px;
+        left: 0;
+        bottom: 0;
+        transition: color .1s ease-in-out;
+      }
+      a:hover {
+        color: darken($button-background, 10%);
+      }
+    }
+  }
+
+  .form-actions {
+    a {
+      position: relative;
+      bottom: 15px;
+      font-size: 18px;
+      transition: color .1s ease-in-out;
+    }
+    a:hover {
+      color: darken($button-background, 10%);
+    }
+  }
+
+}
+
+/**
+ * Follow Link for products.
+ */
+.follow_link {
+  width: 80px;
+  height: 26px;
+  float: left;
+  margin: 10px;
+}
+.commerce-order-item-add-to-cart-form {
+  .form-actions {
+    width: 135px;
+    height: 26px;
+    float: left;
+    margin: 10px;
+  }
+}

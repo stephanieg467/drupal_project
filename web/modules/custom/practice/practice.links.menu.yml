@@ -1,0 +1,11 @@
+practice_collection_menu:
+  title: 'Practice entity list'
+  route_name: entity.practice.collection
+  description: 'List of Practice entities'
+  parent: system.admin_content
+
+practice_type_entity_collection_menu:
+  title: 'PracticeEntity Types'
+  route_name: entity.practice_type.collection
+  description: 'List of Practice entity types (bundles)'
+  parent: system.admin_structure

@@ -1,0 +1,14 @@
+name: Content notification
+type: module
+description: Notifications of content based on invalid and unpublishing.
+# core: 8.x
+package: Others
+configure: content_notify.admin_form
+dependencies:
+  - 'drupal:scheduler'
+
+# Information added by Drupal.org packaging script on 2017-11-08
+version: '8.x-1.2'
+core: '8.x'
+project: 'content_notify'
+datestamp: 1510147391

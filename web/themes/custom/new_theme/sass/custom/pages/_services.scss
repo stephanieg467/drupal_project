@@ -1,0 +1,156 @@
+/**
+ * Services
+ */
+
+// Services page.
+.node--type-services {
+  .field--name-body {
+    position: relative;
+    bottom: 60px;
+    @media (max-width: $screen-xs-max) {
+      bottom: 0;
+    }
+
+    h2 {
+      display: inline;
+      border-bottom: 2px solid $button-background;
+      @media (max-width: $screen-xs-max) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    ul {
+      margin-top: 20px;
+    }
+
+  }
+
+}
+
+// Services teaser.
+.services-list {
+  position: relative;
+  .services-list__teaser-image {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+  .services-list__link {
+    a {
+      position: absolute;
+      bottom: 50px;
+      background-color: $button-background;
+      color: #000000;
+      opacity: 0.8;
+      filter: alpha(opacity=80); /* For IE8 and earlier */
+      padding-left: 20px;
+      padding-right: 20px;
+      @media (max-width: $screen-xs-max) {
+        bottom: 0;
+        left: 0;
+      }
+    }
+  }
+}
+.view-services-teaser {
+
+  .row-1 {
+    .col-1 {
+      a {
+        left: 10px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-2 {
+      a {
+        left: 30px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-3 {
+      a {
+        left: 48px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-4 {
+      a {
+        left: 45px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+  }
+
+  .row-2 {
+    .col-1 {
+      a {
+        left: 20px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-2 {
+      a {
+        left: 0;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-3 {
+      a {
+        left: 48px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+    .col-4 {
+      a {
+        left: 45px;
+      }
+      @media (max-width: $screen-xs-max) {
+        position: relative;
+        margin: 20px auto;
+        left: 40px;
+      }
+    }
+  }
+
+}
+
+.services-list:hover {
+  .services-list__teaser-image {
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+  }
+  .services-list__link {
+    a {
+      background-color: lighten($button-background, 10%);
+    }
+  }
+}
+

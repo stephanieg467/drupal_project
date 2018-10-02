@@ -1,0 +1,23 @@
+{#
+/**
+ * @file
+ * Theme override to display a node.
+ *
+ * Available variables:
+ * - employee_image_url: URL to employee image
+ *
+ * @see template_preprocess_node()
+ */
+#}
+<div class="mechanic">
+    <div class="mechanic__card">
+
+        <img class="mechanic__image" src="{{ employee_image_url }}" alt="{{ node.field_employ.alt.value }}">
+        <div class="mechanic__container">
+            <h2>{{ node.field_name.value }}</h2>
+            <div class="mechanic__info">{{ content.body }}</div>
+        </div>
+
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+add hello world entity entities:
+  title: 'Create new Hello world entity entities'
+
+administer hello world entity entities:
+  title: 'Administer Hello world entity entities'
+  description: 'Allow to access the administration form to configure Hello world entity entities.'
+  restrict access: true
+
+delete hello world entity entities:
+  title: 'Delete Hello world entity entities'
+
+edit hello world entity entities:
+  title: 'Edit Hello world entity entities'
+
+view published hello world entity entities:
+  title: 'View published Hello world entity entities'
+
+view unpublished hello world entity entities:
+  title: 'View unpublished Hello world entity entities'

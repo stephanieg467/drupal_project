@@ -1,0 +1,21 @@
+hello_world.settings:
+  type: config_object
+  mapping:
+    please_select_message:
+      type: string
+      label: 'Please select message'
+    rectangle_checkbox:
+      type: integer
+      label: 'Rectangle checkbox'
+    sphere_checkbox:
+      type: integer
+      label: 'Sphere checkbox'
+    cone_checkbox:
+      type: integer
+      label: 'Cone checkbox'
+    cylinder_checkbox:
+      type: integer
+      label: 'Cylinder checkbox'
+    submit_message:
+      type: string
+      label: 'Submit message'

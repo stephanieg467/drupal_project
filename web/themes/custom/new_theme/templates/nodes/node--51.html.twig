@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Theme implementation for environment page.
+ *
+ * Available variables:
+ * -
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+
+    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-12">
+                {{ content.field_title }}
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6">
+                {{ content.field_cta_1 }}
+            </div>
+            <div class="col-xs-12 col-md-6">
+                {{ content.body }}
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-12">
+                {{ content.field_body }}
+            </div>
+
+        </div>
+
+    </div>
+
+</article>

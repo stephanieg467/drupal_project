@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains practice.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function practice_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the update_notifier module.
+    case 'help.page.practice':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module to help me understand...modules.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

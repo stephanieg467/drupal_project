@@ -1,0 +1,5 @@
+entity.hello_world_entity.add_form:
+  route_name: entity.hello_world_entity.add_form
+  title: 'Add Hello world entity'
+  appears_on:
+    - entity.hello_world_entity.collection

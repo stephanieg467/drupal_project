@@ -1,0 +1,36 @@
+# Hello World's Volume Form
+hello_world.volume_form_menu_link:
+  title: 'Volume Form'
+  route_name: hello_world.volume_form
+  description: 'Form to calculate volumes of rectangle.'
+  parent: system.admin_structure
+  weight: 99
+
+# Hello World's AJAX Volume Form
+hello_world.ajax_volume_form_menu_link:
+  title: 'AJAX Volume Form'
+  route_name: hello_world.ajax_volume_form
+  description: 'AJAX Form to calculate volumes of shapes.'
+  parent: system.admin_structure
+  weight: 100
+
+# Hello World's Configure Volume Form
+hello_world.config_volume_form_menu_link:
+  title: 'Config Volume Form'
+  route_name: hello_world.config_volume_form
+  description: 'Configure volume form'
+  parent: system.admin_config_system
+  weight: 99
+# Hello world entity menu items definition
+entity.hello_world_entity.collection:
+  title: 'Hello world entity list'
+  route_name: entity.hello_world_entity.collection
+  description: 'List Hello world entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+hello_world_entity.admin.structure.settings:
+  title: 'Hello world entity settings'
+  description: 'Configure Hello world entity entities'
+  route_name: hello_world_entity.settings
+  parent: system.admin_structure

@@ -1,0 +1,58 @@
+hello_world.content:
+  path: '/hello_world/{user}'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::content'
+    _title: 'Hello World | User ID'
+  requirements:
+    _permission: 'access content'
+
+hello_world.link:
+  path: '/hello_world/link'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::link_render'
+    _title: 'Hello World | Link'
+  requirements:
+    _permission: 'access content'
+
+hello_world.system_admin:
+  path: '/hello_world/system_admin'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::system_admin'
+    _title: 'Hello World | Admin'
+  requirements:
+    _role: 'administrator'
+
+hello_world.full_name:
+  path: '/hello_world/{first}/{last}'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\HelloWorldController::full_name'
+    _title: 'Hello World | Full Name'
+  requirements:
+    _permission: 'access content'
+
+hello_world.volume_form:
+  path: '/form/volume'
+  defaults:
+    _form: '\Drupal\hello_world\Form\VolumeForm'
+    _title: 'Volume Form'
+  requirements:
+    _permission: 'access content'
+
+hello_world.ajax_volume_form:
+  path: '/form/ajax_volume'
+  defaults:
+    _form: '\Drupal\hello_world\Form\AjaxVolumeForm'
+    _title: 'AJAX Volume Form'
+  requirements:
+    _permission: 'access content'
+
+hello_world.config_volume_form:
+  path: '/admin/config/hello_world'
+  defaults:
+    _form: '\Drupal\hello_world\Form\ConfigVolumeForm'
+    _title: 'Configuration for Volume Form'
+  requirements:
+    _permission: 'administer site configuration'
+
+
+

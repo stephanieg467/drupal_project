@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Default theme implementation to print diba_carousel.
+ */
+#}
+{% set els = elements.content.result|length %}
+<div{{ attributes.addClass('block') }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if els > 0 %}
+    <div id="diba-carousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+      {% for i in 0..els-1 %}
+        {% set class_item = (loop.first) ? 'class = "active"' : '' %}
+        <li data-target="#diba-carousel" data-slide-to="{{ i }}" {{ class_item|raw }}></li>
+      {% endfor %}
+      </ol>
+      <ul class="carousel-inner" role="listbox">
+        {% for item in elements.content.result %}
+          {% set class_item = (loop.first) ? 'class = "item active"' : 'class = "item"' %}
+          <li {{ class_item|raw }}>
+            {% if item.image %}
+              <img src="{{ file_url(item.image) }}" alt="{{ item.title|raw }}" width="{{ item.image_width|raw }}" height="{{ item.image_height|raw }}">
+            {% endif %}
+            <div class="carousel-caption">
+              {% if item.title %}
+                <h2 class="caption-title">
+                  {% if item.url %}
+                    {{ link(item.title|raw, item.url, '') }}
+                  {% else %}
+                    {{ item.title|raw }}
+                  {% endif %}
+                </h2>
+              {% endif %}
+              {% if item.description %}
+                <p class="caption-desc">{{ item.description|raw }}</p>
+              {% endif %}
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>

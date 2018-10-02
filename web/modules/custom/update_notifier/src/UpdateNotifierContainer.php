@@ -14,29 +14,39 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
    */
   public function follow($account, $product_followed, $notifications) {
 
-  }
-
-
-  public function add($account, $entity_type, $entity_id) {
-    // Check if this entity exists already to avoid duplicates.
-    $follow_id = $this->isFollowing($account, $entity_type, $entity_id);
+    // Check if this product is already being followed to avoid duplicates.
+    /*
+    $follow_id = $this->isFollowing($account, $product_followed);
     if (!$follow_id) {
       $values = [
         'user_id' => $account->id(),
-        'entity_type' => $entity_type,
-        'entity_id' => $entity_id,
+        'product_followed' => $product_followed,
+        'notifications' => $notifications,
       ];
-      /** @var FollowMe $follow */
-      $follow = FollowMe::create($values);
-      $follow->save();
-      return $follow->id();
+      /** @var UpdateNotifierEntity $update_notifier_entity */
+    /*
+      $update_notifier_entity = UpdateNotifierEntity::create($values);
+      $update_notifier_entity->save();
+      return $update_notifier_entity->id();
     }
+    */
+    xdebug_break();
+    $values = [
+      'user_id' => $account->id(),
+      'product_followed' => $product_followed,
+      'notifications' => $notifications,
+    ];
+    /** @var UpdateNotifierEntity $update_notifier_entity */
+    $update_notifier_entity = UpdateNotifierEntity::create($values);
+    $update_notifier_entity->save();
+    return $update_notifier_entity->id();
 
     // TODO probably a more elegant way to clear the cache on this entity view.
     // Issue is that it doesn't update the button until after a cache clear.
-    drupal_flush_all_caches();
+    //drupal_flush_all_caches();
 
-    return FALSE;
+    //return FALSE;
+
   }
 
   /**
@@ -75,12 +85,17 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  public function isFollowing($account, $entity_type, $entity_id) {
-    return \Drupal::entityQuery('follow_me')
+  //problem here
+  public function isFollowing($account, $product_followed) {
+    $is_following = \Drupal::entityQuery('update_notifier_entity')
       ->condition('user_id', $account->id())
-      ->condition('entity_type', $entity_type)
-      ->condition('entity_id', $entity_id)
+      ->condition('product_followed', $product_followed)
       ->execute();
+    if ($is_following) {
+      return TRUE;
+    }
+    else
+      return FALSE;
   }
 
 }

@@ -8,6 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\update_notifier\UpdateNotifierContainerInterface;
 
 
 /**
@@ -16,6 +17,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @ingroup update_notifier
  */
 class UpdateNotifierFollow extends FormBase {
+
+  /**
+   * The update notifier container service.
+   *
+   * @var \Drupal\update_notifier\UpdateNotifierContainerInterface
+   */
+  protected $updateNotifierContainer;
+
+  /**
+   * The current user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $user;
 
   /**
    * The product being followed.
@@ -29,16 +44,25 @@ class UpdateNotifierFollow extends FormBase {
    *
    * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
    *   The current route match.
+   * @param \Drupal\Core\Session\AccountInterface $user
+   *   The current user.
    */
-  public function __construct(CurrentRouteMatch $current_route_match) {
+  public function __construct(CurrentRouteMatch $current_route_match, UpdateNotifierContainerInterface $update_notifier_container, AccountInterface $user) {
     $this->product = $current_route_match->getParameter('product');
+    $this->updateNotifierContainer = $update_notifier_container;
+    $this->user = $user;
   }
 
   /**
    * {@inheritdoc}
    */
   public static function create(ContainerInterface $container) {
-    return new static($container->get('current_route_match'));
+    return new static(
+      $container->get('current_route_match'),
+      $container->get('update_notifier.update_notifier_container'),
+      $container->get('current_user')
+    );
+
   }
 
   /**
@@ -52,19 +76,6 @@ class UpdateNotifierFollow extends FormBase {
   }
 
   /**
-   * Form submission handler.
-   *
-   * @param array $form
-   *   An associative array containing the structure of the form.
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The current state of the form.
-   */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
-    $values = $form_state->getValues();
-    drupal_set_message($this->t('You chose to be notified for the following: %notifications', ['%notifications' => $values ]));
-  }
-
-  /**
    * Defines the settings .
    *
    * @param array $form
@@ -75,7 +86,7 @@ class UpdateNotifierFollow extends FormBase {
    * @return array
    *   Form definition array.
    */
-  public function buildForm(array $form, FormStateInterface $form_state, AccountInterface $user = NULL) {
+  public function buildForm(array $form, FormStateInterface $form_state) {
 
     $product_title = $this->product->getTitle();
 
@@ -83,7 +94,7 @@ class UpdateNotifierFollow extends FormBase {
     $form['#suffix'] = '</div>';
 
     $form['greeting'] = [
-      '#markup' => $this->t("Hello, @user", ['@user' => $user->getDisplayName()]),
+      '#markup' => $this->t("Hello, @user", ['@user' => $this->user->getDisplayName()]),
     ];
 
     $form['description'] = [
@@ -108,6 +119,25 @@ class UpdateNotifierFollow extends FormBase {
     ];
 
     return $form;
+  }
+
+  /**
+   * Form submission handler.
+   *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   */
+  public function submitForm(array &$form, FormStateInterface $form_state) {
+
+    xdebug_break();
+
+    $product_followed = $this->product;
+    $notifications = $form_state->getValue('notification_type');
+    $update_notifier_container = $this->updateNotifierContainer;
+    $update_notifier_container->follow($this->user, $product_followed, $notifications);
+    drupal_set_message($this->t('You chose to be notified for the following: %notifications', ['%notifications' => $notifications ]));
   }
 
 }

@@ -1,0 +1,110 @@
+/**
+ * Header Styles
+ */
+
+.site-header {
+  min-height: 120px;
+  background: $header-top;
+}
+
+/**
+ * Site logo.
+ */
+.site-header__logo {
+  float: left;
+  margin: 15px 0;
+  padding: 0;
+
+  img {
+    display: block;
+    width: 170px;
+    height: 89px;
+  }
+}
+
+/**
+ * Site header navigation.
+ */
+.site-header-nav {
+  float: right;
+  color: #ffffff;
+
+  .menu__item:last-child {
+    .menu__link {
+      padding-right: 0;
+    }
+  }
+}
+
+/**
+ * Site header bottom.
+ */
+.site-header__bottom {
+  background-color: $header-bottom;
+}
+
+/**
+ * Primary navigation.
+ */
+.primary-nav {
+  display: block;
+  //display: inline-block;
+  vertical-align: top;
+
+  .menu--child-menu {
+    background-color: $gray-base;
+  }
+}
+
+/**
+ * Site header search.
+ */
+.site-header__search {
+  float: right;
+  clear: right;
+
+  .form-optional {
+    display: none;
+  }
+}
+
+/**
+ * Site header ctas
+ */
+.header-ctas {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  float: right;
+  margin-top: 0;
+
+  h3 {
+    text-decoration: underline overline;
+    margin: 10px;
+    color: $button-background;
+    font: italic bold 30px 'Titillium Web', Georgia, serif;
+  }
+
+  .header-ctas__button--blue{
+    cursor: pointer;
+    background-color: $button-background;
+  }
+  .header-ctas__button--blue:hover{
+    background-color: darken($button-background, 10%);
+  }
+
+  .header-ctas__button--black{
+    cursor: pointer;
+    background-color: #000000;
+  }
+  .header-ctas__button--black:hover{
+    background-color: $c-body;
+  }
+
+  .blue-text {
+    color: $button-background;
+  }
+}
+
+

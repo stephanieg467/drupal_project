@@ -16,13 +16,13 @@ interface UpdateNotifierContainerInterface {
    *
    * @param \Drupal\Core\Session\AccountInterface $account
    *   Account interface which represents the current user.
-   * @param string $product_followed
-   *   The title of the product being followed.
+   * @param \Drupal\commerce_product\Entity\Product $product_followed
+   *   The product being followed.
    * @param array $notifications
    *   The notifications the user wishes to receive.
    *
    * @return int|bool
-   *   False if it was a duplicate. Returns the entity id otherwise.
+   *   False if it was a duplicate. Returns the update notifier id otherwise.
    */
   public function follow($account, $product_followed, $notifications);
 
@@ -44,12 +44,11 @@ interface UpdateNotifierContainerInterface {
   public function followedProducts($account);
 
   /**
-   * @param \Drupal\Core\Session\AccountInterface $account
-   * @param string                                $entity_type
-   * @param int                                   $entity_id
+   * @param \Drupal\Core\Session\AccountInterface   $account
+   * @param \Drupal\commerce_product\Entity\Product $product_followed
    *
    * @return bool
-   *   TRUE if the user is already following this entity.
+   *   TRUE if the user is already following this product.
    */
-  public function isFollowing($account, $entity_type, $entity_id);
+  public function isFollowing($account, $product_followed);
 }

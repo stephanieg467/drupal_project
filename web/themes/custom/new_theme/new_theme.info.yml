@@ -1,0 +1,28 @@
+name: New Theme
+type: theme
+description: 'Custom theme for our amazing clients.'
+package: Core
+core: '8.x'
+base theme: orange_framework
+
+libraries:
+  - new_theme/global-styling
+
+ckeditor_stylesheets:
+  - css/style.css
+
+regions:
+  header: 'Header'
+
+  highlighted: 'Highlighted'
+  above_content: 'Above Content'
+  content: 'Content'
+  below_content: 'Below Content'
+  page_sidebar: 'Page - Sidebar'
+  blog_sidebar: 'Blog - Sidebar'
+  footer: 'Footer'
+  # Navigation.
+  primary_nav: 'Primary Navigation'
+  mobile_nav: 'Mobile Navigation'
+  footer_nav: 'Footer Navigation'
+  social_nav: 'Social Media Navigation'

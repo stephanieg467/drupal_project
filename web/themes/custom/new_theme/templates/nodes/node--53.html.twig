@@ -1,0 +1,74 @@
+{#
+/**
+ * @file
+ * Theme implementation for meet the mechanics page.
+ *
+ * Available variables:
+ * - link_1_url: Link 1 url
+ * - link_2_url: Link 2 url
+ *
+ * @see template_preprocess_node()
+ */
+#}
+{%
+    set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+]
+%}
+<article{{ attributes.addClass(classes) }}>
+    <header>
+
+        {{ title_prefix }}
+        {% if not page %}
+            <h2{{ title_attributes.addClass('node__title') }}>
+                <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+            </h2>
+            {#
+            {% else %}
+              <h1{{ title_attributes.addClass('page-title') }}>
+                {{ label }}
+              </h1>
+            #}
+        {% endif %}
+        {{ title_suffix }}
+
+        {% if display_submitted %}
+            <div class="node__meta">
+                {{ author_picture }}
+                <span{{ author_attributes }}>
+          {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+        </span>
+                {{ metadata }}
+            </div>
+        {% endif %}
+    </header>
+
+    <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-12">
+                {{ content.field_title }}
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6">
+                {{ content.field_employee }}
+            </div>
+            <div class="col-xs-12 col-md-6">
+                {{ content.field_employee_2 }}
+            </div>
+
+        </div>
+
+    </div>
+</article>
