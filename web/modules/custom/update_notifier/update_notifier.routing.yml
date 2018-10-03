@@ -12,14 +12,16 @@ update_notifier.follow_link:
   requirements:
     _permission: 'follow product'
 
-update_notifier.follow_link2:
-  path: '/update_notifier/add/{product}'
+update_notifier.unfollow_link:
+  path: '/update_notifier/unfollow/{user}/{product}'
   defaults:
-    _form: '\Drupal\update_notifier\Form\UpdateNotifierFollow2'
-    _title: 'Follow a Product'
+    _form: '\Drupal\update_notifier\Form\UpdateNotifierUnfollow'
+    _title: 'Unfollow a Product'
   options:
     parameters:
       product:
         type: 'entity:commerce_product'
+      user:
+        type: 'entity:user'
   requirements:
     _permission: 'follow product'

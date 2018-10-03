@@ -12,60 +12,45 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  public function follow($account, $product_followed, $notifications) {
+  public function follow($account, $product_followed, $notify__price_change, $notify__on_sale, $notify__promotion, $notify__in_stock) {
 
     // Check if this product is already being followed to avoid duplicates.
-    /*
     $follow_id = $this->isFollowing($account, $product_followed);
     if (!$follow_id) {
       $values = [
         'user_id' => $account->id(),
         'product_followed' => $product_followed,
-        'notifications' => $notifications,
+        'notify__price_change' => $notify__price_change,
+        'notify__on_sale' => $notify__on_sale,
+        'notify__promotion' => $notify__promotion,
+        'notify__in_stock' => $notify__in_stock,
       ];
       /** @var UpdateNotifierEntity $update_notifier_entity */
-    /*
       $update_notifier_entity = UpdateNotifierEntity::create($values);
       $update_notifier_entity->save();
       return $update_notifier_entity->id();
     }
-    */
-    xdebug_break();
-    $values = [
-      'user_id' => $account->id(),
-      'product_followed' => $product_followed,
-      'notifications' => $notifications,
-    ];
-    /** @var UpdateNotifierEntity $update_notifier_entity */
-    $update_notifier_entity = UpdateNotifierEntity::create($values);
-    $update_notifier_entity->save();
-    return $update_notifier_entity->id();
 
-    // TODO probably a more elegant way to clear the cache on this entity view.
-    // Issue is that it doesn't update the button until after a cache clear.
-    //drupal_flush_all_caches();
+    drupal_flush_all_caches();
 
-    //return FALSE;
+    return FALSE;
 
   }
 
   /**
    * @inheritdoc
    */
-  public function delete($account, $entity_type, $entity_id) {
-    $follow_ids = \Drupal::entityQuery('follow_me')
+  public function unfollow($account, $product_followed) {
+    // $update_notifier_entity_id is the id of the UpdateNotifierEntity
+    // that is being used by the user ($account) following the product ($product_followed).
+    $update_notifier_entity_id = \Drupal::entityQuery('update_notifier_entity')
       ->condition('user_id', $account->id())
-      ->condition('entity_type', $entity_type)
-      ->condition('entity_id', $entity_id)
+      ->condition('product_followed', $product_followed->id())
       ->execute();
-    $followMeEntities = FollowMe::loadMultiple($follow_ids);
-    /** @var FollowMe $follow */
-    foreach ($followMeEntities as $follow) {
-      $follow->delete();
-    }
+    /** @var UpdateNotifierEntity $UpdateNotifierEntity */
+    $UpdateNotifierEntity = UpdateNotifierEntity::load($update_notifier_entity_id);
+    $UpdateNotifierEntity->delete();
 
-    // TODO probably a more elegant way to clear the cache on this entity view.
-    // Issue is that it doesn't update the button until after a cache clear.
     drupal_flush_all_caches();
 
     return TRUE;
@@ -85,17 +70,13 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  //problem here
   public function isFollowing($account, $product_followed) {
-    $is_following = \Drupal::entityQuery('update_notifier_entity')
+    $query = \Drupal::service('entity.query');
+    return $query->get('update_notifier_entity')
       ->condition('user_id', $account->id())
-      ->condition('product_followed', $product_followed)
+      ->condition('product_followed', $product_followed->id())
       ->execute();
-    if ($is_following) {
-      return TRUE;
-    }
-    else
-      return FALSE;
+
   }
 
 }

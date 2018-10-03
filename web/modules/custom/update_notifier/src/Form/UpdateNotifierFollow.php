@@ -131,13 +131,48 @@ class UpdateNotifierFollow extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
-    xdebug_break();
+    $notifications = $form_state->getValue('notification_type');
+
+    $notify__price_change = $notifications['price_change'];
+    if($notify__price_change === 'price_change')
+      $notify__price_change = 1;
+    else
+      $notify__price_change = 0;
+
+    $notify__on_sale = $notifications['on_sale'];
+    if($notify__on_sale === 'on_sale')
+      $notify__on_sale = 1;
+    else
+      $notify__on_sale = 0;
+
+    $notify__promotion = $notifications['promotion'];
+    if($notify__promotion === 'promotion')
+      $notify__promotion = 1;
+    else
+      $notify__promotion = 0;
+
+    $notify__in_stock = $notifications['in_stock'];
+    if($notify__in_stock === 'in_stock')
+      $notify__in_stock = 1;
+    else
+      $notify__in_stock = 0;
 
     $product_followed = $this->product;
-    $notifications = $form_state->getValue('notification_type');
     $update_notifier_container = $this->updateNotifierContainer;
-    $update_notifier_container->follow($this->user, $product_followed, $notifications);
-    drupal_set_message($this->t('You chose to be notified for the following: %notifications', ['%notifications' => $notifications ]));
+    //xdebug_break();
+    $update_notifier_container->follow($this->user, $product_followed, $notify__price_change, $notify__on_sale, $notify__promotion, $notify__in_stock);
+
+    if($notify__price_change === 1)
+      $this->messenger()->addMessage($this->t('The will be notified if %product has a price change.', ['%product' => $this->product->getTitle()]));
+    if($notify__on_sale === 1)
+      $this->messenger()->addMessage($this->t('The will be notified if %product is on sale.', ['%product' => $this->product->getTitle()]));
+    if($notify__promotion === 1)
+      $this->messenger()->addMessage($this->t('The will be notified if %product has a promotion.', ['%product' => $this->product->getTitle()]));
+    if($notify__in_stock === 1)
+      $this->messenger()->addMessage($this->t('The will be notified if %product is in stock.', ['%product' => $this->product->getTitle()]));
+
+    $form_state->setRedirect('entity.user.canonical', ['user' => $this->user->id()]);
+
   }
 
 }

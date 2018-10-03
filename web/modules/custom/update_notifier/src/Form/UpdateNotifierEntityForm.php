@@ -4,8 +4,6 @@ namespace Drupal\update_notifier\Form;
 
 use Drupal\Core\Entity\ContentEntityForm;
 use Drupal\Core\Form\FormStateInterface;
-//use Drupal\update_notifier\UpdateNotifierContainerInterface;
-//use Symfony\Component\DependencyInjection\ContainerInterface;
 
 
 /**
@@ -14,40 +12,6 @@ use Drupal\Core\Form\FormStateInterface;
  * @ingroup update_notifier
  */
 class UpdateNotifierEntityForm extends ContentEntityForm {
-
-  /*
-  /**
-   * The update notifier container service.
-   *
-   * @var \Drupal\update_notifier\UpdateNotifierContainerInterface
-   */
-  /*
-  protected $updateNotifierContainer;
-  */
-
-  /*
-  /**
-   * Constructs a new UpdateNotifierEntityForm object.
-   *
-   * @param \Drupal\update_notifier\UpdateNotifierContainerInterface $update_notifier_container
-   *   The update notifier container service.
-   */
-  /*
-  public function __construct(UpdateNotifierContainerInterface $update_notifier_container) {
-
-    $this->updateNotifierContainer = $update_notifier_container;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  /*
-  public static function create(ContainerInterface $container) {
-    return new static(
-      $container->get('update_notifier.update_notifier_container')
-    );
-  }
-  */
 
   /**
    * {@inheritdoc}

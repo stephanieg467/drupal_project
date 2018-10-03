@@ -56,11 +56,11 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
   public function setNotifyPriceChange($notify__price_change);
 
   /**
-   * Gets notify__on_sale.
-   *
-   * @return bool
-   *   TRUE if the user wants on sale notifications.
-   */
+ * Gets notify__on_sale.
+ *
+ * @return bool
+ *   TRUE if the user wants on sale notifications.
+ */
   public function getNotifyOnSale();
 
   /**
@@ -73,6 +73,44 @@ interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityCh
    *   @return $this
    */
   public function setNotifyOnSale($notify__on_sale);
+
+  /**
+   * Gets notify__promotion.
+   *
+   * @return bool
+   *   TRUE if the user wants product promotion notifications.
+   */
+  public function getNotifyPromotion();
+
+  /**
+   * Sets notify__promotion.
+   *
+   * @param bool $notify__promotion
+   *   Whether the user wants product promotion notifications.
+   *   TRUE to get notified if the product has a promotion, FALSE to not get notified if the product has a promotion.
+   *
+   *   @return $this
+   */
+  public function setNotifyPromotion($notify__promotion);
+
+  /**
+   * Gets notify__in_stock.
+   *
+   * @return bool
+   *   TRUE if the user wants to get notified if product is in stock.
+   */
+  public function getNotifyInStock();
+
+  /**
+   * Sets notify__in_stock.
+   *
+   * @param bool $notify__in_stock
+   *   Whether the user wants to get notified if product is in stock.
+   *   TRUE to get notified if the product is in stock, FALSE to not get notified if the product is in stock.
+   *
+   *   @return $this
+   */
+  public function setNotifyInStock($notify__in_stock);
 
   /**
    * Gets the Update notifier entity name.

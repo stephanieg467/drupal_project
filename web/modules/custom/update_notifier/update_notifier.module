@@ -45,11 +45,27 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
 
     if ($product == 'commerce_product') {
 
+      // Check if user is already following product
+      /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
+      $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
+      /** @var \Drupal\commerce_product\Entity\Product $product_followed */
+      $product_followed = $entity;
+      $is_following = $container->isFollowing($user, $product_followed);
+      if ($is_following) {
+        $follow_button_text = 'Unfollow';
+        $route = 'update_notifier.unfollow_link';
+      }
+      else {
+        $follow_button_text = 'Follow';
+        $route = 'update_notifier.follow_link';
+      }
+
       $build['follow_link'] = [
         '#theme' => 'follow_link',
         '#product' => $product_id,
         '#user' => $user_id,
-        '#route' => 'update_notifier.follow_link2',
+        '#follow_button_text' => $follow_button_text,
+        '#route' => $route,
         '#weight' => 100,
       ];
     }
@@ -74,6 +90,7 @@ function update_notifier_theme($existing, $type, $theme, $path) {
           'route' => NULL,
           'user' => NULL,
           'product' => NULL,
+          'follow_button_text' => NULL,
         ],
       ],
     ];

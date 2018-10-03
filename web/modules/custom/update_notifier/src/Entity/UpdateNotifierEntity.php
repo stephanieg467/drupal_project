@@ -108,8 +108,8 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   }
 
   /**
-   * {@inheritdoc}
-   */
+ * {@inheritdoc}
+ */
   public function getNotifyOnSale() {
     return $this->get('notify__on_sale')->value;
   }
@@ -119,6 +119,36 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
    */
   public function setNotifyOnSale($notify__on_sale) {
     $this->set('notify__on_sale', $notify__on_sale ? TRUE : FALSE);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getNotifyPromotion() {
+    return $this->get('notify__promotion')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setNotifyPromotion($notify__promotion) {
+    $this->set('notify__promotion', $notify__promotion ? TRUE : FALSE);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getNotifyInStock() {
+    return $this->get('notify__in_stock')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setNotifyInStock($notify__in_stock) {
+    $this->set('notify__in_stock', $notify__in_stock ? TRUE : FALSE);
     return $this;
   }
 
@@ -245,7 +275,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(FALSE);
 
-    /*
     $fields['notify__on_sale'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Get notified if product is on sale'))
       ->setDescription(t('Notify the user if the product is on sale.'))
@@ -261,7 +290,38 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(FALSE);
-    */
+
+    $fields['notify__promotion'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Get notified if product has a promotion.'))
+      ->setDescription(t('Notify the user if the product has a promotion.'))
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'boolean',
+        'weight' => 1,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'boolean_checkbox',
+        'weight' => 1,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(FALSE);
+
+    $fields['notify__in_stock'] = BaseFieldDefinition::create('boolean')
+      ->setLabel(t('Get notified if product is in stock'))
+      ->setDescription(t('Notify the user if the product is in stock.'))
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'boolean',
+        'weight' => 1,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'boolean_checkbox',
+        'weight' => 1,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(FALSE);
 
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
@@ -310,11 +370,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
     $fields['changed'] = BaseFieldDefinition::create('changed')
       ->setLabel(t('Changed'))
       ->setDescription(t('The time that the entity was last edited.'));
-
-    //$field_type_manager = \Drupal::service('plugin.manager.field.field_type');
-    //$storage_settings = $field_type_manager->getDefaultStorageSettings('entity_reference');
-    //$field_settings = $field_type_manager->getDefaultFieldSettings('entity_reference');
-    //kint($field_settings);
 
     return $fields;
   }
