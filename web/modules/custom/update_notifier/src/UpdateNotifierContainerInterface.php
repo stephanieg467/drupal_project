@@ -39,10 +39,11 @@ interface UpdateNotifierContainerInterface {
   /**
    * @param \Drupal\Core\Session\AccountInterface   $account
    * @param \Drupal\commerce_product\Entity\Product $product_followed
+   * @param array $checked_notifications
    *
    * @return bool
    */
-  public function unfollow($account, $product_followed);
+  public function unfollow($account, $product_followed, $checked_notifications);
 
   /**
    * @param \Drupal\Core\Session\AccountInterface $account
@@ -56,8 +57,18 @@ interface UpdateNotifierContainerInterface {
    * @param \Drupal\Core\Session\AccountInterface   $account
    * @param \Drupal\commerce_product\Entity\Product $product_followed
    *
-   * @return int|array
-   *   Returns an integer for count queries or an array of ids.
+   * @return int
+   *   Returns id of update notifier entity.
    */
   public function isFollowing($account, $product_followed);
+
+  /**
+   * @param \Drupal\Core\Session\AccountInterface   $account
+   * @param \Drupal\commerce_product\Entity\Product $product_followed
+   *
+   * @return array
+   *   Array containing the names of notification types selected.
+   */
+  public function getSelectedNotifications($account, $product_followed);
+
 }

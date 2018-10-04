@@ -40,16 +40,37 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  public function unfollow($account, $product_followed) {
-    // $update_notifier_entity_id is the id of the UpdateNotifierEntity
-    // that is being used by the user ($account) following the product ($product_followed).
-    $update_notifier_entity_id = \Drupal::entityQuery('update_notifier_entity')
-      ->condition('user_id', $account->id())
-      ->condition('product_followed', $product_followed->id())
-      ->execute();
-    /** @var UpdateNotifierEntity $UpdateNotifierEntity */
-    $UpdateNotifierEntity = UpdateNotifierEntity::load($update_notifier_entity_id);
-    $UpdateNotifierEntity->delete();
+  public function unfollow($account, $product_followed, $checked_notifications) {
+
+    $update_notifier_entity_id = $this->isFollowing($account, $product_followed);
+    $update_notifier_entity = UpdateNotifierEntity::load(reset($update_notifier_entity_id));
+
+    foreach($checked_notifications as $checked_notification) {
+
+      if ($checked_notification === 'price_change') {
+        $update_notifier_entity->setNotifyPriceChange(FALSE);
+        $update_notifier_entity->save();
+      }
+
+      if ($checked_notification === 'on_sale') {
+        $update_notifier_entity->setNotifyOnSale(FALSE);
+        $update_notifier_entity->save();
+      }
+
+      if ($checked_notification === 'promotion') {
+        $update_notifier_entity->setNotifyPromotion(FALSE);
+        $update_notifier_entity->save();
+      }
+
+      if ($checked_notification === 'in_stock') {
+        $update_notifier_entity->setNotifyInStock(FALSE);
+        $update_notifier_entity->save();
+      }
+
+    }
+
+    if(count($checked_notifications) === 4)
+      $update_notifier_entity->delete();
 
     drupal_flush_all_caches();
 
@@ -79,4 +100,21 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
 
   }
 
+  /**
+   * @inheritdoc
+   */
+  public function getSelectedNotifications($account, $product_followed) {
+    $update_notifier_entity_id = $this->isFollowing($account, $product_followed);
+    $update_notifier_entity = UpdateNotifierEntity::load(reset($update_notifier_entity_id));
+    $notifications = [];
+    if($update_notifier_entity->getNotifyPriceChange())
+      $notifications['price_change'] = 'price_change';
+    if($update_notifier_entity->getNotifyOnSale())
+      $notifications['on_sale'] = 'on_sale';
+    if($update_notifier_entity->getNotifyPromotion())
+      $notifications['promotion'] = 'promotion';
+    if($update_notifier_entity->getNotifyInStock())
+      $notifications['in_stock'] = 'in_stock';
+    return $notifications;
+  }
 }
