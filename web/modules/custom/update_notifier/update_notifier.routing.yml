@@ -25,3 +25,4 @@ update_notifier.unfollow_link:
         type: 'entity:user'
   requirements:
     _permission: 'follow product'
+

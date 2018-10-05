@@ -82,7 +82,7 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
    * {@inheritdoc}
    */
   public function getProductFollowed() {
-    return $this->get('product_followed')->value;
+    return $this->get('product_followed')->entity;
   }
   /**
    * {@inheritdoc}

@@ -40,47 +40,27 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  public function unfollow($account, $product_followed, $checked_notifications) {
+  public function unfollow($account, $product_followed) {
 
-    $update_notifier_entity_id = $this->isFollowing($account, $product_followed);
-    $update_notifier_entity = UpdateNotifierEntity::load(reset($update_notifier_entity_id));
+    if ($update_notifier_entity_id = $this->isFollowing($account, $product_followed)) {
+      $update_notifier_entity = UpdateNotifierEntity::load(reset($update_notifier_entity_id));
 
-    foreach($checked_notifications as $checked_notification) {
-
-      if ($checked_notification === 'price_change') {
-        $update_notifier_entity->setNotifyPriceChange(FALSE);
-        $update_notifier_entity->save();
-      }
-
-      if ($checked_notification === 'on_sale') {
-        $update_notifier_entity->setNotifyOnSale(FALSE);
-        $update_notifier_entity->save();
-      }
-
-      if ($checked_notification === 'promotion') {
-        $update_notifier_entity->setNotifyPromotion(FALSE);
-        $update_notifier_entity->save();
-      }
-
-      if ($checked_notification === 'in_stock') {
-        $update_notifier_entity->setNotifyInStock(FALSE);
-        $update_notifier_entity->save();
-      }
-
-    }
-
-    if(count($checked_notifications) === 4)
       $update_notifier_entity->delete();
 
-    drupal_flush_all_caches();
+      drupal_flush_all_caches();
 
-    return TRUE;
+      return TRUE;
+    }
+    else
+      return FALSE;
+
   }
 
   /**
    * @inheritdoc
    */
   public function followedProducts($account) {
+    //followedProducts is returning the id of the un entity associated to this user
     //Get update notifier entity for current user
     $followed_products_ids = \Drupal::entityQuery('update_notifier_entity')
       ->condition('user_id', $account->id())

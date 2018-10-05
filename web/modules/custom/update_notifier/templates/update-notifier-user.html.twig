@@ -8,6 +8,9 @@
  *
  * Available variables:
  * - products: A list of products being followed
+ *   - product_id: Product id
+ *   - product_link: Link to product followed
+ *   - unfollow_form: route to unfollow form
  * - user: A Drupal User entity.
  *
  * @see template_preprocess_update_notifier_user
@@ -46,16 +49,29 @@
         <tbody>
         <tr>
           <th>{{ 'Product Followed'|t }}</th>
+          <th>{{ 'Edit Notifications'|t }}</th>
           <th>{{ 'Unfollow'|t }}</th>
         </tr>
-        <tr>
-          <td>
-            {{ products }}
-          </td>
-          <td>
-            {{ 'Unfollow'|t }}
-          </td>
-        </tr>
+        {% for product in products %}
+          <tr>
+            <td>{{ product.product_link }}</td>
+            <td>
+              {#
+              <a class="btn btn-primary" href="{{ path(edit_notifications_form, {'user': user.id, 'product': product.product_id}) }}">
+                {{ 'Edit Notifications'|t }}
+              </a>
+              #}
+              <a class="btn btn-primary" href="#">
+                {{ 'Edit Notifications'|t }}
+              </a>
+            </td>
+            <td>
+              <a class="btn btn-primary" href="{{ path(product.unfollow_form, {'user': user.id, 'product': product.product_id}) }}">
+                {{ 'Unfollow'|t }}
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
         </tbody>
       </table>
     </div>

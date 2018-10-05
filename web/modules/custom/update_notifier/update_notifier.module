@@ -107,13 +107,20 @@ function update_notifier_theme($existing, $type, $theme, $path) {
  *   - products: An array of products being followed by the current user.
  */
 function template_preprocess_update_notifier_user(&$variables) {
-
   /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
   $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
   $products = $container->followedProducts(\Drupal::currentUser());
   $variables['products'] = [];
+  xdebug_break();
+
   foreach ($products as $product) {
-    $variables['products'] = $product->getProductFollowed();
+    $variables['products'][$product->getProductFollowed()->id()] = [
+      'product' => $product->getProductFollowed(),
+      'product_id' => $product->getProductFollowed()->id(),
+      'product_link' => $product->getProductFollowed()->toLink(),
+      //'edit_notifications_form' => 'update_notifier.edit',
+      'unfollow_form' => 'update_notifier.unfollow_link',
+    ];
   }
 
 }

@@ -8,45 +8,44 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\update_notifier\UpdateNotifierContainerInterface;
-use Drupal\Core\Render\Element\Checkboxes;
 
 
 /**
-* Class UpdateNotifierUnfollow.
-*
-* @ingroup update_notifier
-*/
-class UpdateNotifierUnfollow extends FormBase {
+ * Class UpdateNotifierEdit.
+ *
+ * @ingroup update_notifier
+ */
+class UpdateNotifierEdit extends FormBase {
 
   /**
-  * The update notifier container service.
-  *
-  * @var \Drupal\update_notifier\UpdateNotifierContainerInterface
-  */
+   * The update notifier container service.
+   *
+   * @var \Drupal\update_notifier\UpdateNotifierContainerInterface
+   */
   protected $updateNotifierContainer;
 
   /**
-  * The current user.
-  *
-  * @var \Drupal\Core\Session\AccountInterface
-  */
+   * The current user.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
   protected $user;
 
   /**
-  * The product to be unfollowed.
-  *
-  * @var \Drupal\commerce_product\Entity\Product
-  */
+   * The product to be unfollowed.
+   *
+   * @var \Drupal\commerce_product\Entity\Product
+   */
   protected $product;
 
   /**
-  * Constructs a new UpdateNotifierFollow object.
-  *
-  * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
-  *   The current route match.
-  * @param \Drupal\Core\Session\AccountInterface $user
-  *   The current user.
-  */
+   * Constructs a new UpdateNotifierFollow object.
+   *
+   * @param \Drupal\Core\Routing\CurrentRouteMatch $current_route_match
+   *   The current route match.
+   * @param \Drupal\Core\Session\AccountInterface $user
+   *   The current user.
+   */
   public function __construct(CurrentRouteMatch $current_route_match, UpdateNotifierContainerInterface $update_notifier_container, AccountInterface $user) {
     $this->product = $current_route_match->getParameter('product');
     $this->updateNotifierContainer = $update_notifier_container;
@@ -54,42 +53,42 @@ class UpdateNotifierUnfollow extends FormBase {
   }
 
   /**
-  * {@inheritdoc}
-  */
+   * {@inheritdoc}
+   */
   public static function create(ContainerInterface $container) {
     return new static(
-    $container->get('current_route_match'),
-    $container->get('update_notifier.update_notifier_container'),
-    $container->get('current_user')
+      $container->get('current_route_match'),
+      $container->get('update_notifier.update_notifier_container'),
+      $container->get('current_user')
     );
   }
 
   /**
-  * Returns a unique string identifying the form.
-  *
-  * @return string
-  *   The unique string identifying the form.
-  */
+   * Returns a unique string identifying the form.
+   *
+   * @return string
+   *   The unique string identifying the form.
+   */
   public function getFormId() {
-    return 'update_notifier_unfollow';
+    return 'update_notifier_edit';
   }
 
   /**
-  * Defines the settings .
-  *
-  * @param array $form
-  *   An associative array containing the structure of the form.
-  * @param \Drupal\Core\Form\FormStateInterface $form_state
-  *   The current state of the form.
-  *
-  * @return array
-  *   Form definition array.
-  */
+   * Defines the settings .
+   *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   *
+   * @return array
+   *   Form definition array.
+   */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
     $product_title = $this->product->getTitle();
 
-    $form['#prefix'] = '<div id="unfollow_form">';
+    $form['#prefix'] = '<div id="update_notifier_edit_form">';
     $form['#suffix'] = '</div>';
 
     $form['greeting'] = [
@@ -100,7 +99,7 @@ class UpdateNotifierUnfollow extends FormBase {
       '#type' => 'item',
       '#markup' => $this->t(
         "Please confirm that you would no longer like to follow %product_title.",
-               ['%product_title' => $product_title]),
+        ['%product_title' => $product_title]),
     ];
 
     $form['confirm_unfollow'] = [
@@ -121,13 +120,13 @@ class UpdateNotifierUnfollow extends FormBase {
   }
 
   /**
-  * Form submission handler.
-  *
-  * @param array $form
-  *   An associative array containing the structure of the form.
-  * @param \Drupal\Core\Form\FormStateInterface $form_state
-  *   The current state of the form.
-  */
+   * Form submission handler.
+   *
+   * @param array $form
+   *   An associative array containing the structure of the form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The current state of the form.
+   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
 
     $product_followed = $this->product;

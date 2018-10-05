@@ -39,11 +39,10 @@ interface UpdateNotifierContainerInterface {
   /**
    * @param \Drupal\Core\Session\AccountInterface   $account
    * @param \Drupal\commerce_product\Entity\Product $product_followed
-   * @param array $checked_notifications
    *
    * @return bool
    */
-  public function unfollow($account, $product_followed, $checked_notifications);
+  public function unfollow($account, $product_followed);
 
   /**
    * @param \Drupal\Core\Session\AccountInterface $account
