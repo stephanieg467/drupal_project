@@ -10,7 +10,9 @@
  * - products: A list of products being followed
  *   - product_id: Product id
  *   - product_link: Link to product followed
- *   - unfollow_form: route to unfollow form
+ *   - update_notifier_entity: Id of update notifier entity
+ *   - edit_notifications_form: Route to edit update notifier entity form
+ *   - unfollow_form: Route to unfollow form
  * - user: A Drupal User entity.
  *
  * @see template_preprocess_update_notifier_user
@@ -56,12 +58,7 @@
           <tr>
             <td>{{ product.product_link }}</td>
             <td>
-              {#
-              <a class="btn btn-primary" href="{{ path(edit_notifications_form, {'user': user.id, 'product': product.product_id}) }}">
-                {{ 'Edit Notifications'|t }}
-              </a>
-              #}
-              <a class="btn btn-primary" href="#">
+              <a class="btn btn-primary" href="{{ path(product.edit_notifications_form, {'update_notifier_entity': product.update_notifier_entity}) }}">
                 {{ 'Edit Notifications'|t }}
               </a>
             </td>

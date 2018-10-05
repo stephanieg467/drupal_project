@@ -118,7 +118,8 @@ function template_preprocess_update_notifier_user(&$variables) {
       'product' => $product->getProductFollowed(),
       'product_id' => $product->getProductFollowed()->id(),
       'product_link' => $product->getProductFollowed()->toLink(),
-      //'edit_notifications_form' => 'update_notifier.edit',
+      'edit_notifications_form' => 'entity.update_notifier_entity.edit_form',
+      'update_notifier_entity' => $product->id(),
       'unfollow_form' => 'update_notifier.unfollow_link',
     ];
   }
