@@ -28,6 +28,7 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
       /** @var UpdateNotifierEntity $update_notifier_entity */
       $update_notifier_entity = UpdateNotifierEntity::create($values);
       $update_notifier_entity->save();
+      drupal_flush_all_caches();
       return $update_notifier_entity->id();
     }
 

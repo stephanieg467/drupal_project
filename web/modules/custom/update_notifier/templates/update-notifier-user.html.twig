@@ -19,14 +19,6 @@
  */
 #}
 
-{#
-<article{{ attributes.addClass('profile') }}>
-  {% if content %}
-    {{- content -}}
-  {% endif %}
-</article>
-#}
-
 {{ attach_library('update_notifier/update_notifier.styling') }}
 
 <div class="container user_page">
@@ -35,8 +27,8 @@
       <h1 class="user_page__title">{{ 'User Information'|t }}</h1>
       <table>
         <tr>
-          <td>{{ 'Username: '|t }}</td>
-          <td>{{ user.account.name }}</td>
+          <td class="content_name">{{ 'Username: '|t }}</td>
+          <td class="content_info">{{ user.account.name }}</td>
         </tr>
         <tr>
           <td>{{ elements.member_for }}</td>
@@ -46,8 +38,8 @@
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12">
-      <table>
-        <thead>{{ 'Products Being Followed'|t }}</thead>
+      <h1 class="user_page__title">{{ 'Products Being Followed'|t }}</h1>
+      <table id="update_notifier_products_followed_list">
         <tbody>
         <tr>
           <th>{{ 'Product Followed'|t }}</th>
@@ -58,12 +50,12 @@
           <tr>
             <td>{{ product.product_link }}</td>
             <td>
-              <a class="btn btn-primary" href="{{ path(product.edit_notifications_form, {'update_notifier_entity': product.update_notifier_entity}) }}">
+              <a class="btn btn-primary update_notifier_form_button--edit" href="{{ path(product.edit_notifications_form, {'update_notifier_entity': product.update_notifier_entity}) }}">
                 {{ 'Edit Notifications'|t }}
               </a>
             </td>
             <td>
-              <a class="btn btn-primary" href="{{ path(product.unfollow_form, {'user': user.id, 'product': product.product_id}) }}">
+              <a class="btn btn-primary update_notifier_form_button--unfollow" href="{{ path(product.unfollow_form, {'user': user.id, 'product': product.product_id}) }}">
                 {{ 'Unfollow'|t }}
               </a>
             </td>

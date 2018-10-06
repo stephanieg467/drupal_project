@@ -111,7 +111,6 @@ function template_preprocess_update_notifier_user(&$variables) {
   $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
   $products = $container->followedProducts(\Drupal::currentUser());
   $variables['products'] = [];
-  xdebug_break();
 
   foreach ($products as $product) {
     $variables['products'][$product->getProductFollowed()->id()] = [
