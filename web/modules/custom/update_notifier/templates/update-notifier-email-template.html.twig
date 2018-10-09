@@ -1,0 +1,21 @@
+{#
+/**
+ * @file update-notifier-email-template.html.twig
+ * This template is used to send product update notifications.
+ *
+ * Available variables:
+ * - product: The id of the product to be followed.
+ *
+ * @ingroup themeable
+ */
+#}
+
+{{ attach_library('update_notifier/update_notifier.styling') }}
+
+<div class="container email_template">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+      <h1>{{ product.getTitle }}</h1>
+    </div>
+  </div>
+</div>

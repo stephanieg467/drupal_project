@@ -70,4 +70,12 @@ interface UpdateNotifierContainerInterface {
    */
   public function getSelectedNotifications($account, $product_followed);
 
+  /**
+   * @param \Drupal\commerce_product\Entity\ProductInterface $product_followed
+   *
+   * @return bool
+   *   TRUE if the product price changed, FALSE if it did not.
+   */
+  public function priceChanged($product_followed);
+
 }

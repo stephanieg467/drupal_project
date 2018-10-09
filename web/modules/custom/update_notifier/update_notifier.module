@@ -6,9 +6,11 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
-use Drupal\Core\Url;
+use Drupal\Core\Render\RenderContext;
+use Drupal\commerce_product\Event\ProductEvent;
+use Drupal\commerce_product\Event\ProductEvents;
+use Drupal\commerce_product\Entity\ProductInterface;
+use Drupal\commerce_product\Entity\Product;
 use Drupal\update_notifier\Entity\UpdateNotifierEntity;
 
 
@@ -93,6 +95,12 @@ function update_notifier_theme($existing, $type, $theme, $path) {
           'follow_button_text' => NULL,
         ],
       ],
+      'update_notifier_email_template' => [
+        'variables' => [
+          'product' => NULL,
+          'update_notifier_entity_notifications' => NULL,
+        ],
+      ],
     ];
 
 }
@@ -134,4 +142,31 @@ function update_notifier_theme_suggestions_user_alter(array &$suggestions, array
   $suggestions[] = 'update_notifier_user';
 
   return $suggestions;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function update_notifier_commerce_product_update(ProductInterface $product) {
+
+  /** @var \Drupal\commerce_product\Event\ProductEvent $event */
+  $dispatcher = \Drupal::service('event_dispatcher');
+  $event = new ProductEvent($product);
+  $dispatcher->dispatch(ProductEvents::PRODUCT_UPDATE, $event);
+
+}
+
+/**
+ * Implements hook_mail().
+ *
+ * Captures the outgoing mail and sets appropriate message body and headers.
+ */
+function update_notifier_mail($key, &$message, $params) {
+  if (isset($params['headers'])) {
+    $message['headers'] = array_merge($message['headers'], $params['headers']);
+  }
+
+  $message['from'] = $params['from'];
+  $message['subject'] = $params['subject'];
+  $message['body'][] = $params['body'];
 }

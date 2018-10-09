@@ -98,4 +98,22 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
       $notifications['in_stock'] = 'in_stock';
     return $notifications;
   }
+
+  /**
+   * @inheritdoc
+   */
+  public function priceChanged($product_followed) {
+    $price_changed = FALSE;
+    /** @var  \Drupal\commerce_product\Entity\ProductVariationInterface[] $product_variations */
+    $product_variations = $product_followed->getVariations();
+    foreach($product_variations as $product_variation) {
+      // original might not work??
+      if (!$product_variation->isNew() && $product_variation->get('price')->getValue() != $product_variation->original->get('price')->getValue()) {
+        $price_changed = TRUE;
+      }
+    }
+    return $price_changed;
+
+  }
+
 }

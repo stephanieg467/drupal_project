@@ -2,3 +2,9 @@ services:
   update_notifier.update_notifier_container:
     class: Drupal\update_notifier\UpdateNotifierContainer
     arguments: []
+
+  update_notifier.update_notifier_subscriber:
+    class: Drupal\update_notifier\EventSubscriber\UpdateNotifierSubscriber
+    arguments: ['@update_notifier.update_notifier_container', '@language_manager', '@plugin.manager.mail', '@renderer']
+    tags:
+      - { name: 'event_subscriber' }
