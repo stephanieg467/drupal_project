@@ -98,11 +98,14 @@ class UpdateNotifierSubscriber implements EventSubscriberInterface {
 
     // Send email to all users following product.
     foreach ($update_notifier_entities as $update_notifier_entity) {
-      $update_notifier_entity_notifications = $this->updateNotifierContainer->getSelectedNotifications($update_notifier_entity->getOwner(), $product);
+      $notifications = $this->updateNotifierContainer->getSelectedNotifications($update_notifier_entity->getOwner(), $product);
+      $site_name = \Drupal::config('system.site')->get('name');
       $build = [
         '#theme' => 'update_notifier_email_template',
         '#product' => $product,
-        '#notifications' => $update_notifier_entity_notifications,
+        '#route' => 'entity.commerce_product.canonical',
+        '#notifications' => $notifications,
+        '#site_name' => $site_name,
       ];
       $params['body'] = $this->renderer->executeInRenderContext(new RenderContext(), function () use ($build) {
         return $this->renderer->render($build);

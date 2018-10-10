@@ -60,13 +60,13 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
   /**
    * @inheritdoc
    */
-  public function followedProducts($account) {
-    //followedProducts is returning the id of the un entity associated to this user
-    //Get update notifier entity for current user
-    $followed_products_ids = \Drupal::entityQuery('update_notifier_entity')
+  public function userUpdateNotifierEntity($account) {
+
+    $update_notifier_ids = \Drupal::entityQuery('update_notifier_entity')
       ->condition('user_id', $account->id())
       ->execute();
-    return UpdateNotifierEntity::loadMultiple($followed_products_ids);
+
+    return UpdateNotifierEntity::loadMultiple($update_notifier_ids);
   }
 
   /**
@@ -97,23 +97,6 @@ class UpdateNotifierContainer implements UpdateNotifierContainerInterface {
     if($update_notifier_entity->getNotifyInStock())
       $notifications['in_stock'] = 'in_stock';
     return $notifications;
-  }
-
-  /**
-   * @inheritdoc
-   */
-  public function priceChanged($product_followed) {
-    $price_changed = FALSE;
-    /** @var  \Drupal\commerce_product\Entity\ProductVariationInterface[] $product_variations */
-    $product_variations = $product_followed->getVariations();
-    foreach($product_variations as $product_variation) {
-      // original might not work??
-      if (!$product_variation->isNew() && $product_variation->get('price')->getValue() != $product_variation->original->get('price')->getValue()) {
-        $price_changed = TRUE;
-      }
-    }
-    return $price_changed;
-
   }
 
 }

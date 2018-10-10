@@ -98,7 +98,9 @@ function update_notifier_theme($existing, $type, $theme, $path) {
       'update_notifier_email_template' => [
         'variables' => [
           'product' => NULL,
-          'update_notifier_entity_notifications' => NULL,
+          'route' => NULL,
+          'notifications' => NULL,
+          'site_name' => NULL,
         ],
       ],
     ];
@@ -117,7 +119,7 @@ function update_notifier_theme($existing, $type, $theme, $path) {
 function template_preprocess_update_notifier_user(&$variables) {
   /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
   $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
-  $products = $container->followedProducts(\Drupal::currentUser());
+  $products = $container->userUpdateNotifierEntity(\Drupal::currentUser());
   $variables['products'] = [];
 
   foreach ($products as $product) {

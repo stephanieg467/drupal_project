@@ -4,18 +4,59 @@
  * This template is used to send product update notifications.
  *
  * Available variables:
- * - product: The id of the product to be followed.
+ * - product: The id of the product being followed.
+ * - route: Link to the product being followed
+ * - notifications: The types of changes the user chose to be notified about.
+ * - site_name: The site name.
  *
  * @ingroup themeable
  */
 #}
 
-{{ attach_library('update_notifier/update_notifier.styling') }}
+{# Set the path for the site logo. #}
+{% set site_logo_url =  site_path ~ directory ~ '/' %}
 
-<div class="container email_template">
-  <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12">
-      <h1>{{ product.getTitle }}</h1>
-    </div>
+<div style="padding: 30px; background-color: #f1f1f1; width: 100%">
+
+  <div style="float:left; margin: 0 auto 0 auto;">
+    <a href="{{ url('<front>') }}">
+      <img src="{{ site_logo_url }}logo.svg" alt="{{ site_name|t }}" />
+    </a>
   </div>
+
+  <div style="clear:left">
+    <table style="margin-left: auto; margin-right: auto; padding: 0; height: 100%; width: 100%; font-family: 'Titillium Web', Georgia, sans-serif">
+      <tbody>
+      <tr>
+        <td>
+          <br>
+          <br>
+          <table style="text-align: center; min-width: 450px; margin: 5px auto 0 auto; border: 1px solid #008080; border-radius: 5px; padding: 40px 30px 30px 30px; background-color: #ffffff;">
+            <tbody>
+            <tr>
+              <td style="font-size: 24px; padding-bottom: 30px; font-weight: 400;">
+                <span style=" border-bottom: 1px solid #008080;">{{ 'Message from @site_name'|t({'@site_name': site_name}) }}</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 16px; padding-bottom: 20px;">
+                {{ 'The following product has been updated: '|t }}
+                <a href="{{ url(route, {'commerce_product': product.id}) }}" style="color: #0e69be; text-decoration: none; font-weight: bold;">{{ product.getTitle }}</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="font-size: 16px;">
+                {{ 'Visit the site to see what changed:'|t }}
+                <a style="background-color: #0e69be; color: #ffffff; border: 1px solid #000000; border-radius: 4px; text-align: center; padding: 7px 22px 7px 22px; font-weight: bold; text-decoration: none;" href="{{ url(route, {'commerce_product': product.id}) }}">{{ 'View Product'|t }}</a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
 </div>
+

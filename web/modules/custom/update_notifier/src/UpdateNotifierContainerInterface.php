@@ -48,9 +48,9 @@ interface UpdateNotifierContainerInterface {
    * @param \Drupal\Core\Session\AccountInterface $account
    *
    * @return array
-   *   All products followed by the user.
+   *   The update_notifier_entity belonging to the current user.
    */
-  public function followedProducts($account);
+  public function userUpdateNotifierEntity($account);
 
   /**
    * @param \Drupal\Core\Session\AccountInterface   $account
@@ -69,13 +69,5 @@ interface UpdateNotifierContainerInterface {
    *   Array containing the names of notification types selected.
    */
   public function getSelectedNotifications($account, $product_followed);
-
-  /**
-   * @param \Drupal\commerce_product\Entity\ProductInterface $product_followed
-   *
-   * @return bool
-   *   TRUE if the product price changed, FALSE if it did not.
-   */
-  public function priceChanged($product_followed);
 
 }
