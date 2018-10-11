@@ -13,28 +13,43 @@ use Drupal\Core\Link;
  */
 class UpdateNotifierEntityListBuilder extends EntityListBuilder {
 
-
   /**
    * {@inheritdoc}
    */
   public function buildHeader() {
+
     $header['id'] = $this->t('Update notifier entity ID');
-    $header['name'] = $this->t('Name');
+    $header['customer'] = $this->t('Customer');
+    $header['product_followed'] = $this->t('Product followed');
+
     return $header + parent::buildHeader();
+
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildRow(EntityInterface $entity) {
+
     /* @var $entity \Drupal\update_notifier\Entity\UpdateNotifierEntity */
-    $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
+
+    $row['id'] = Link::createFromRoute(
+      $entity->id(),
       'entity.update_notifier_entity.edit_form',
       ['update_notifier_entity' => $entity->id()]
     );
+    $row['customer']['data'] = [
+      '#theme' => 'username',
+      '#account' => $entity->getOwner(),
+    ];
+    $row['product_followed'] = Link::createFromRoute(
+      $entity->getProductFollowed()->getTitle(),
+      'entity.commerce_product.canonical',
+      ['commerce_product' => $entity->getProductFollowed()->id()]
+    );
+
     return $row + parent::buildRow($entity);
+
   }
 
 }

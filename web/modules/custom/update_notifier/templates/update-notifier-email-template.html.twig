@@ -5,8 +5,9 @@
  *
  * Available variables:
  * - product: The id of the product being followed.
- * - route: Link to the product being followed
+ * - route: Link to the product being followed.
  * - notifications: The types of changes the user chose to be notified about.
+ * - email_message: The email message that was set by admin.
  * - site_name: The site name.
  *
  * @ingroup themeable
@@ -40,7 +41,7 @@
             </tr>
             <tr>
               <td style="font-size: 16px; padding-bottom: 20px;">
-                {{ 'The following product has been updated: '|t }}
+                {{ email_message|t }}
                 <a href="{{ url(route, {'commerce_product': product.id}) }}" style="color: #0e69be; text-decoration: none; font-weight: bold;">{{ product.getTitle }}</a>
               </td>
             </tr>

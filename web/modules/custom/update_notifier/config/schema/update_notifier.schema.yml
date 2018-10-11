@@ -13,3 +13,6 @@ update_notifier.settings:
     in_stock:
       type: string
       label: 'Message sent when product is in stock'
+    email_message:
+      type: string
+      label: 'Email message sent when product changes.'

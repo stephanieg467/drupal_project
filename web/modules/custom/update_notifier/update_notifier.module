@@ -101,6 +101,7 @@ function update_notifier_theme($existing, $type, $theme, $path) {
           'route' => NULL,
           'notifications' => NULL,
           'site_name' => NULL,
+          'email_message' => NULL,
         ],
       ],
     ];

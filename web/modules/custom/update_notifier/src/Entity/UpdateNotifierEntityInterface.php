@@ -15,11 +15,6 @@ use Drupal\commerce_product\Entity\Product;
 interface UpdateNotifierEntityInterface extends ContentEntityInterface, EntityChangedInterface, EntityOwnerInterface {
 
   /**
-   * Stop following the product.
-   */
-  public function unfollow();
-
-  /**
    * Gets the product followed.
    *
    * @return \Drupal\commerce_product\Entity\Product

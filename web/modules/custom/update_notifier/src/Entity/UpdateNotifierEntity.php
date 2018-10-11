@@ -74,13 +74,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
   /**
    * {@inheritdoc}
    */
-  public function unfollow() {
-    $this->set('product_followed', NULL);
-  }
-
-  /**
-   * {@inheritdoc}
-   */
   public function getProductFollowed() {
     return $this->get('product_followed')->entity;
   }
@@ -234,8 +227,8 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
 
     //Stores the product that a user is following
     $fields['product_followed'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Product/Products followed'))
-      ->setDescription(t('The product/products being followed.'))
+      ->setLabel(t('Product followed'))
+      ->setDescription(t('The product being followed.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'commerce_product')
       ->setSetting('handler', 'default')
@@ -261,7 +254,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
 
     $fields['notify__price_change'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Get notified if price changes'))
-      ->setDescription(t('Notify the user if the price changes.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'boolean',
@@ -277,7 +269,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
 
     $fields['notify__on_sale'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Get notified if product is on sale'))
-      ->setDescription(t('Notify the user if the product is on sale.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'boolean',
@@ -293,7 +284,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
 
     $fields['notify__promotion'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Get notified if product has a promotion.'))
-      ->setDescription(t('Notify the user if the product has a promotion.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'boolean',
@@ -309,7 +299,6 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
 
     $fields['notify__in_stock'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Get notified if product is in stock'))
-      ->setDescription(t('Notify the user if the product is in stock.'))
       ->setDisplayOptions('view', [
         'label' => 'above',
         'type' => 'boolean',
@@ -320,6 +309,22 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
         'weight' => 1,
       ])
       ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE)
+      ->setRequired(FALSE);
+
+    $fields['name'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Name'))
+      ->setDescription(t('The name of the Update notifier entity entity.'))
+      ->setSettings([
+        'max_length' => 50,
+        'text_processing' => 0,
+      ])
+      ->setDefaultValue('')
+      ->setDisplayOptions('view', [
+        'label' => 'above',
+        'type' => 'string',
+        'weight' => -6,
+      ])
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(FALSE);
 
@@ -338,30 +343,10 @@ class UpdateNotifierEntity extends ContentEntityBase implements UpdateNotifierEn
       ])
       ->setDisplayConfigurable('view', TRUE);
 
-    $fields['name'] = BaseFieldDefinition::create('string')
-      ->setLabel(t('Name'))
-      ->setDescription(t('The name of the Update notifier entity entity.'))
-      ->setSettings([
-        'max_length' => 50,
-        'text_processing' => 0,
-      ])
-      ->setDefaultValue('')
-      ->setDisplayOptions('view', [
-        'label' => 'above',
-        'type' => 'string',
-        'weight' => -6,
-      ])
-      ->setDisplayConfigurable('view', TRUE)
-      ->setRequired(FALSE);
-
     $fields['status'] = BaseFieldDefinition::create('boolean')
       ->setLabel(t('Publishing status'))
       ->setDescription(t('A boolean indicating whether the Update notifier entity is published.'))
-      ->setDefaultValue(TRUE)
-      ->setDisplayOptions('form', [
-        'type' => 'boolean_checkbox',
-        'weight' => 10,
-      ]);
+      ->setDefaultValue(TRUE);
 
     $fields['created'] = BaseFieldDefinition::create('created')
       ->setLabel(t('Created'))

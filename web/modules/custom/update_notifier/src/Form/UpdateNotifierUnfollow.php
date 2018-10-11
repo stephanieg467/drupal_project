@@ -8,8 +8,6 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\update_notifier\UpdateNotifierContainerInterface;
-use Drupal\Core\Render\Element\Checkboxes;
-
 
 /**
 * Class UpdateNotifierUnfollow.
@@ -89,23 +87,47 @@ class UpdateNotifierUnfollow extends FormBase {
 
     $product_title = $this->product->getTitle();
 
+    $notifications = $this->updateNotifierContainer->getSelectedNotifications($this->user, $this->product);
+
+    $form['#attached']['library'][] = 'update_notifier/update_notifier.styling';
+
     $form['#prefix'] = '<div id="unfollow_form">';
     $form['#suffix'] = '</div>';
 
     $form['greeting'] = [
+      '#type' => 'item',
       '#markup' => $this->t("Hello, @user", ['@user' => $this->user->getDisplayName()]),
     ];
+
+    $form['notifications'] = [
+      '#type' => 'item',
+      '#markup' => $this->t(
+        "You are currently registered to be notified about the following changes for %product_title:",
+        ['%product_title' => $product_title]),
+    ];
+
+    foreach($notifications as $notification) {
+      $form['notifications'.$notification] = [
+        '#type' => 'item',
+        '#markup' => $this->t(
+          "* %notification",
+          ['%notification' => str_replace('_', ' ', $notification)]),
+      ];
+    }
 
     $form['description'] = [
       '#type' => 'item',
       '#markup' => $this->t(
-        "Please confirm that you would no longer like to follow %product_title.",
-               ['%product_title' => $product_title]),
+        "By selecting the checkbox below you are confirming that you no longer wish to be notified
+         about any of these changes to %product_title.",
+        ['%product_title' => $product_title]),
     ];
 
     $form['confirm_unfollow'] = [
       '#type' => 'checkbox',
-      '#description' => $this->t('Select to stop following %product_title', ['%product_title' => $product_title])
+      '#description' => $this->t(
+        'Select to stop following %product_title',
+        ['%product_title' => $product_title])
     ];
 
     $form['actions'] = [
@@ -145,11 +167,10 @@ class UpdateNotifierUnfollow extends FormBase {
       $form_state->setRedirect('entity.user.canonical', ['user' => $this->user->id()]);
     }
     else {
-      $this->messenger()->addMessage($this->t('Something went wrong, please try again later.'));
+      $this->messenger()->addError($this->t('You must select the checkbox in order to confirm you no longer wish to follow %product.', ['%product' => $this->product->getTitle()]));
 
-      $form_state->setRedirect('entity.user.canonical', ['user' => $this->user->id()]);
+      $form_state->setRedirect('update_notifier.unfollow_link', ['user' => $this->user->id(), 'product' => $this->product->id()]);
     }
-
 
   }
 

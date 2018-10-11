@@ -1,7 +1,9 @@
 /**
  * @file
- * Module styling for user landing page.
+ * Module styling for update_notifier.
  */
+
+/* User page */
 .user_page {
   border: 2px solid #008080;
 }
@@ -38,4 +40,14 @@
 }
 #update_notifier_products_followed_list a.update_notifier_form_button--unfollow {
   margin: 0 0 10px 112px;
+}
+
+/* Unfollow form */
+#unfollow_form div.help-block {
+  position: relative;
+  bottom: 33px;
+  color: #000000;
+}
+#unfollow_form input#edit-submit {
+  width: 190px;
 }

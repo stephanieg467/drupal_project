@@ -42,7 +42,18 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
 
+    xdebug_break();
+
     $config = \Drupal::config('update_notifier.settings');
+
+    $form['email_message'] = [
+      '#title' => $this->t('Email Message'),
+      '#description' => $this->t('Set the message that is sent to the user when the product they are following changes.'),
+      '#type' => 'textarea',
+      '#rows' => 5,
+      '#cols' => 3,
+      '#default_value' => $this->t($config->get('email_message')),
+    ];
 
     $form['updatenotifierentity_settings'] = [
       '#title' => $this->t('Notification Messages'),
@@ -56,7 +67,7 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#rows' => 5,
       '#cols' => 3,
-      '#default_value' => $config->get('price_change'),
+      '#default_value' => $this->t($config->get('price_change')),
     ];
 
     $form['updatenotifierentity_settings']['on_sale_message'] = [
@@ -64,7 +75,7 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#rows' => 5,
       '#cols' => 3,
-      '#default_value' => $config->get('on_sale'),
+      '#default_value' => $this->t($config->get('on_sale')),
     ];
 
     $form['updatenotifierentity_settings']['promotion_message'] = [
@@ -72,7 +83,7 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#rows' => 5,
       '#cols' => 3,
-      '#default_value' => $config->get('promotion'),
+      '#default_value' => $this->t($config->get('promotion')),
     ];
 
     $form['updatenotifierentity_settings']['in_stock_message'] = [
@@ -80,7 +91,7 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
       '#type' => 'textarea',
       '#rows' => 5,
       '#cols' => 3,
-      '#default_value' => $config->get('in_stock'),
+      '#default_value' => $this->t($config->get('in_stock')),
     ];
 
     return parent::buildForm($form, $form_state);
@@ -101,6 +112,7 @@ class UpdateNotifierEntitySettingsForm extends ConfigFormBase {
       ->set('on_sale', $form_state->getValue('on_sale_message'))
       ->set('promotion', $form_state->getValue('promotion_message'))
       ->set('in_stock', $form_state->getValue('in_stock_message'))
+      ->set('email_message', $form_state->getValue('email_message'))
       ->save();
     parent::submitForm($form, $form_state);
   }
