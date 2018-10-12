@@ -57,7 +57,6 @@ class UpdateNotifierSubscriber implements EventSubscriberInterface {
    * @param \Drupal\Core\Render\Renderer $renderer
    *   The renderer.
    */
-  //fix this
   public function __construct(UpdateNotifierContainerInterface $update_notifier_container,LanguageManagerInterface $language_manager, MailManagerInterface $mail_manager, Renderer $renderer) {
     $this->updateNotifierContainer = $update_notifier_container;
     $this->languageManager = $language_manager;
@@ -114,7 +113,9 @@ class UpdateNotifierSubscriber implements EventSubscriberInterface {
       });
       $to = $update_notifier_entity->getOwner()->getEmail();
       $langcode = $update_notifier_entity->getOwner()->getPreferredLangcode();
-      $this->mailManager->mail('update_notifier', 'update_notifier_email_notification', $to, $langcode, $params);
+      $send = true;
+      $this->mailManager->mail('update_notifier', 'update_notifier_email_notification', $to, $langcode, $params, NULL, $send);
+
     }
 
   }

@@ -176,14 +176,16 @@ class UpdateNotifierUnfollow extends FormBase {
       $unfollow_success = $update_notifier_container->unfollow($this->user, $product_followed);
 
     if($unfollow_success) {
-      $this->messenger()->addMessage($this->t('You are no longer following %product', ['%product' => $this->product->getTitle()]));
-
+      $this->messenger()->addMessage($this->t('You are no longer following %product',
+        ['%product' => $this->product->getTitle()]));
       $form_state->setRedirect('entity.user.canonical', ['user' => $this->user->id()]);
     }
     else {
-      $this->messenger()->addError($this->t('You must select the checkbox in order to confirm you no longer wish to follow %product.', ['%product' => $this->product->getTitle()]));
-
-      $form_state->setRedirect('update_notifier.unfollow_link', ['user' => $this->user->id(), 'product' => $this->product->id()]);
+      $this->messenger()->addError($this->t('You must select the checkbox in order to confirm you
+        no longer wish to follow %product.',
+        ['%product' => $this->product->getTitle()]));
+      $form_state->setRedirect('update_notifier.unfollow_link',
+        ['user' => $this->user->id(), 'product' => $this->product->id()]);
     }
 
   }
@@ -195,7 +197,8 @@ class UpdateNotifierUnfollow extends FormBase {
       ->condition('product_followed', $this->product->id())
       ->execute();
     $updateNotifierEntity = UpdateNotifierEntity::load(reset($update_notifier_id));
-    $form_state->setRedirect('entity.update_notifier_entity.edit_form', ['update_notifier_entity' => $updateNotifierEntity->id()]);
+    $form_state->setRedirect('entity.update_notifier_entity.edit_form',
+      ['update_notifier_entity' => $updateNotifierEntity->id()]);
 
   }
 

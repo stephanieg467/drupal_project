@@ -148,18 +148,6 @@ function update_notifier_theme_suggestions_user_alter(array &$suggestions, array
 }
 
 /**
- * Implements hook_ENTITY_TYPE_update().
- */
-function update_notifier_commerce_product_update(ProductInterface $product) {
-
-  /** @var \Drupal\commerce_product\Event\ProductEvent $event */
-  $dispatcher = \Drupal::service('event_dispatcher');
-  $event = new ProductEvent($product);
-  $dispatcher->dispatch(ProductEvents::PRODUCT_UPDATE, $event);
-
-}
-
-/**
  * Implements hook_mail().
  *
  * Captures the outgoing mail and sets appropriate message body and headers.
