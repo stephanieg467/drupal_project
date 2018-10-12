@@ -90,22 +90,47 @@ class UpdateNotifierFollow extends FormBase {
 
     $product_title = $this->product->getTitle();
 
+    $form['#attached']['library'][] = 'update_notifier/update_notifier.styling';
+
     $form['#prefix'] = '<div id="follow_form">';
     $form['#suffix'] = '</div>';
 
-    $form['greeting'] = [
-      '#markup' => $this->t("Hello, @user", ['@user' => $this->user->getDisplayName()]),
+    $form['title'] = [
+      '#type' => 'item',
+      '#title' => $this->t("Follow %product_title", ['%product_title' => $product_title]),
     ];
 
     $form['description'] = [
       '#type' => 'item',
-      '#markup' => $this->t("Choose the type(s) of notification(s) you would like to receive for %product_title.", ['%product_title' => $product_title]),
+      '#markup' => $this->t("Choose the type(s) of notification(s) you would like to receive for
+       %product_title.", ['%product_title' => $product_title]),
     ];
 
-    $form['notification_type'] = [
-      '#type' => 'checkboxes',
-      '#options' => array('price_change' => $this->t('Price Change'), 'on_sale' => $this->t('On Sale'), 'promotion' => $this->t('Promotion'), 'in_stock' => $this->t('In Stock')),
+    $form['notifications'] = [
       '#title' => $this->t('Types of Notifications'),
+      '#type' => 'details',
+      '#collapsible' => FALSE,
+      '#collapsed' => FALSE,
+      '#description' => $this->t("You will be notified via e-mail when %product_title is updated
+        in a way corresponding to the types of notifications you choose.",
+        ['%product_title' => $product_title]),
+    ];
+
+    $form['notifications']['notification_type'] = [
+      '#type' => 'checkboxes',
+      '#options' => array(
+        'price_change' => $this->t('Price Change'),
+        'on_sale' => $this->t('On Sale'),
+        'promotion' => $this->t('Promotion'),
+        'in_stock' => $this->t('In Stock')
+      ),
+      '#required' => TRUE,
+    ];
+
+    $form['agree'] = [
+      '#type' => 'checkbox',
+      '#description' => $this->t("I agree to receive emails about the types of notifications I
+        have selected for %product_title.", ['%product_title' => $product_title]),
       '#required' => TRUE,
     ];
 

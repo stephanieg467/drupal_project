@@ -51,3 +51,47 @@
 #unfollow_form input#edit-submit {
   width: 190px;
 }
+#unfollow_form input#edit-edit-notifications {
+  width: 195px;
+  position: relative;
+  right: 20px;
+}
+#unfollow_form div#edit-title label{
+  border-bottom: 2px solid #008080;
+  font-size: 30px;
+}
+#unfollow_form span.form-optional{
+  display: none;
+}
+#unfollow_form div#edit-confirm-unfollow--description{
+  font-size: 15px;
+}
+
+/* Follow form */
+#follow_form span.form-optional{
+  display: none;
+}
+#follow_form div#edit-title label{
+  border-bottom: 2px solid #008080;
+  font-size: 30px;
+}
+#follow_form span.form-required{
+  color: #000000;
+  border-bottom: 2px solid #008080;
+}
+#follow_form legend{
+  border-bottom: none;
+}
+#follow_form details#edit-notifications summary{
+  border-bottom: 2px solid #008080;
+  font-weight: bold;
+}
+#follow_form details#edit-notifications div.details-description{
+  font-size: 15px;
+}
+#follow_form div#edit-agree--description{
+  position: relative;
+  bottom: 33px;
+  color: #000000;
+  font-size: 15px;
+}

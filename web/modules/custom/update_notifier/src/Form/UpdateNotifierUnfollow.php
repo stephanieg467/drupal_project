@@ -8,6 +8,7 @@ use Drupal\Core\Session\AccountInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\update_notifier\UpdateNotifierContainerInterface;
+use Drupal\update_notifier\Entity\UpdateNotifierEntity;
 
 /**
 * Class UpdateNotifierUnfollow.
@@ -94,15 +95,15 @@ class UpdateNotifierUnfollow extends FormBase {
     $form['#prefix'] = '<div id="unfollow_form">';
     $form['#suffix'] = '</div>';
 
-    $form['greeting'] = [
+    $form['title'] = [
       '#type' => 'item',
-      '#markup' => $this->t("Hello, @user", ['@user' => $this->user->getDisplayName()]),
+      '#title' => $this->t("Unfollow %product_title", ['%product_title' => $product_title]),
     ];
 
     $form['notifications'] = [
       '#type' => 'item',
       '#markup' => $this->t(
-        "You are currently registered to be notified about the following changes for %product_title:",
+        "You are currently registered to be notified about the following changes for %product_title :",
         ['%product_title' => $product_title]),
     ];
 
@@ -110,10 +111,23 @@ class UpdateNotifierUnfollow extends FormBase {
       $form['notifications'.$notification] = [
         '#type' => 'item',
         '#markup' => $this->t(
-          "* %notification",
+          "- %notification",
           ['%notification' => str_replace('_', ' ', $notification)]),
       ];
     }
+
+    $form['edit_update_notifier_entity'] = [
+      '#type' => 'item',
+      '#markup' => $this->t(
+        "If you would like to edit the types of notifications you have chosen, then click the 
+          'Edit Notifications' button below."),
+    ];
+
+    $form['edit_notifications'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Edit Notifications'),
+      '#submit' => ['::editNotificationsRedirect'],
+    ];
 
     $form['description'] = [
       '#type' => 'item',
@@ -171,6 +185,17 @@ class UpdateNotifierUnfollow extends FormBase {
 
       $form_state->setRedirect('update_notifier.unfollow_link', ['user' => $this->user->id(), 'product' => $this->product->id()]);
     }
+
+  }
+
+  public function editNotificationsRedirect(&$form, FormStateInterface $form_state) {
+
+    $update_notifier_id = \Drupal::entityQuery('update_notifier_entity')
+      ->condition('user_id', $this->user->id())
+      ->condition('product_followed', $this->product->id())
+      ->execute();
+    $updateNotifierEntity = UpdateNotifierEntity::load(reset($update_notifier_id));
+    $form_state->setRedirect('entity.update_notifier_entity.edit_form', ['update_notifier_entity' => $updateNotifierEntity->id()]);
 
   }
 
