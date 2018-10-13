@@ -15,49 +15,200 @@
 #}
 
 {# Set the path for the site logo. #}
-{% set site_logo_url =  site_path ~ directory ~ '/' %}
+{% set site_logo_url =  'https://sgalata.aws1.acrobuild.com/modules/custom/update_notifier/gfx/' %}
 
-<div style="padding: 30px; background-color: #f1f1f1; width: 100%">
-
-  <div style="float:left; margin: 0 auto 0 auto;">
-    <a href="{{ url('<front>') }}">
-      <img src="{{ site_logo_url }}logo.svg" alt="{{ site_name|t }}" />
-    </a>
-  </div>
-
-  <div style="clear:left">
-    <table style="margin-left: auto; margin-right: auto; padding: 0; height: 100%; width: 100%; font-family: 'Titillium Web', Georgia, sans-serif">
-      <tbody>
+{# Set CSS variables. #}
+{% set body_css = 'margin: 0; padding: 0; width: 100%; background-color: #efefef;' %}
+{% set table_td_css = 'border-collapse: collapse;' %}
+<html>
+<head>
+  <style type="text/css">
+    /* Client-specific Styles. */
+    #outlook a { padding: 0; } /* Force Outlook to provide a "view in browser" button. */
+    body { width: 100% !important; }
+    .ReadMsgBody { width: 100%; }
+    .ExternalClass { width: 100%; } /* Force Hotmail to display emails at full width. */
+    body { -webkit-text-size-adjust: none; } /* Prevent Webkit platforms from changing default text sizes. */
+    /* Reset Styles. */
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    table td {
+    {{ table_td_css }}
+    }
+    body {
+    {{ body_css }}
+    }
+    h1,
+    .h1 {
+      display: block;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 40px;
+      font-weight: normal;
+      line-height: 100%;
+      color: #333333;
+      text-align: left;
+    }
+    h2,
+    .h2 {
+      display: block;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 100%;
+      color: #cc0000;
+      text-align: left;
+    }
+    h3,
+    .h3 {
+      display: block;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 100%;
+      color: #cc0000;
+      text-align: left;
+    }
+    h4,
+    .h4 {
+      display: block;
+      margin: 0 0 10px 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 100%;
+      color: #cc0000;
+      text-align: left;
+    }
+    .body-content div {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #333333;
+      line-height: 150%;
+      text-align: left;
+    }
+    .body-content div a:link,
+    .body-content div a:visited, /* Yahoo! Mail Override. */
+    .body-content div a .yshortcuts /* Yahoo! Mail Override. */ {
+      color: #cc0000;
+      font-weight: normal;
+      text-decoration: none;
+    }
+    .body-content img {
+      display: inline;
+      height: auto;
+    }
+  </style>
+</head>
+<body style="{{ body_css }}">
+<center>
+  {# Container table #}
+  <table border="0" cellpadding="0" cellspacing="0" width="137%" style="width: 137%; height: 100%; margin: 0 0 0 0; padding: 0; background-color: #efefef;">
+    <tbody>
       <tr>
-        <td>
-          <br>
-          <br>
-          <table style="text-align: center; min-width: 450px; margin: 5px auto 0 auto; border: 1px solid #008080; border-radius: 5px; padding: 40px 30px 30px 30px; background-color: #ffffff;">
-            <tbody>
+        <td align="center" valign="top" style="{{ table_td_css }}">
+          <br /><br />
+          {# Content table #}
+          <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="margin-bottom: 24px; background-color: #ffffff; border-collapse: collapse;">
             <tr>
-              <td style="font-size: 24px; padding-bottom: 30px; font-weight: 400;">
-                <span style=" border-bottom: 1px solid #008080;">{{ 'Message from @site_name'|t({'@site_name': site_name}) }}</span>
+              <td align="center" valign="top" style="{{ table_td_css }}">
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" id="template-body">
+                  <tr>
+                    <td align="center" valign="top" class="body-content" style="{{ table_td_css }} background-color: #ffffff;">
+                      <table align="center" border="0" cellpadding="50" cellspacing="0" width="600">
+                        <tr>
+                          <td align="center" valign="top" style="{{ table_td_css }}">
+                            <div>
+                              <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                  <td align="center" valign="top" style="border-collapse: collapse; padding: 40px 0 0 0; border-top: 1px solid #e6e6e6; text-align: center;">
+                                    <a href="{{ url('<front>') }}">
+                                      <img src="{{ site_logo_url }}blue-logo.png" alt="{{ site_name|t }}"/>
+                                    </a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" valign="top" style="border-collapse: collapse; padding: 0 0 30px 0; font-size: 24px; font-weight: 400; color: #999999; text-align: center;">
+                                    <span style="font-size: 30px; border-bottom: 1px solid #008080; color: #000000; padding-bottom: 10px;">{{ 'Message from @site_name'|t({'@site_name': site_name}) }}</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="font-size: 18px; padding-bottom: 20px;">
+                                    {{ email_message|t }}
+                                    <a href="{{ url(route, {'commerce_product': product.id}) }}" style="color: #0e69be; text-decoration: none; font-weight: bold;">{{ product.getTitle }}</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td align="center" style="font-size: 18px;">
+                                    {{ 'Visit the site to see what changed:'|t }}
+                                    <a style="background-color: #0e69be; color: #ffffff; border: 1px solid #000000; border-radius: 4px; text-align: center; padding: 7px 22px 7px 22px; font-weight: bold; text-decoration: none;" href="{{ url(route, {'commerce_product': product.id}) }}">{{ 'View Product'|t }}</a>
+                                  </td>
+                                </tr>
+                              </table>
+                              {# Footer #}
+                              <table align="center" border="0" cellpadding="0" cellspacing="0" width="550px" style="width: 550px; margin-top: 30px">
+                                <tr>
+                                  <td align="center" valign="top" style="border-top: 1px solid #e6e6e6; padding: 32px 0; {{ table_td_css }}">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                      <tr>
+                                        <td align="left" valign="top">
+                                          <a href="https://www.facebook.com" style="text-decoration: none;">
+                                            <img src="{{ site_logo_url }}facebook_icon.png" alt="{{ 'Facebook'|t }}" style="border: none;" />
+                                          </a>
+                                        <td width="30">&nbsp;</td>
+                                        </td>
+                                        <td align="left" valign="top">
+                                          <a href="https://www.twitter.com" style="text-decoration: none;">
+                                            <img src="{{ site_logo_url }}twitter_icon.png" alt="{{ 'Twitter'|t }}" style="border: none;" />
+                                          </a>
+                                        <td width="30">&nbsp;</td>
+                                        </td>
+                                        <td align="left" valign="top">
+                                          <a href="https://www.youtube.com" style="text-decoration: none;">
+                                            <img src="{{ site_logo_url }}youtube_icon.png" alt="{{ 'Youtube'|t }}" style="border: none;" />
+                                          </a>
+                                        <td width="30">&nbsp;</td>
+                                        </td>
+                                        <td align="left" valign="top">
+                                          <a href="https://www.instagram.com" style="text-decoration: none;">
+                                            <img src="{{ site_logo_url }}instagram_icon.png" alt="{{ 'Instagram'|t }}" style="border: none;" />
+                                          </a>
+                                        <td width="30">&nbsp;</td>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <td align="center" valign="top" style="border-collapse: collapse; padding: 0; font-family: Arial, sans-serif; font-size: 12px; color: #999999; text-align: center;">
+                                          {{ 'Copyright'|t }} &copy; {{ 'now'|date('Y') }} <a href="{{ site_path }}" style="font-family: Arial, sans-serif; font-size: 12px; color: #999999; text-decoration: none; font-weight: normal;">{{ site_name }}</a>
+                                        </td>
+                                      </tr>
+                                    </table>
+
+                                  </td>
+                                </tr>
+
+                              </table>
+                              {# /Footer #}
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
-            <tr>
-              <td style="font-size: 16px; padding-bottom: 20px;">
-                {{ email_message|t }}
-                <a href="{{ url(route, {'commerce_product': product.id}) }}" style="color: #0e69be; text-decoration: none; font-weight: bold;">{{ product.getTitle }}</a>
-              </td>
-            </tr>
-            <tr>
-              <td style="font-size: 16px;">
-                {{ 'Visit the site to see what changed:'|t }}
-                <a style="background-color: #0e69be; color: #ffffff; border: 1px solid #000000; border-radius: 4px; text-align: center; padding: 7px 22px 7px 22px; font-weight: bold; text-decoration: none;" href="{{ url(route, {'commerce_product': product.id}) }}">{{ 'View Product'|t }}</a>
-              </td>
-            </tr>
-            </tbody>
           </table>
         </td>
       </tr>
-      </tbody>
-    </table>
-  </div>
+    </tbody>
+  </table>
+</center>
+</body>
+</html>
 
-</div>
 

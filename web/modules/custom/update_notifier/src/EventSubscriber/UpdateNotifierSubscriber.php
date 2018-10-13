@@ -11,6 +11,8 @@ use Drupal\commerce_product\Event\ProductEvent;
 use Drupal\commerce_product\Event\ProductEvents;
 use Drupal\update_notifier\Entity\UpdateNotifierEntity;
 use Drupal\update_notifier\UpdateNotifierContainerInterface;
+use Drupal\Core\Url;
+
 
 /**
  * Sends an email when a product changes.
@@ -102,11 +104,13 @@ class UpdateNotifierSubscriber implements EventSubscriberInterface {
       $email_message = \Drupal::config('update_notifier.settings')->get('email_message');
       $build = [
         '#theme' => 'update_notifier_email_template',
+        //'#theme' => 'swiftmailer__update_notifier',
         '#product' => $product,
         '#route' => 'entity.commerce_product.canonical',
         '#notifications' => $notifications,
         '#email_message' => $email_message,
         '#site_name' => $site_name,
+        //'#site_path' => Url::fromRoute('<front>', [], ['absolute' => TRUE])->toString(),
       ];
       $params['body'] = $this->renderer->executeInRenderContext(new RenderContext(), function () use ($build) {
         return $this->renderer->render($build);

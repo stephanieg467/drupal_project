@@ -6,13 +6,6 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
-use Drupal\Core\Render\RenderContext;
-use Drupal\commerce_product\Event\ProductEvent;
-use Drupal\commerce_product\Event\ProductEvents;
-use Drupal\commerce_product\Entity\ProductInterface;
-use Drupal\commerce_product\Entity\Product;
-use Drupal\update_notifier\Entity\UpdateNotifierEntity;
-
 
 /**
  * Implements hook_help().
@@ -104,6 +97,17 @@ function update_notifier_theme($existing, $type, $theme, $path) {
           'email_message' => NULL,
         ],
       ],
+      /*
+      'swiftmailer__update_notifier' => [
+        'variables' => [
+          'site_name' => NULL,
+          'product' => NULL,
+          'route' => NULL,
+          'notifications' => NULL,
+          'email_message' => NULL,
+        ],
+      ],
+      */
     ];
 
 }
