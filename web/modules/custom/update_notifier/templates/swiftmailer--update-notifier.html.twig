@@ -1,46 +1,24 @@
 {#
 /**
- * @file
- * The default template file for e-mails.
+ * @file update-notifier-email-template.html.twig
+ * This template is used to send product update notifications.
  *
  * Available variables:
- * - subject: The subject.
- * - body: The message content.
- * - message: The $message array created and used in the mail building
- *   procedure. Its content varies between cases, but typically contains at
- *   least the following elements:
- *   - id: The message identifier.
- *   - module: The module that handles the building of the message.
- *   - key: The key of the message.
- *   - to: The recipient email address.
- *   - from: The email address of the sender.
- *   - langcode: The langcode to use to compose the e-mail.
- *   - params: The message parameters.
  * - product: The id of the product being followed.
  * - route: Link to the product being followed.
  * - notifications: The types of changes the user chose to be notified about.
  * - email_message: The email message that was set by admin.
  * - site_name: The site name.
  *
- * This template may be overriden by module and/or mail key, using any of the
- * following template names:
- * - swiftmailer.html.twig: global, used by default.
- * - swiftmailer--mymodule.html.twig: only emails sent by the module "mymodule".
- * - swiftmailer--mymodule--test.html.twig: only emails by the module
- *   "mymodule" with key "test".
- *
- * @see template_preprocess()
- * @see template_preprocess_swiftmailer()
- *
  * @ingroup themeable
  */
 #}
-{# Set absolute live path for images. #}
-{# Can also use this for local server path: {{ site_path ~ directory }} #}
-{% set image_path = 'https://sgalata.aws1.acrobuild.com/modules/custom/update_notifier/gfx/' %}
+
+{# Set the path for the site logo. #}
+{% set site_logo_url =  'https://sgalata.aws1.acrobuild.com/modules/custom/update_notifier/gfx/' %}
+
 {# Set CSS variables. #}
 {% set body_css = 'margin: 0; padding: 0; width: 100%; background-color: #efefef;' %}
-{% set table_td_css = 'border-collapse: collapse;' %}
 <html>
 <head>
   <style type="text/css">
@@ -53,7 +31,7 @@
     /* Reset Styles. */
     img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
     table td {
-    {{ table_td_css }}
+      border-collapse: collapse;
     }
     body {
     {{ body_css }}
@@ -128,54 +106,114 @@
 </head>
 <body style="{{ body_css }}">
 <center>
-  <table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="width: 100%; height: 100%; margin: 0; padding: 0; background-color: #efefef;">
+  {# Container table #}
+  <table border="0" cellpadding="0" cellspacing="0" width="137%" style="width: 137%; height: 100%; margin: 0 0 0 0; padding: 0; background-color: #efefef;">
+    <tbody>
     <tr>
-      <td align="center" valign="top" style="{{ table_td_css }}">
+      <td align="center" valign="top" style="border-collapse: collapse;">
         <br /><br />
-        <table border="0" cellpadding="0" cellspacing="0" width="600" style="background-color: #ffffff;">
+        {# Content table #}
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="margin-bottom: 24px; background-color: #ffffff; border-collapse: collapse;">
           <tr>
-            <td align="center" valign="top" style="{{ table_td_css }}">
-              {# Template Body. #}
-              <table border="0" cellpadding="0" cellspacing="0" width="600" id="template-body">
+            <td align="center" valign="top" style="border-collapse: collapse;">
+              <table align="center" border="0" cellpadding="0" cellspacing="0" width="600" id="template-body">
                 <tr>
-                  <td valign="top" class="body-content" style="{{ table_td_css }} background-color: #ffffff;">
-                    {# Inner Content. #}
-                    <table border="0" cellpadding="50" cellspacing="0" width="100%">
+                  <td align="center" valign="top" class="body-content" style="border-collapse: collapse; background-color: #ffffff;">
+                    <table align="center" border="0" cellpadding="50" cellspacing="0" width="600">
                       <tr>
-                        <td valign="top" style="{{ table_td_css }}">
+                        <td align="center" valign="top" style="border-collapse: collapse;">
                           <div>
-                            {{ body }}
-                            <br />
-
-                            {# Footer. #}
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                               <tr>
-                                <td valign="top" style="border-collapse: collapse; padding: 40px 0 0 0; border-top: 1px solid #e6e6e6; text-align: center;">
-                                  <a href="{{ site_path }}"><img src="{{ image_path }}blue-logo.png" alt="{{ 'Logo'|t }}" /></a>
+                                <td align="center" valign="top" style="border-collapse: collapse; padding: 40px 0 0 0; border-top: 1px solid #e6e6e6; text-align: center;">
+                                  <a href="{{ url('<front>') }}">
+                                    <img src="{{ site_logo_url }}blue-logo.png" alt="{{ site_name|t }}"/>
+                                  </a>
                                 </td>
                               </tr>
                               <tr>
-                                <td valign="top" style="border-collapse: collapse; padding: 0; font-family: Arial, sans-serif; font-size: 12px; color: #999999; text-align: center;">
-                                  {{ 'Copyright'|t }} &copy; {{ 'now'|date('Y') }} <a href="{{ site_path }}" style="font-family: Arial, sans-serif; font-size: 12px; color: #999999; text-decoration: none; font-weight: normal;">{{ site_name }}</a>
+                                <td align="center" valign="top" style="border-collapse: collapse; padding: 0 0 30px 0; font-size: 24px; font-weight: 400; color: #999999; text-align: center;">
+                                  <span style="font-size: 30px; border-bottom: 1px solid #008080; color: #000000; padding-bottom: 10px;">{{ 'Message from @site_name'|t({'@site_name': site_name}) }}</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="border-collapse: collapse; font-size: 18px; padding-top: 20px;">
+                                  {{ email_message|t }}
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="border-collapse: collapse; font-size: 18px; padding-bottom: 20px;">
+                                  <a href="{{ url(route, {'commerce_product': product.id}) }}" style="color: #0e69be; text-decoration: none; font-weight: bold;">{{ product.getTitle }}</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td align="center" style="border-collapse: collapse; font-size: 18px;">
+                                  {{ 'Visit the site to see what changed:'|t }}
+                                  <a style="background-color: #0e69be; color: #ffffff; border: 1px solid #000000; border-radius: 4px; text-align: center; padding: 7px 22px 7px 22px; font-weight: bold; text-decoration: none;" href="{{ url(route, {'commerce_product': product.id}) }}">{{ 'View Product'|t }}</a>
                                 </td>
                               </tr>
                             </table>
-                            {# / Footer. #}
+                            {# Footer #}
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="550px" style="width: 550px; margin-top: 30px">
+                              <tr>
+                                <td align="center" valign="top" style="border-top: 1px solid #e6e6e6; padding: 32px 0; border-collapse: collapse;">
+                                  <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                      <td align="left" valign="top">
+                                        <a href="https://www.facebook.com" style="text-decoration: none;">
+                                          <img src="{{ site_logo_url }}facebook_icon.png" alt="{{ 'Facebook'|t }}" style="border: none;" />
+                                        </a>
+                                      </td>
+                                      <td width="30">&nbsp;</td>
+                                      <td align="left" valign="top">
+                                        <a href="https://www.twitter.com" style="text-decoration: none;">
+                                          <img src="{{ site_logo_url }}twitter_icon.png" alt="{{ 'Twitter'|t }}" style="border: none;" />
+                                        </a>
+                                      </td>
+                                      <td width="30">&nbsp;</td>
+                                      <td align="left" valign="top">
+                                        <a href="https://www.youtube.com" style="text-decoration: none;">
+                                          <img src="{{ site_logo_url }}youtube_icon.png" alt="{{ 'Youtube'|t }}" style="border: none;" />
+                                        </a>
+                                      </td>
+                                      <td width="30">&nbsp;</td>
+                                      <td align="left" valign="top">
+                                        <a href="https://www.instagram.com" style="text-decoration: none;">
+                                          <img src="{{ site_logo_url }}instagram_icon.png" alt="{{ 'Instagram'|t }}" style="border: none;" />
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <table cellpadding="0" cellspacing="0" border="0" width="550" style="width:550px">
+                                          <tbody>
+                                          <tr>
+                                            <td align="center" valign="top" style="padding-bottom:32px;">
+                                              {{ 'Copyright'|t }} &copy; {{ 'now'|date('Y') }} <a href="https://sgalata.aws1.acrobuild.com" style="font-family: Arial, sans-serif; font-size: 12px; color: #999999; text-decoration: none; font-weight: normal;">{{ site_name }}</a>
+                                            </td>
+                                          </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                            {# /Footer #}
                           </div>
                         </td>
                       </tr>
                     </table>
-                    {# / Inner Content. #}
                   </td>
                 </tr>
               </table>
-              {# / Template Body. #}
             </td>
           </tr>
         </table>
-        <br /><br />
       </td>
     </tr>
+    </tbody>
   </table>
 </center>
 </body>

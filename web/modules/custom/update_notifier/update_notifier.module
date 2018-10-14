@@ -92,22 +92,13 @@ function update_notifier_theme($existing, $type, $theme, $path) {
         'variables' => [
           'product' => NULL,
           'route' => NULL,
+          'user' => NULL,
+          'unfollow_link' => NULL,
           'notifications' => NULL,
           'site_name' => NULL,
           'email_message' => NULL,
         ],
       ],
-      /*
-      'swiftmailer__update_notifier' => [
-        'variables' => [
-          'site_name' => NULL,
-          'product' => NULL,
-          'route' => NULL,
-          'notifications' => NULL,
-          'email_message' => NULL,
-        ],
-      ],
-      */
     ];
 
 }
