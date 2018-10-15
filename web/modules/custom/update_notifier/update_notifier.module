@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Link;
 
 /**
  * Implements hook_help().
@@ -30,20 +31,20 @@ function update_notifier_help($route_name, RouteMatchInterface $route_match) {
 function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
 
   $user = \Drupal::currentUser();
+  /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
+  $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
+
   // Only allow authenticated users to follow products.
   if ($user->isAuthenticated()) {
 
     $product = $entity->getEntityTypeId();
-    $product_id = $entity->id();
 
     $user_id = $user->id();
 
     if ($product == 'commerce_product') {
 
       // Check if user is already following product
-      /** @var \Drupal\update_notifier\UpdateNotifierContainerInterface $container */
-      $container = \Drupal::getContainer()->get('update_notifier.update_notifier_container');
-      /** @var \Drupal\commerce_product\Entity\Product $product_followed */
+      /** @var \Drupal\commerce_product\Entity\ProductInterface $product_followed */
       $product_followed = $entity;
       $is_following = $container->isFollowing($user, $product_followed);
       if ($is_following) {
@@ -55,14 +56,48 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
         $route = 'update_notifier.follow_link';
       }
 
+      $product_id = $entity->id();
+
       $build['follow_link'] = [
         '#theme' => 'follow_link',
         '#product' => $product_id,
         '#user' => $user_id,
         '#follow_button_text' => $follow_button_text,
         '#route' => $route,
+        '#link_class' => 'follow_link_product',
         '#weight' => 100,
       ];
+
+    }
+    elseif($product == 'commerce_product_variation') {
+
+      /** @var \Drupal\commerce_product\Entity\ProductVariationInterface $product_variation */
+      $product_variation = $entity;
+      // Check if user is following parent product
+      /** @var \Drupal\commerce_product\Entity\ProductInterface $product_followed */
+      $product_followed = $product_variation->getProduct();
+      $is_following = $container->isFollowing($user, $product_followed);
+      if ($is_following) {
+        $follow_button_text = 'Unfollow';
+        $route = 'update_notifier.unfollow_link';
+      }
+      else {
+        $follow_button_text = 'Follow';
+        $route = 'update_notifier.follow_link';
+      }
+
+      $product_id = $product_followed->id();
+
+      $build['follow_link'] = [
+        '#theme' => 'follow_link',
+        '#product' => $product_id,
+        '#user' => $user_id,
+        '#follow_button_text' => $follow_button_text,
+        '#route' => $route,
+        '#link_class' => 'follow_link_product_variation',
+        '#weight' => 100,
+      ];
+
     }
   }
 
@@ -86,6 +121,7 @@ function update_notifier_theme($existing, $type, $theme, $path) {
           'user' => NULL,
           'product' => NULL,
           'follow_button_text' => NULL,
+          'link_class' => NULL,
         ],
       ],
       'update_notifier_email_template' => [

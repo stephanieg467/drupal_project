@@ -54,7 +54,7 @@ interface UpdateNotifierContainerInterface {
 
   /**
    * @param \Drupal\Core\Session\AccountInterface   $account
-   * @param \Drupal\commerce_product\Entity\Product $product_followed
+   * @param \Drupal\commerce_product\Entity\ProductInterface $product_followed
    *
    * @return int
    *   Returns id of update notifier entity.

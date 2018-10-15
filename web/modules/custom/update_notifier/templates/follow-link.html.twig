@@ -8,14 +8,20 @@
  * - product: The id of the product to be followed.
  * - user: The id of the current user.
  * - follow_button_text: Text for button.
+ * - link_class: Class to style follow button according to view (product or product variation).
  *
  * @ingroup themeable
  */
 #}
-<div class="follow_link">
+
+{{ attach_library('update_notifier/update_notifier.styling') }}
+
+<div class="{{ link_class }}">
   <a class="button button--primary btn btn-primary"
      href="{{ path(route, {'user': user, 'product': product}) }}">
     {{ follow_button_text|t }}
   </a>
 </div>
+
+
 

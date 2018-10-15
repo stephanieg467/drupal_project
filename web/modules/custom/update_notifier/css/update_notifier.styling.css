@@ -3,8 +3,22 @@
  * Module styling for update_notifier.
  */
 
+/* Follow Link for products. */
+.follow_link_product {
+  width: 80px;
+  height: 26px;
+  float: left;
+  margin: 10px;
+}
+.follow_link_product_variation {
+  width: 80px;
+  height: 26px;
+  margin-top: 10px;
+}
+
 /* User page */
 .user_page {
+  width: 100%;
   border: 2px solid #008080;
 }
 .user_page__title {
@@ -18,7 +32,7 @@
 }
 .content_info {
   position: relative;
-  right: 180px;
+  right: 106px;
 }
 #update_notifier_products_followed_list {
   margin-bottom: 20px;
@@ -41,6 +55,13 @@
 #update_notifier_products_followed_list a.update_notifier_form_button--unfollow {
   margin: 0 0 10px 112px;
 }
+@media screen and (max-width: 780px) {
+  #update_notifier_products_followed_list a.update_notifier_form_button--edit,
+  #update_notifier_products_followed_list a.update_notifier_form_button--unfollow {
+    margin: 0 0 0 0;
+  }
+}
+
 
 /* Unfollow form */
 #unfollow_form div.help-block {
