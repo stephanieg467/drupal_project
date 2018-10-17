@@ -65,7 +65,7 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
         '#follow_button_text' => $follow_button_text,
         '#route' => $route,
         '#link_class' => 'follow_link_product',
-        '#weight' => 100,
+        '#weight' => 11,
       ];
 
     }
@@ -95,7 +95,7 @@ function update_notifier_entity_view_alter(array &$build, Drupal\Core\Entity\Ent
         '#follow_button_text' => $follow_button_text,
         '#route' => $route,
         '#link_class' => 'follow_link_product_variation',
-        '#weight' => 100,
+        '#weight' => 2,
       ];
 
     }

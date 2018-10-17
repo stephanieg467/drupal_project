@@ -1,5 +1,0 @@
-name: 'Practice'
-type: module
-description: 'Module to help me understand...modules.'
-core: 8.x
-package: 'Custom'
