@@ -1,0 +1,104 @@
+{
+  "name": "acromedia/drupal-orange-project",
+  "description": "Provides a template to create a new Drupal 8 project via Composer.",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "",
+      "role": ""
+    }
+  ],
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "orange_profile": {
+      "type": "vcs",
+      "url": "https://github.com/AcroMedia/orange_profile"
+    },
+    "orange_ecom_profile": {
+      "type": "vcs",
+      "url": "https://github.com/AcroMedia/orange_ecom_profile"
+    }
+  },
+  "require": {
+    "ext-curl": "*",
+    "acromedia/orange_ecom_profile": "dev-8.x-1.x",
+    "acromedia/orange_profile": "dev-8.x-1.x",
+    "composer/installers": "^1.2",
+    "cweagans/composer-patches": "^1.6",
+    "drupal-composer/drupal-scaffold": "^2.5",
+    "drupal/Schemadata": "^1.2",
+    "drupal/commerce": "^2.8",
+    "drupal/commerce_fedex": "^1.0@alpha",
+    "drupal/commerce_paypal": "^1.0@beta",
+    "drupal/commerce_shipping": "^2.0@beta",
+    "drupal/console": "~1.0",
+    "drupal/content_notify": "^1.2",
+    "drupal/core": "~8.5.3",
+    "drupal/facets": "^1.1",
+    "drupal/image_delta_formatter": "^1.0",
+    "drupal/image_effects": "^2.1",
+    "drupal/search_api": "^1.9",
+    "drupal/simple_gmap": "^1.4",
+    "drush/drush": "^9.0.0",
+    "webflo/drupal-finder": "^1.0.0",
+    "webmozart/path-util": "^2.3"
+  },
+  "require-dev": {
+    "webflo/drupal-core-require-dev": "~8.5.3",
+    "drupal/devel": "1.x-dev"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "bin-dir": "bin",
+    "sort-packages": true
+  },
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/contrib/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "drush/Commands/{$name}": [
+        "type:drupal-drush"
+      ]
+    }
+  }
+}
